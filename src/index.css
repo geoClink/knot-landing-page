@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+@theme {
+    --color-knot-bg: #F7F5F0;
+    --color-knot-text: #1D1D1D;
+    --color-knot-purple: #4A3BEE;
+
+    --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+    --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+    --duration-150: 150ms;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--color-knot-bg);
+    color: var(--color-knot-text);
+}
+
