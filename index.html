@@ -2056,6 +2056,7 @@ function toggleBilling(type) {
     }
 
     // 2. FAQ Accordion Engine
+    // 2. FAQ Accordion Engine — Updated to dynamically handle active color states
     const faqTriggers = document.querySelectorAll('.faq-trigger');
     faqTriggers.forEach(trigger => {
       trigger.addEventListener('click', () => {
@@ -2064,22 +2065,29 @@ function toggleBilling(type) {
         const verticalLine = icon.querySelector('.vertical-line');
         const isOpen = content.style.maxHeight && content.style.maxHeight !== '0px';
 
+        // 1. Reset all items back to closed, gray states
         faqTriggers.forEach(t => {
           const c = t.nextElementSibling;
           const ic = t.querySelector('.icon-toggle');
           const vl = ic.querySelector('.vertical-line');
+          
           c.style.maxHeight = '0px';
           c.style.opacity = '0';
-          ic.classList.remove('rotate-180');
-          ic.classList.add('rotate-90');
+          
+          ic.classList.remove('rotate-180', 'text-indigo-600'); // Remove active purple color
+          ic.classList.add('rotate-90', 'text-zinc-400');       // Re-apply inactive gray color
+          
           if (vl) vl.style.display = 'block';
         });
 
+        // 2. If this item was closed, open it up and make it purple!
         if (!isOpen) {
           content.style.maxHeight = content.scrollHeight + 'px';
           content.style.opacity = '1';
-          icon.classList.remove('rotate-90');
-          icon.classList.add('rotate-180');
+          
+          icon.classList.remove('rotate-90', 'text-zinc-400');   // Strip inactive gray color
+          icon.classList.add('rotate-180', 'text-indigo-600');   // Lock active purple color
+          
           if (verticalLine) verticalLine.style.display = 'none';
         }
       });
