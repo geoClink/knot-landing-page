@@ -34,3 +34,28 @@
 
 .circle-float-1 { animation: float-slow 9s ease-in-out infinite; }
 .circle-float-2 { animation: float-slow-reverse 11s ease-in-out infinite; }
+
+[data-tooltip] {
+  position: relative;
+}
+[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: #18181b;
+  color: #e4e4e7;
+  font-size: 11px;
+  font-weight: 500;
+  white-space: nowrap;
+  padding: 5px 10px;
+  border-radius: 6px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+  border: 1px solid #3f3f46;
+}
+[data-tooltip]:hover::after {
+  opacity: 1;
+}

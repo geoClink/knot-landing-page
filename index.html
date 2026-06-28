@@ -593,11 +593,14 @@
             <h4 class="font-bold text-lg text-white">Payments built in, not bolted on</h4>
             <p class="text-zinc-400 text-sm leading-relaxed">PCI-handled, dispute-ready, and reconciled to every sale by default.</p>
           </div>
-          <div class="flex items-center gap-3 pt-2">
+          <div class="flex items-center gap-4 pt-2">
             <span class="text-[10px] font-bold text-zinc-500 uppercase tracking-wider">Powered by</span>
-            <span class="text-white font-black text-sm tracking-tight">Stripe</span>
-            <span class="text-zinc-600">·</span>
-            <span class="text-white font-black text-sm tracking-tight">Supabase</span>
+            <span data-tooltip="Stripe — payments infrastructure" class="inline-flex">
+              <img src="/images/logos/stripe.svg" alt="Stripe" class="h-5 opacity-80 hover:opacity-100 transition-opacity cursor-default">
+            </span>
+            <span data-tooltip="Supabase — auth & database" class="inline-flex">
+              <img src="/images/logos/supabase.svg" alt="Supabase" class="h-5 opacity-80 hover:opacity-100 transition-opacity cursor-default">
+            </span>
           </div>
         </div>
       </div>
@@ -940,6 +943,22 @@
           <p class="text-zinc-600 text-sm leading-relaxed max-w-3xl">
             Absolutely. You retain 100% ownership of your business records, with instant exporting options to standard
             CSV or Excel files anytime.
+          </p>
+        </div>
+      </div>
+
+      <div class="border-t border-zinc-200 py-7 space-y-4">
+        <div class="flex items-center justify-between cursor-pointer faq-trigger">
+          <h3 class="font-black text-lg text-zinc-700 hover:text-zinc-900 transition">Is my payment and customer data secure?</h3>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"
+            class="text-zinc-400 transition-transform duration-300 icon-toggle rotate-90">
+            <path class="vertical-line" d="M8 2v12" />
+            <path d="M2 8h12" />
+          </svg>
+        </div>
+        <div class="faq-content overflow-hidden transition-all duration-300 max-h-0 opacity-0">
+          <p class="text-zinc-600 text-sm leading-relaxed max-w-3xl">
+            Yes. Knot never stores raw card numbers or banking credentials. All payment processing runs through <strong class="text-zinc-800">Stripe</strong> — the same infrastructure used by Amazon, Shopify, and millions of other businesses. Stripe is PCI Level 1 certified, the highest level of payment security certification available. User authentication and your business data are handled by <strong class="text-zinc-800">Supabase</strong>, built on enterprise-grade PostgreSQL with row-level security and encrypted connections. We chose these providers specifically because they handle security as a core product, not an afterthought.
           </p>
         </div>
       </div>
