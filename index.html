@@ -1,19 +1,1107 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Knot</title>
-    <link rel="stylesheet" href="./src/index.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
-  </head>
-  <body class="bg-[#F7F5F0] min-h-screen flex flex-col">
+<html lang="en" class="scroll-smooth">
 
-    <h1 class="text-3xl font-bold p-10">
-      If this text is huge, bold, and padded, Tailwind is working perfectly!
-    </h1>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Knot</title>
+  <link rel="stylesheet" href="./src/index.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'knot-purple': '#4f46e5',
+            'knot-bg': '#EFEDE8',
+            'knot-text': '#18181b',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="min-h-screen flex flex-col bg-knot-bg overflow-x-hidden text-knot-text font-sans">
+
+  <header class="w-full sticky top-0 bg-knot-bg z-50 border-b border-zinc-300">
+    <div class="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
+
+      <a href="#" class="flex items-center space-x-3 font-black text-xl tracking-tight text-zinc-900 shrink-0">
+        <div class="bg-knot-purple text-white p-2.5 rounded-xl flex items-center justify-center shadow-sm">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="8" stroke="white" stroke-width="2.5"/>
+            <circle cx="12" cy="12" r="3" fill="white"/>
+          </svg>
+        </div>
+        <span>Knot</span>
+      </a>
+
+      <nav class="hidden md:flex items-center space-x-12 font-medium text-sm text-zinc-600">
+        <a href="#verticals" class="hover:text-black transition">Verticals</a>
+        <a href="#platform" class="hover:text-black transition">Platform</a>
+        <a href="#onboarding" class="hover:text-black transition">Onboarding</a>
+        <a href="#pricing" class="hover:text-black transition">Pricing</a>
+        <a href="#faq" class="hover:text-black transition">FAQ</a>
+      </nav>
+
+      <div class="hidden md:flex items-center space-x-6 font-semibold text-sm shrink-0">
+        <a href="#" class="hover:text-zinc-800 transition text-zinc-600">Sign in</a>
+        <button onclick="openModal('contact-modal')" class="bg-knot-purple hover:bg-indigo-700 active:scale-95 text-white px-6 py-2.5 rounded-full transition-all duration-200 shadow-sm hover:shadow cursor-pointer border-none outline-none">
+          Contact us
+        </button>
+      </div>
+
+      <!-- Hamburger (mobile only) -->
+      <button id="hamburger-btn" onclick="toggleMobileMenu()" class="md:hidden flex flex-col gap-[5px] p-1 cursor-pointer bg-transparent border-none outline-none">
+        <span class="block w-5 h-0.5 bg-zinc-800 rounded transition-all duration-300"></span>
+        <span class="block w-5 h-0.5 bg-zinc-800 rounded transition-all duration-300"></span>
+        <span class="block w-5 h-0.5 bg-zinc-800 rounded transition-all duration-300"></span>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-knot-bg border-t border-zinc-200 px-6 pt-2 pb-6 space-y-4">
+      <nav class="flex flex-col font-medium text-base text-zinc-700">
+        <a href="#verticals" onclick="closeMobileMenu()" class="hover:text-black transition py-3.5 border-b border-zinc-200">Verticals</a>
+        <a href="#platform" onclick="closeMobileMenu()" class="hover:text-black transition py-3.5 border-b border-zinc-200">Platform</a>
+        <a href="#onboarding" onclick="closeMobileMenu()" class="hover:text-black transition py-3.5 border-b border-zinc-200">Onboarding</a>
+        <a href="#pricing" onclick="closeMobileMenu()" class="hover:text-black transition py-3.5 border-b border-zinc-200">Pricing</a>
+        <a href="#faq" onclick="closeMobileMenu()" class="hover:text-black transition py-3.5">FAQ</a>
+      </nav>
+      <div class="flex flex-col gap-3 pt-2 border-t border-zinc-200">
+        <a href="#" class="text-zinc-600 font-semibold text-center py-3">Sign in</a>
+        <button onclick="closeMobileMenu(); openModal('contact-modal')" class="w-full bg-knot-purple hover:bg-indigo-700 text-white font-semibold px-6 py-3.5 rounded-full cursor-pointer border-none">Contact us</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-1 w-full max-w-7xl mx-auto px-6 pt-12 pb-20 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+    <div class="lg:col-span-7 space-y-8">
+      <div class="text-[11px] font-bold tracking-[0.2em] uppercase text-knot-purple">
+        The operating system for local business
+      </div>
+
+      <h1 class="text-6xl md:text-7xl font-black tracking-tight text-zinc-900 leading-[1.05]">
+        One platform <br>for the whole <br>counter.
+      </h1>
+
+      <p class="max-w-xl text-[17px] text-zinc-600 font-medium leading-relaxed">
+        Knot runs the orders, the staff, the payments, and the books — whether you pour coffee, book chairs, lead
+        sessions, or call last orders.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center gap-4 pt-2">
+        <button onclick="openModal('contact-modal')"
+          class="w-full sm:w-auto bg-knot-purple hover:bg-indigo-600 active:scale-95 text-white font-semibold px-7 py-4 rounded-full transition-all duration-200 shadow-sm cursor-pointer border-none">
+          Contact to learn more
+        </button>
+        <a href="#verticals" class="w-full sm:w-auto">
+          <button
+            class="w-full bg-white hover:bg-zinc-50 active:scale-95 text-zinc-700 font-semibold border border-zinc-200 px-7 py-4 rounded-full transition-all duration-200 shadow-sm cursor-pointer">
+            See how it works
+          </button>
+        </a>
+      </div>
+
+      <div class="pt-4 text-[11px] font-bold text-zinc-400 uppercase tracking-[0.05em]">
+        Built for <span class="text-zinc-700">coffee · salons · wellness · sports bars</span>
+      </div>
+    </div>
+
+    <div class="hidden lg:flex lg:col-span-5 justify-center lg:justify-end items-center">
+      <!-- Outer div matches scaled dimensions at each breakpoint -->
+      <div class="relative w-[336px] h-[329px] sm:w-[408px] sm:h-[399px] lg:w-[480px] lg:h-[470px] overflow-hidden">
+        <!-- Inner div always 480×470, scaled down on small screens from top-left -->
+        <div class="absolute top-0 left-0 w-[480px] h-[470px] origin-top-left scale-[0.7] sm:scale-[0.85] lg:scale-100">
+
+          <!-- POS Terminal Card (background) -->
+          <div class="absolute right-0 top-0 w-[405px] h-[305px] bg-[#E5E1D8] rounded-3xl overflow-hidden border border-zinc-300/30">
+            <div class="absolute inset-0" style="background: repeating-linear-gradient(-45deg, transparent 0px, transparent 12px, rgba(0,0,0,0.05) 12px, rgba(0,0,0,0.05) 13px);"></div>
+            <div class="absolute top-4 left-5">
+              <span class="text-[9px] font-bold tracking-[0.15em] text-zinc-500 uppercase">POS TERMINAL SCREEN</span>
+            </div>
+            <div class="absolute top-3 right-3 flex items-center gap-1.5 bg-white rounded-full px-3 py-1.5 shadow-sm border border-zinc-100">
+              <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+              <span class="text-[11px] font-semibold text-zinc-800">Today · <span class="text-indigo-600 font-bold">$4,182</span></span>
+            </div>
+          </div>
+
+          <!-- Volume up button -->
+          <div class="absolute bg-zinc-500 rounded-l-sm z-20" style="left:51px; top:112px; width:4px; height:26px;"></div>
+          <!-- Volume down button -->
+          <div class="absolute bg-zinc-500 rounded-l-sm z-20" style="left:51px; top:148px; width:4px; height:26px;"></div>
+          <!-- Power / side button -->
+          <div class="absolute bg-zinc-500 rounded-r-sm z-20" style="left:233px; top:128px; width:4px; height:44px;"></div>
+
+          <!-- Phone mockup (foreground) — iPhone 17 style -->
+          <div class="absolute left-[55px] top-[40px] w-[178px] h-[390px] rounded-[26px] border-[3px] border-zinc-600 bg-[#E5E1D8] overflow-hidden z-10 shadow-[0_20px_60px_rgba(0,0,0,0.15)]">
+            <div class="relative w-full h-full">
+              <!-- Dynamic Island -->
+              <div class="absolute top-[10px] left-0 right-0 flex justify-center z-20">
+                <div class="w-[52px] h-[18px] bg-zinc-900 rounded-full"></div>
+              </div>
+              <div class="absolute inset-0" style="background: repeating-linear-gradient(-45deg, transparent 0px, transparent 12px, rgba(0,0,0,0.05) 12px, rgba(0,0,0,0.05) 13px);"></div>
+              <div class="absolute bottom-6 left-0 right-0 flex justify-center">
+                <span class="text-[9px] font-bold tracking-[0.15em] text-zinc-500 uppercase">CUSTOMER APP</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="w-full max-w-7xl mx-auto px-6">
+    <div class="flex flex-wrap items-center justify-between gap-4 border-t border-b border-zinc-300 py-6">
+      <div class="text-[10px] font-black tracking-[0.15em] text-zinc-400 uppercase">Trusted by independents in 40+ cities</div>
+      <div class="flex flex-wrap items-center gap-6 md:gap-16">
+        <span class="font-black text-lg tracking-tight text-zinc-400">Marlow&Co</span>
+        <span class="font-black text-lg tracking-tight text-zinc-400">Edra Salon</span>
+        <span class="font-black text-lg tracking-tight text-zinc-400">Stillpoint</span>
+        <span class="font-black text-lg tracking-tight text-zinc-400">The Crossbar</span>
+        <span class="font-black text-lg tracking-tight text-zinc-400">Field Notes</span>
+      </div>
+      <div class="w-24"></div>
+    </div>
+  </div>
+
+  <section id="verticals" class="w-full max-w-7xl mx-auto px-6 py-20">
+    <div class="space-y-4 max-w-3xl mb-12">
+      <div class="text-[11px] font-bold tracking-[0.2em] uppercase text-knot-purple">
+        Built for your trade
+      </div>
+      <h2 class="text-5xl font-black tracking-tight text-zinc-900">
+        One Knot, shaped to how you work.
+      </h2>
+      <p class="text-zinc-600 font-medium text-base">
+        Each vertical gets the workflow it actually needs — not a generic template with the wrong words on the buttons.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="bg-white border border-zinc-200/80 rounded-3xl p-8 shadow-sm flex flex-col justify-between h-[200px]">
+        <div class="flex items-start justify-between">
+          <div class="w-12 h-12 bg-amber-100 rounded-2xl flex items-center justify-center text-amber-700">
+            <div class="w-4 h-4 bg-amber-700 rounded-sm"></div>
+          </div>
+          <div class="text-[10px] font-extrabold tracking-widest text-amber-600 uppercase">01 / Coffee</div>
+        </div>
+        <div class="space-y-2">
+          <h3 class="font-black text-xl text-zinc-900">Coffee & cafés</h3>
+          <p class="text-zinc-500 text-sm leading-relaxed">Order-ahead, tabs, and a queue that keeps moving through the
+            morning rush.</p>
+        </div>
+      </div>
+
+      <div class="bg-white border border-zinc-200/80 rounded-3xl p-8 shadow-sm flex flex-col justify-between h-[200px]">
+        <div class="flex items-start justify-between">
+          <div class="w-12 h-12 bg-pink-100 rounded-2xl flex items-center justify-center text-pink-600">
+            <div class="w-4 h-4 bg-pink-600 rounded-full"></div>
+          </div>
+          <div class="text-[10px] font-extrabold tracking-widest text-pink-500 uppercase">02 / Salon</div>
+        </div>
+        <div class="space-y-2">
+          <h3 class="font-black text-xl text-zinc-900">Salons & studios</h3>
+          <p class="text-zinc-500 text-sm leading-relaxed">Appointments, deposits, and effortless rebooking — chairs
+            stay full, no-shows don't.</p>
+        </div>
+      </div>
+
+      <div class="bg-white border border-zinc-200/80 rounded-3xl p-8 shadow-sm flex flex-col justify-between h-[200px]">
+        <div class="flex items-start justify-between">
+          <div class="w-12 h-12 bg-emerald-100 rounded-2xl flex items-center justify-center text-emerald-700">
+            <div class="w-3.5 h-3.5 bg-emerald-700 rotate-45"></div>
+          </div>
+          <div class="text-[10px] font-extrabold tracking-widest text-emerald-600 uppercase">03 / Wellness</div>
+        </div>
+        <div class="space-y-2">
+          <h3 class="font-black text-xl text-zinc-900">Wellness practitioners</h3>
+          <p class="text-zinc-500 text-sm leading-relaxed">Sessions, memberships, and packages handled — so you can stay
+            with the client in front of you.</p>
+        </div>
+      </div>
+
+      <div class="bg-white border border-zinc-200/80 rounded-3xl p-8 shadow-sm flex flex-col justify-between h-[200px]">
+        <div class="flex items-start justify-between">
+          <div class="w-12 h-12 bg-orange-100 rounded-2xl flex items-center justify-center text-orange-600">
+            <div class="w-5 h-3 bg-orange-600 rounded-sm"></div>
+          </div>
+          <div class="text-[10px] font-extrabold tracking-widest text-orange-500 uppercase">04 / Bars</div>
+        </div>
+        <div class="space-y-2">
+          <h3 class="font-black text-xl text-zinc-900">Bars & sports bars</h3>
+          <p class="text-zinc-500 text-sm leading-relaxed">Fast tabs, tableside ordering, and big-game rushes that don't
+            break the floor.</p>
+        </div>
+      </div>
+
+      <div class="bg-white border border-zinc-200/80 rounded-3xl p-8 shadow-sm flex flex-col justify-between h-[200px]">
+        <div class="flex items-start justify-between">
+          <div class="w-12 h-12 bg-sky-100 rounded-2xl flex items-center justify-center text-sky-600">
+            <div class="w-4 h-4 bg-sky-600 rounded-sm"></div>
+          </div>
+          <div class="text-[10px] font-extrabold tracking-widest text-sky-500 uppercase">05 / E-Commerce</div>
+        </div>
+        <div class="space-y-2">
+          <h3 class="font-black text-xl text-zinc-900">Online stores</h3>
+          <p class="text-zinc-500 text-sm leading-relaxed">Sell across your store, your website, and your socials — inventory, orders, and fulfilment all in one place.</p>
+        </div>
+      </div>
+
+      <a href="#cta-section" class="bg-knot-purple rounded-3xl p-8 flex flex-col justify-between h-[200px] shadow-sm group hover:bg-indigo-700 transition-all cursor-pointer">
+        <div class="text-[10px] font-extrabold tracking-widest text-indigo-300 uppercase">Your trade</div>
+        <div class="space-y-2">
+          <h3 class="font-black text-xl text-white">Don't see yours?</h3>
+          <p class="text-indigo-200 text-sm leading-relaxed">Tell us your trade and we'll show you how Knot fits.</p>
+        </div>
+        <div class="flex justify-end transform group-hover:translate-x-1 transition-transform duration-200">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-indigo-300 group-hover:text-white transition-colors"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section id="platform" class="w-full max-w-7xl mx-auto px-6 py-20 border-t border-zinc-300">
+    <div class="space-y-4 max-w-3xl mb-12">
+      <div class="text-[11px] font-bold tracking-[0.2em] uppercase text-knot-purple">
+        The Platform
+      </div>
+      <h2 class="text-5xl font-black tracking-tight text-zinc-900">
+        Five tools. One system that talks to itself.
+      </h2>
+      <p class="text-zinc-600 font-medium text-base max-w-2xl">
+        A sale on the POS updates the dashboard, pays the right staff, and rewards the customer — automatically. No
+        exports, no reconciling.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-white border border-zinc-200/80 rounded-3xl overflow-hidden shadow-sm flex flex-col h-[380px]">
+        <div class="h-[200px] bg-zinc-100 border-b border-zinc-200/60 p-4 flex items-center justify-center">
+          <span
+            class="text-[10px] font-bold tracking-widest text-zinc-400 uppercase bg-white/70 px-3 py-1 rounded-lg border border-zinc-200/50 shadow-sm">CUSTOMER
+            APP SHOT</span>
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between space-y-3">
+          <div class="space-y-1">
+            <span class="text-[9px] font-extrabold tracking-[0.15em] text-knot-purple uppercase">iOS</span>
+            <h3 class="font-black text-xl text-zinc-900">Customer app</h3>
+          </div>
+          <p class="text-zinc-500 text-sm leading-relaxed">Order, pay, and earn rewards — your storefront lives on their
+            phone and your website.</p>
+        </div>
+      </div>
+
+      <div class="bg-white border border-zinc-200/80 rounded-3xl overflow-hidden shadow-sm flex flex-col h-[380px]">
+        <div class="h-[200px] bg-zinc-100 border-b border-zinc-200/60 p-4 flex items-center justify-center">
+          <span
+            class="text-[10px] font-bold tracking-widest text-zinc-400 uppercase bg-white/70 px-3 py-1 rounded-lg border border-zinc-200/50 shadow-sm">EMPLOYEE
+            APP SHOT</span>
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between space-y-3">
+          <div class="space-y-1">
+            <span class="text-[9px] font-extrabold tracking-[0.15em] text-knot-purple uppercase">iOS</span>
+            <h3 class="font-black text-xl text-zinc-900">Employee app</h3>
+          </div>
+          <p class="text-zinc-500 text-sm leading-relaxed">Clock in, track hours, and swap shifts — no paper timesheets,
+            no guesswork on payroll.</p>
+        </div>
+      </div>
+
+      <div class="bg-white border border-zinc-200/80 rounded-3xl overflow-hidden shadow-sm flex flex-col h-[380px]">
+        <div class="h-[200px] bg-zinc-100 border-b border-zinc-200/60 p-4 flex items-center justify-center">
+          <span
+            class="text-[10px] font-bold tracking-widest text-zinc-400 uppercase bg-white/70 px-3 py-1 rounded-lg border border-zinc-200/50 shadow-sm">POS
+            TERMINAL SHOT</span>
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between space-y-3">
+          <div class="space-y-1">
+            <span class="text-[9px] font-extrabold tracking-[0.15em] text-knot-purple uppercase">iOS · Hardware</span>
+            <h3 class="font-black text-xl text-zinc-900">Point of sale</h3>
+          </div>
+          <p class="text-zinc-500 text-sm leading-relaxed">Quick to learn, quicker on a rush. Tap, split, tip, and send
+            to the kitchen or bar.</p>
+        </div>
+      </div>
+
+      <div class="bg-white border border-zinc-200/80 rounded-3xl overflow-hidden shadow-sm flex flex-col h-[380px]">
+        <div class="h-[200px] bg-zinc-100 border-b border-zinc-200/60 p-4 flex items-center justify-center">
+          <span
+            class="text-[10px] font-bold tracking-widest text-zinc-400 uppercase bg-white/70 px-3 py-1 rounded-lg border border-zinc-200/50 shadow-sm">DASHBOARD
+            SHOT</span>
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between space-y-3">
+          <div class="space-y-1">
+            <span class="text-[9px] font-extrabold tracking-[0.15em] text-knot-purple uppercase">Web</span>
+            <h3 class="font-black text-xl text-zinc-900">Dashboard</h3>
+          </div>
+          <p class="text-zinc-500 text-sm leading-relaxed">Everything in real-time. Manage inventory, view sales trends,
+            and adjust menus instantly.</p>
+        </div>
+      </div>
+
+      <div class="bg-white border border-zinc-200/80 rounded-3xl overflow-hidden shadow-sm flex flex-col h-[380px]">
+        <div class="h-[200px] bg-zinc-100 border-b border-zinc-200/60 p-4 flex items-center justify-center">
+          <span
+            class="text-[10px] font-bold tracking-widest text-zinc-400 uppercase bg-white/70 px-3 py-1 rounded-lg border border-zinc-200/50 shadow-sm">ADMIN
+            UI SHOT</span>
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between space-y-3">
+          <div class="space-y-1">
+            <span class="text-[9px] font-extrabold tracking-[0.15em] text-knot-purple uppercase">Web</span>
+            <h3 class="font-black text-xl text-zinc-900">Admin UI</h3>
+          </div>
+          <p class="text-zinc-500 text-sm leading-relaxed">Configure settings, manage multi-location operations, and
+            oversee staff configurations.</p>
+        </div>
+      </div>
+
+      <div class="bg-white border border-zinc-200/80 rounded-3xl overflow-hidden shadow-sm flex flex-col h-[380px]">
+        <div class="h-[200px] bg-zinc-100 border-b border-zinc-200/60 p-4 flex items-center justify-center">
+          <span
+            class="text-[10px] font-bold tracking-widest text-zinc-400 uppercase bg-white/70 px-3 py-1 rounded-lg border border-zinc-200/50 shadow-sm">CUSTOMER
+            WEBSITE SHOT</span>
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between space-y-3">
+          <div class="space-y-1">
+            <span class="text-[9px] font-extrabold tracking-[0.15em] text-knot-purple uppercase">Web</span>
+            <h3 class="font-black text-xl text-zinc-900">Customer website</h3>
+          </div>
+          <p class="text-zinc-500 text-sm leading-relaxed">Your full
+            storefront on the web, no app download required.</p>
+        </div>
+      </div>
+
+      <a href="#cta-section"
+        class="md:col-span-3 bg-indigo-600 rounded-3xl p-8 flex flex-col justify-between h-[200px] shadow-md relative overflow-hidden group hover:bg-indigo-700 transition-all cursor-pointer">
+        <div class="space-y-3 max-w-xs">
+          <span class="text-[9px] font-black tracking-[0.2em] text-indigo-200 uppercase">All Connected</span>
+          <h3 class="font-black text-white text-3xl leading-tight group-hover:underline underline-offset-4">Run your
+            whole counter from one system.</h3>
+        </div>
+        <div class="flex justify-end transform group-hover:translate-x-1.5 transition-transform duration-200">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round" class="text-white/40 group-hover:text-white/60">
+            <path d="M5 12h14" />
+            <path d="m12 5 7 7-7 7" />
+          </svg>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section id="onboarding" class="w-full max-w-7xl mx-auto px-6 py-20 border-t border-b border-zinc-300">
+    <div class="space-y-4 max-w-3xl mb-16">
+      <div class="text-[11px] font-bold tracking-[0.2em] uppercase text-knot-purple">
+        Getting started
+      </div>
+      <h2 class="text-5xl font-black tracking-tight text-zinc-900">
+        Live in days, not quarters.
+      </h2>
+      <p class="text-zinc-600 font-medium text-base max-w-2xl">
+        A guided setup that does the heavy lifting for you — placeholder steps for now, easy to swap for your real flow.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+      <div class="space-y-4">
+        <div
+          class="w-10 h-10 border-2 border-indigo-600 rounded-full flex items-center justify-center text-indigo-600 font-bold text-sm">
+          1</div>
+        <div class="space-y-2">
+          <h3 class="font-black text-lg text-zinc-900">Tell us about your business</h3>
+          <p class="text-zinc-500 text-sm leading-relaxed">Pick your vertical and what you need at the counter. Two
+            minutes, no sales call required.</p>
+        </div>
+      </div>
+
+      <div class="space-y-4">
+        <div
+          class="w-10 h-10 border-2 border-indigo-600 rounded-full flex items-center justify-center text-indigo-600 font-bold text-sm">
+          2</div>
+        <div class="space-y-2">
+          <h3 class="font-black text-lg text-zinc-900">We tailor your setup</h3>
+          <p class="text-zinc-500 text-sm leading-relaxed">Menu or services, staff, and payments configured for you —
+            ready to review, not build from scratch.</p>
+        </div>
+      </div>
+
+      <div class="space-y-4">
+        <div
+          class="w-10 h-10 border-2 border-indigo-600 rounded-full flex items-center justify-center text-indigo-600 font-bold text-sm">
+          3</div>
+        <div class="space-y-2">
+          <h3 class="font-black text-lg text-zinc-900">Hardware arrives ready</h3>
+          <p class="text-zinc-500 text-sm leading-relaxed">Plug in, sign in, you're trading. Everything's paired and
+            pre-loaded before it ships.</p>
+        </div>
+      </div>
+
+      <div class="space-y-4">
+        <div
+          class="w-10 h-10 border-2 border-indigo-600 rounded-full flex items-center justify-center text-indigo-600 font-bold text-sm">
+          4</div>
+        <div class="space-y-2">
+          <h3 class="font-black text-lg text-zinc-900">Go live with a real person</h3>
+          <p class="text-zinc-500 text-sm leading-relaxed">An onboarding specialist is on call through your first week —
+            and beyond when you need them.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="w-full bg-[#1C1A17] text-white py-24">
+    <div class="max-w-7xl mx-auto px-6 space-y-16">
+      <div class="space-y-4 max-w-3xl">
+        <div class="text-[11px] font-bold tracking-[0.2em] uppercase text-indigo-400">
+          Why Knot
+        </div>
+        <h2 class="text-5xl md:text-6xl font-black tracking-tight text-white leading-tight">
+          Less software to wrangle. <br>More time on the floor.
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-16 border-t border-zinc-800/60 pt-16">
+        <div class="space-y-3">
+          <h3 class="font-black text-4xl text-indigo-400">One</h3>
+          <div class="space-y-1">
+            <h4 class="font-bold text-lg text-white">Login for every number</h4>
+            <p class="text-zinc-400 text-sm leading-relaxed">Orders, labor, and cash flow share one source of truth.
+              Nothing to reconcile at midnight.</p>
+          </div>
+        </div>
+
+        <div class="space-y-3">
+          <h3 class="font-black text-4xl text-indigo-400">Flat</h3>
+          <div class="space-y-1">
+            <h4 class="font-bold text-lg text-white">Pricing that won't punish growth</h4>
+            <p class="text-zinc-400 text-sm leading-relaxed">Clear rates, no surprise per-feature fees. Add a location
+              without renegotiating everything.</p>
+          </div>
+        </div>
+
+        <div class="space-y-3">
+          <h3 class="font-black text-4xl text-indigo-400">Real</h3>
+          <div class="space-y-1">
+            <h4 class="font-bold text-lg text-white">People who answer the phone</h4>
+            <p class="text-zinc-400 text-sm leading-relaxed">Support from humans who've worked a counter — not a chatbot
+              loop or a ticket queue.</p>
+          </div>
+        </div>
+
+        <div class="space-y-3">
+          <h3 class="font-black text-4xl text-indigo-400">Yours</h3>
+          <div class="space-y-1">
+            <h4 class="font-bold text-lg text-white">Data you actually own</h4>
+            <p class="text-zinc-400 text-sm leading-relaxed">Export anytime, in formats your accountant and your bank
+              already understand.</p>
+          </div>
+        </div>
+
+        <div class="space-y-3">
+          <h3 class="font-black text-4xl text-indigo-400">Fast</h3>
+          <div class="space-y-1">
+            <h4 class="font-bold text-lg text-white">Hardware that just works</h4>
+            <p class="text-zinc-400 text-sm leading-relaxed">Pre-configured and paired before it ships. No IT visit, no
+              tangle of setup wizards.</p>
+          </div>
+        </div>
+
+        <div class="space-y-3">
+          <h3 class="font-black text-4xl text-indigo-400">Safe</h3>
+          <div class="space-y-1">
+            <h4 class="font-bold text-lg text-white">Payments built in, not bolted on</h4>
+            <p class="text-zinc-400 text-sm leading-relaxed">PCI-handled, dispute-ready, and reconciled to every sale by
+              default.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing" class="w-full max-w-7xl mx-auto px-6 py-24 border-t border-zinc-300">
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
+      <div class="space-y-4 max-w-2xl">
+        <div class="text-[11px] font-bold tracking-[0.2em] uppercase text-knot-purple">
+          Pricing
+        </div>
+        <h2 class="text-5xl md:text-6xl font-black tracking-tight text-zinc-900 leading-tight">
+          Simple plans. No surprises.
+        </h2>
+        <p class="text-zinc-600 font-medium text-base">
+          Placeholder pricing — swap for your real tiers. Hardware and processing quoted to your volume.
+        </p>
+      </div>
+
+      <div class="flex items-center bg-zinc-100/60 p-1 rounded-full border border-zinc-200/60 self-start md:self-auto">
+        <button id="monthly-toggle" onclick="toggleBilling('monthly')"
+          class="px-5 py-2.5 rounded-full text-xs font-bold bg-white text-zinc-900 shadow-sm cursor-pointer border-none outline-none transition-all">
+          Monthly
+        </button>
+        <button id="annual-toggle" onclick="toggleBilling('annual')"
+          class="px-5 py-2.5 rounded-full text-xs font-bold text-zinc-600 cursor-pointer border-none outline-none flex items-center gap-1.5 transition-all">
+          Annual <span class="text-indigo-600 font-black">-20%</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+
+      <div class="bg-white border border-zinc-200/80 rounded-3xl p-8 flex flex-col justify-between h-full space-y-8">
+        <div class="space-y-3">
+          <h3 class="font-black text-2xl text-zinc-900">Starter</h3>
+          <p class="text-zinc-500 text-sm">For a single counter finding its feet.</p>
+          <div class="flex items-baseline gap-1 pt-2">
+            <span class="text-5xl font-black text-zinc-900 tracking-tight">$<span class="price-val" data-monthly="55"
+                data-annual="44">55</span></span>
+            <span class="text-zinc-400 font-semibold text-sm">/mo</span>
+          </div>
+        </div>
+
+        <button onclick="openModal('contact-modal')"
+          class="w-full py-3.5 bg-white hover:bg-zinc-50 text-zinc-800 font-bold border border-zinc-200 rounded-2xl shadow-sm transition-all cursor-pointer border-none">
+          Contact us
+        </button>
+
+        <ul class="space-y-3.5 border-t border-zinc-100 pt-6 text-sm font-medium text-zinc-600">
+          <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-indigo-600 rounded-full"></span> 1 location
+          </li>
+          <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-indigo-600 rounded-full"></span> POS +
+            customer app</li>
+          <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-indigo-600 rounded-full"></span> Standard
+            payments</li>
+          <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-indigo-600 rounded-full"></span> Email support
+          </li>
+        </ul>
+      </div>
+
+      <div
+        class="bg-zinc-900 border border-zinc-800 rounded-3xl p-8 flex flex-col justify-between h-full space-y-8 shadow-xl relative overflow-hidden">
+        <span
+          class="absolute top-6 right-6 bg-indigo-600/90 text-white text-[9px] font-black tracking-widest uppercase px-3 py-1.5 rounded-full shadow-sm">
+          Most Popular
+        </span>
+
+        <div class="space-y-3">
+          <h3 class="font-black text-2xl text-white">Growth</h3>
+          <p class="text-zinc-400 text-sm">For busy rooms ready to grow.</p>
+          <div class="flex items-baseline gap-1 pt-2">
+            <span class="text-5xl font-black text-white tracking-tight">$<span class="price-val" data-monthly="103"
+                data-annual="82">103</span></span>
+            <span class="text-zinc-400 font-semibold text-sm">/mo</span>
+          </div>
+        </div>
+
+        <a href="#cta-section" class="w-full">
+          <button
+            class="w-full py-3.5 bg-indigo-600 hover:bg-indigo-500 text-white font-bold rounded-2xl shadow-sm transition-all cursor-pointer border-none">
+            Contact us
+          </button>
+        </a>
+
+        <ul class="space-y-3.5 border-t border-zinc-800 pt-6 text-sm font-medium text-zinc-300">
+          <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-indigo-400 rounded-full"></span> Up to 3
+            locations</li>
+          <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-indigo-400 rounded-full"></span> Everything in
+            Starter</li>
+          <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-indigo-400 rounded-full"></span> Employee app
+            + scheduling</li>
+          <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-indigo-400 rounded-full"></span> Financial
+            dashboard</li>
+          <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-indigo-400 rounded-full"></span> Priority
+            support</li>
+        </ul>
+      </div>
+
+      <div class="bg-white border border-zinc-200/80 rounded-3xl p-8 flex flex-col justify-between h-full space-y-8">
+        <div class="space-y-3">
+          <h3 class="font-black text-2xl text-zinc-900">Scale</h3>
+          <p class="text-zinc-500 text-sm">For multi-location operators.</p>
+          <div class="flex items-baseline gap-1 pt-2">
+            <span class="text-4xl font-black text-zinc-900 tracking-tight mt-1.5">Custom</span>
+          </div>
+        </div>
+
+        <a href="#cta-section" class="w-full">
+          <button
+            class="w-full py-3.5 bg-white hover:bg-zinc-50 text-zinc-800 font-bold border border-zinc-200 rounded-2xl shadow-sm transition-all cursor-pointer">
+            Talk to us
+          </button>
+        </a>
+
+        <ul class="space-y-3.5 border-t border-zinc-100 pt-6 text-sm font-medium text-zinc-600">
+          <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-indigo-600 rounded-full"></span> Unlimited
+            locations</li>
+          <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-indigo-600 rounded-full"></span> Custom
+            payment rates</li>
+          <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-indigo-600 rounded-full"></span> API +
+            integrations</li>
+          <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-indigo-600 rounded-full"></span> Dedicated
+            specialist</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="faq" class="w-full max-w-4xl mx-auto px-6 py-24 border-t border-zinc-300">
+    <div class="space-y-4 mb-16 text-center md:text-left">
+      <div class="text-[11px] font-bold tracking-[0.2em] uppercase text-knot-purple">
+        Questions
+      </div>
+      <h2 class="text-5xl md:text-6xl font-black tracking-tight text-zinc-900">
+        Good to know.
+      </h2>
+    </div>
+
+    <div class="divide-y divide-zinc-200/60 faq-accordion">
+
+      <div class="py-6 space-y-4">
+        <div class="flex items-center justify-between cursor-pointer faq-trigger">
+          <h3 class="font-black text-lg text-zinc-900">Does Knot work for more than one type of business?</h3>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"
+            class="text-indigo-600 transition-transform duration-300 icon-toggle rotate-0">
+            <path class="vertical-line" d="M8 2v12" />
+            <path d="M2 8h12" />
+          </svg>
+        </div>
+        <div class="faq-content overflow-hidden transition-all duration-300 max-h-40 opacity-100">
+          <p class="text-zinc-600 text-sm leading-relaxed max-w-3xl">
+            Yes — that's the point. Coffee shops, salons, wellness practitioners, and sports bars each get a workflow
+            shaped to their trade, all on the same platform. If you run more than one kind of place, they live under one
+            login.
+          </p>
+        </div>
+      </div>
+
+      <div class="py-6 space-y-4">
+        <div class="flex items-center justify-between cursor-pointer faq-trigger">
+          <h3 class="font-black text-lg text-zinc-700 hover:text-zinc-900 transition">Do I have to buy all five
+            products?</h3>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"
+            class="text-zinc-400 transition-transform duration-300 icon-toggle rotate-90">
+            <path class="vertical-line" d="M8 2v12" />
+            <path d="M2 8h12" />
+          </svg>
+        </div>
+        <div class="faq-content overflow-hidden transition-all duration-300 max-h-0 opacity-0">
+          <p class="text-zinc-600 text-sm leading-relaxed max-w-3xl">
+            No, you can start with the core tools you need right now and expand modules as your business grows and
+            scales.
+          </p>
+        </div>
+      </div>
+
+      <div class="py-6 space-y-4">
+        <div class="flex items-center justify-between cursor-pointer faq-trigger">
+          <h3 class="font-black text-lg text-zinc-700 hover:text-zinc-900 transition">How does the customer app connect
+            to my website?</h3>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"
+            class="text-zinc-400 transition-transform duration-300 icon-toggle rotate-90">
+            <path class="vertical-line" d="M8 2v12" />
+            <path d="M2 8h12" />
+          </svg>
+        </div>
+        <div class="faq-content overflow-hidden transition-all duration-300 max-h-0 opacity-0">
+          <p class="text-zinc-600 text-sm leading-relaxed max-w-3xl">
+            It integrates cleanly via embeddable widgets and dedicated custom domains, seamlessly syncing your counter
+            menus or online booking automatically.
+          </p>
+        </div>
+      </div>
+
+      <div class="py-6 space-y-4">
+        <div class="flex items-center justify-between cursor-pointer faq-trigger">
+          <h3 class="font-black text-lg text-zinc-700 hover:text-zinc-900 transition">What does onboarding actually
+            involve?</h3>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"
+            class="text-zinc-400 transition-transform duration-300 icon-toggle rotate-90">
+            <path class="vertical-line" d="M8 2v12" />
+            <path d="M2 8h12" />
+          </svg>
+        </div>
+        <div class="faq-content overflow-hidden transition-all duration-300 max-h-0 opacity-0">
+          <p class="text-zinc-600 text-sm leading-relaxed max-w-3xl">
+            We handle menus, staff hours, and inventory imports for you, ensuring your hardware arrives fully
+            pre-configured and paired out of the box.
+          </p>
+        </div>
+      </div>
+
+      <div class="py-6 space-y-4">
+        <div class="flex items-center justify-between cursor-pointer faq-trigger">
+          <h3 class="font-black text-lg text-zinc-700 hover:text-zinc-900 transition">How does pricing work?</h3>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"
+            class="text-zinc-400 transition-transform duration-300 icon-toggle rotate-90">
+            <path class="vertical-line" d="M8 2v12" />
+            <path d="M2 8h12" />
+          </svg>
+        </div>
+        <div class="faq-content overflow-hidden transition-all duration-300 max-h-0 opacity-0">
+          <p class="text-zinc-600 text-sm leading-relaxed max-w-3xl">
+            We run on simple flat monthly subscription plans based on location counts, with direct-integrated,
+            predictable processing rates.
+          </p>
+        </div>
+      </div>
+
+      <div class="py-6 space-y-4">
+        <div class="flex items-center justify-between cursor-pointer faq-trigger">
+          <h3 class="font-black text-lg text-zinc-700 hover:text-zinc-900 transition">Can I get my data out?</h3>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"
+            class="text-zinc-400 transition-transform duration-300 icon-toggle rotate-90">
+            <path class="vertical-line" d="M8 2v12" />
+            <path d="M2 8h12" />
+          </svg>
+        </div>
+        <div class="faq-content overflow-hidden transition-all duration-300 max-h-0 opacity-0">
+          <p class="text-zinc-600 text-sm leading-relaxed max-w-3xl">
+            Absolutely. You retain 100% ownership of your business records, with instant exporting options to standard
+            CSV or Excel files anytime.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="cta-section" class="w-full max-w-7xl mx-auto px-6 py-24 border-t border-zinc-300">
+    <div class="bg-indigo-600 rounded-[40px] px-8 py-20 md:py-24 text-center space-y-8 shadow-xl max-w-6xl mx-auto">
+      <div class="space-y-4 max-w-2xl mx-auto">
+        <span class="text-[10px] font-black tracking-[0.2em] text-indigo-200 uppercase">
+          Let's talk
+        </span>
+        <h2 class="text-4xl md:text-6xl font-black text-white tracking-tight leading-tight">
+          See what Knot looks like for your counter.
+        </h2>
+        <p class="text-indigo-100 font-medium text-base max-w-lg mx-auto leading-relaxed">
+          Tell us your vertical and we'll walk you through a setup built around it — no pressure, no jargon.
+        </p>
+      </div>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+        <button onclick="openModal('contact-modal')"
+          class="w-full sm:w-auto bg-white hover:bg-zinc-50 active:scale-95 text-indigo-600 font-bold px-8 py-4 rounded-2xl transition-all shadow-md cursor-pointer border-none outline-none">
+          Contact to learn more
+        </button>
+        <button onclick="openModal('book-modal')"
+          class="w-full sm:w-auto bg-indigo-500/30 hover:bg-indigo-500/40 border border-indigo-400/30 active:scale-95 text-white font-bold px-8 py-4 rounded-2xl transition-all cursor-pointer outline-none border-none">
+          Book a walkthrough
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="w-full bg-zinc-50 border-t border-zinc-300 py-16">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-12">
+      <div class="md:col-span-4 space-y-4">
+        <a href="#" class="flex items-center space-x-3 font-black text-xl tracking-tight text-zinc-900">
+          <div class="bg-indigo-600 text-white p-2.5 rounded-xl flex items-center justify-center shadow-sm">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="8" stroke="white" stroke-width="2.5"/>
+              <circle cx="12" cy="12" r="3" fill="white"/>
+            </svg>
+          </div>
+          <span>Knot</span>
+        </a>
+        <p class="text-zinc-500 text-sm font-medium max-w-xs leading-relaxed">
+          The operating system for local business — one platform for the whole counter.
+        </p>
+      </div>
+
+      <div class="md:col-span-8 grid grid-cols-2 sm:grid-cols-3 gap-8 text-sm">
+        <div class="space-y-4">
+          <h4 class="text-[10px] font-black uppercase tracking-wider text-zinc-400">Platform</h4>
+          <ul class="space-y-3 font-semibold text-zinc-600">
+            <li><a href="#platform" class="hover:text-black transition">Point of sale</a></li>
+            <li><a href="#platform" class="hover:text-black transition">Customer app</a></li>
+            <li><a href="#platform" class="hover:text-black transition">Employee app</a></li>
+            <li><a href="#platform" class="hover:text-black transition">Dashboard</a></li>
+          </ul>
+        </div>
+
+        <div class="space-y-4">
+          <h4 class="text-[10px] font-black uppercase tracking-wider text-zinc-400">Verticals</h4>
+          <ul class="space-y-3 font-semibold text-zinc-600">
+            <li><a href="#verticals" class="hover:text-black transition">Coffee & cafés</a></li>
+            <li><a href="#verticals" class="hover:text-black transition">Salons & studios</a></li>
+            <li><a href="#verticals" class="hover:text-black transition">Wellness</a></li>
+            <li><a href="#verticals" class="hover:text-black transition">Bars</a></li>
+          </ul>
+        </div>
+
+        <div class="space-y-4">
+          <h4 class="text-[10px] font-black uppercase tracking-wider text-zinc-400">Company</h4>
+          <ul class="space-y-3 font-semibold text-zinc-600">
+            <li><a href="#" class="hover:text-black transition">About</a></li>
+            <li><a href="#pricing" class="hover:text-black transition">Pricing</a></li>
+            <li><a href="#cta-section" class="hover:text-black transition">Contact</a></li>
+            <li><a href="#faq" class="hover:text-black transition">Support</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Contact Modal -->
+  <div id="contact-modal" class="hidden fixed inset-0 z-[200] flex items-end sm:items-center justify-center p-0 sm:p-4">
+    <div class="absolute inset-0 bg-zinc-900/60 backdrop-blur-sm" onclick="closeModal('contact-modal')"></div>
+    <div class="relative bg-white rounded-t-3xl sm:rounded-3xl p-8 sm:p-10 w-full sm:max-w-lg shadow-2xl max-h-[92vh] overflow-y-auto">
+      <button onclick="closeModal('contact-modal')" class="absolute top-5 right-5 text-zinc-400 hover:text-zinc-700 transition bg-transparent border-none cursor-pointer p-1">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+      <div class="mb-7 space-y-1">
+        <div class="text-[10px] font-black tracking-[0.2em] uppercase text-knot-purple">Get in touch</div>
+        <h2 class="text-2xl font-black text-zinc-900">Tell us about your business.</h2>
+        <p class="text-zinc-500 text-sm">We'll reach out within one business day.</p>
+      </div>
+      <form id="contact-form" class="space-y-4" onsubmit="handleContactSubmit(event)">
+        <input type="hidden" name="_subject" value="Knot — New contact enquiry">
+        <input type="text" name="_gotcha" class="hidden">
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-semibold text-zinc-600 mb-1.5">First name</label>
+            <input type="text" name="first_name" required placeholder="George" class="w-full px-4 py-3 rounded-xl border border-zinc-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-knot-purple transition">
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-zinc-600 mb-1.5">Last name</label>
+            <input type="text" name="last_name" required placeholder="Smith" class="w-full px-4 py-3 rounded-xl border border-zinc-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-knot-purple transition">
+          </div>
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-zinc-600 mb-1.5">Business name</label>
+          <input type="text" name="business_name" required placeholder="The Coffee House" class="w-full px-4 py-3 rounded-xl border border-zinc-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-knot-purple transition">
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-zinc-600 mb-1.5">Email</label>
+          <input type="email" name="email" required placeholder="george@coffeehouse.com" class="w-full px-4 py-3 rounded-xl border border-zinc-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-knot-purple transition">
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-zinc-600 mb-1.5">Your trade</label>
+          <select name="trade" required class="w-full px-4 py-3 rounded-xl border border-zinc-200 text-sm text-zinc-700 focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-knot-purple transition bg-white">
+            <option value="" disabled selected>Select your business type</option>
+            <option>Coffee &amp; cafés</option>
+            <option>Salons &amp; studios</option>
+            <option>Wellness practitioners</option>
+            <option>Bars &amp; sports bars</option>
+            <option>Online stores</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-zinc-600 mb-1.5">What are you looking for?</label>
+          <textarea name="message" rows="3" placeholder="Tell us a bit about your setup and what you need..." class="w-full px-4 py-3 rounded-xl border border-zinc-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-knot-purple transition resize-none"></textarea>
+        </div>
+        <button type="submit" id="contact-submit-btn" class="w-full bg-knot-purple hover:bg-indigo-700 text-white font-bold py-4 rounded-full transition-all cursor-pointer border-none mt-2">
+          Send message
+        </button>
+      </form>
+      <div id="contact-success" class="hidden text-center py-10 space-y-3">
+        <div class="text-4xl">✓</div>
+        <h3 class="text-xl font-black text-zinc-900">Message sent!</h3>
+        <p class="text-zinc-500 text-sm">We'll be in touch within one business day.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Book Walkthrough Modal -->
+  <div id="book-modal" class="hidden fixed inset-0 z-[200] flex items-end sm:items-center justify-center p-0 sm:p-4">
+    <div class="absolute inset-0 bg-zinc-900/60 backdrop-blur-sm" onclick="closeModal('book-modal')"></div>
+    <div class="relative bg-white rounded-t-3xl sm:rounded-3xl p-8 sm:p-10 w-full sm:max-w-lg shadow-2xl max-h-[92vh] overflow-y-auto">
+      <button onclick="closeModal('book-modal')" class="absolute top-5 right-5 text-zinc-400 hover:text-zinc-700 transition bg-transparent border-none cursor-pointer p-1">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+      <div class="mb-7 space-y-1">
+        <div class="text-[10px] font-black tracking-[0.2em] uppercase text-knot-purple">Book a walkthrough</div>
+        <h2 class="text-2xl font-black text-zinc-900">See Knot built for your counter.</h2>
+        <p class="text-zinc-500 text-sm">30 minutes. We'll walk through a setup tailored to your trade.</p>
+      </div>
+      <form id="book-form" class="space-y-4" onsubmit="handleBookSubmit(event)">
+        <input type="hidden" name="_subject" value="Knot — Walkthrough request">
+        <input type="text" name="_gotcha" class="hidden">
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-semibold text-zinc-600 mb-1.5">First name</label>
+            <input type="text" name="first_name" required placeholder="George" class="w-full px-4 py-3 rounded-xl border border-zinc-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-knot-purple transition">
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-zinc-600 mb-1.5">Last name</label>
+            <input type="text" name="last_name" required placeholder="Smith" class="w-full px-4 py-3 rounded-xl border border-zinc-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-knot-purple transition">
+          </div>
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-zinc-600 mb-1.5">Email</label>
+          <input type="email" name="email" required placeholder="george@coffeehouse.com" class="w-full px-4 py-3 rounded-xl border border-zinc-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-knot-purple transition">
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-zinc-600 mb-1.5">Your trade</label>
+          <select name="trade" required class="w-full px-4 py-3 rounded-xl border border-zinc-200 text-sm text-zinc-700 focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-knot-purple transition bg-white">
+            <option value="" disabled selected>Select your business type</option>
+            <option>Coffee &amp; cafés</option>
+            <option>Salons &amp; studios</option>
+            <option>Wellness practitioners</option>
+            <option>Bars &amp; sports bars</option>
+            <option>Online stores</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-zinc-600 mb-1.5">When works for you?</label>
+          <input type="text" name="availability" placeholder="e.g. Weekday mornings, any time after 2pm..." class="w-full px-4 py-3 rounded-xl border border-zinc-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-knot-purple transition">
+        </div>
+        <p class="text-[11px] text-zinc-400 leading-relaxed">We'll follow up by email to confirm a time that works.</p>
+        <button type="submit" id="book-submit-btn" class="w-full bg-knot-purple hover:bg-indigo-700 text-white font-bold py-4 rounded-full transition-all cursor-pointer border-none">
+          Request walkthrough
+        </button>
+      </form>
+      <div id="book-success" class="hidden text-center py-10 space-y-3">
+        <div class="text-4xl">✓</div>
+        <h3 class="text-xl font-black text-zinc-900">Request received!</h3>
+        <p class="text-zinc-500 text-sm">We'll reach out to confirm your walkthrough time.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // 1. Pricing Toggle Logic
+    function toggleBilling(type) {
+      const monthlyBtn = document.getElementById('monthly-toggle');
+      const annualBtn = document.getElementById('annual-toggle');
+      const prices = document.querySelectorAll('.price-val');
+
+      if (type === 'monthly') {
+        monthlyBtn.className = "px-5 py-2.5 rounded-full text-xs font-bold bg-white text-zinc-900 shadow-sm cursor-pointer border-none outline-none transition-all";
+        annualBtn.className = "px-5 py-2.5 rounded-full text-xs font-bold text-zinc-600 cursor-pointer border-none outline-none flex items-center gap-1.5 transition-all";
+
+        prices.forEach(price => {
+          price.innerText = price.getAttribute('data-monthly');
+        });
+      } else {
+        annualBtn.className = "px-5 py-2.5 rounded-full text-xs font-bold bg-white text-zinc-900 shadow-sm cursor-pointer border-none outline-none transition-all";
+        monthlyBtn.className = "px-5 py-2.5 rounded-full text-xs font-bold text-zinc-600 cursor-pointer border-none outline-none transition-all";
+
+        prices.forEach(price => {
+          price.innerText = price.getAttribute('data-annual');
+        });
+      }
+    }
+
+    // 3. Modal system
+    function openModal(id) {
+      document.getElementById(id).classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeModal(id) {
+      document.getElementById(id).classList.add('hidden');
+      document.body.style.overflow = '';
+      if (id === 'contact-modal') {
+        document.getElementById('contact-form').classList.remove('hidden');
+        document.getElementById('contact-success').classList.add('hidden');
+        const btn = document.getElementById('contact-submit-btn');
+        btn.textContent = 'Send message'; btn.disabled = false;
+      }
+      if (id === 'book-modal') {
+        document.getElementById('book-form').classList.remove('hidden');
+        document.getElementById('book-success').classList.add('hidden');
+        const btn = document.getElementById('book-submit-btn');
+        btn.textContent = 'Request walkthrough'; btn.disabled = false;
+      }
+    }
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeModal('contact-modal');
+        closeModal('book-modal');
+      }
+    });
+    async function handleContactSubmit(e) {
+      e.preventDefault();
+      const btn = document.getElementById('contact-submit-btn');
+      btn.textContent = 'Sending…';
+      btn.disabled = true;
+      try {
+        const res = await fetch('https://formspree.io/f/xzdlggqj', {
+          method: 'POST',
+          body: new FormData(e.target),
+          headers: { 'Accept': 'application/json' }
+        });
+        if (res.ok) {
+          document.getElementById('contact-form').classList.add('hidden');
+          document.getElementById('contact-success').classList.remove('hidden');
+          e.target.reset();
+        } else {
+          btn.textContent = 'Try again';
+          btn.disabled = false;
+        }
+      } catch {
+        btn.textContent = 'Try again';
+        btn.disabled = false;
+      }
+    }
+    async function handleBookSubmit(e) {
+      e.preventDefault();
+      const btn = document.getElementById('book-submit-btn');
+      btn.textContent = 'Sending…';
+      btn.disabled = true;
+      try {
+        const res = await fetch('https://formspree.io/f/xzdlggqj', {
+          method: 'POST',
+          body: new FormData(e.target),
+          headers: { 'Accept': 'application/json' }
+        });
+        if (res.ok) {
+          document.getElementById('book-form').classList.add('hidden');
+          document.getElementById('book-success').classList.remove('hidden');
+          e.target.reset();
+        } else {
+          btn.textContent = 'Try again';
+          btn.disabled = false;
+        }
+      } catch {
+        btn.textContent = 'Try again';
+        btn.disabled = false;
+      }
+    }
+
+    // 0. Mobile hamburger menu
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    }
+    function closeMobileMenu() {
+      document.getElementById('mobile-menu').classList.add('hidden');
+    }
+
+    // 2. FAQ Accordion Engine
+    document.querySelectorAll('.faq-trigger').forEach(trigger => {
+      trigger.addEventListener('click', () => {
+        const content = trigger.nextElementSibling;
+        const icon = trigger.querySelector('.icon-toggle');
+        const verticalLine = icon.querySelector('.vertical-line');
+
+        if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+          content.style.maxHeight = '0px';
+          content.style.opacity = '0';
+          icon.classList.remove('rotate-180');
+          icon.classList.add('rotate-90');
+          if (verticalLine) verticalLine.style.display = 'block';
+        } else {
+          content.style.maxHeight = content.scrollHeight + 'px';
+          content.style.opacity = '1';
+          icon.classList.remove('rotate-90');
+          icon.classList.add('rotate-180');
+          if (verticalLine) verticalLine.style.display = 'none';
+        }
+      });
+    });
+  </script>
+
+</body>
+
 </html>
