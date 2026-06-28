@@ -6,7 +6,8 @@
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Knot — The operating system for local business</title>
-  <meta name="description" content="Knot runs orders, staff, payments, and books for independent businesses — one platform for the whole counter. Built for coffee, salons, wellness, bars, and more.">
+  <meta name="description"
+    content="Knot runs orders, staff, payments, and books for independent businesses — one platform for the whole counter. Built for coffee, salons, wellness, bars, and more.">
 
   <!-- Canonical -->
   <link rel="canonical" href="https://knotsystem.com/">
@@ -15,7 +16,8 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://knotsystem.com/">
   <meta property="og:title" content="Knot — The operating system for local business">
-  <meta property="og:description" content="One platform for orders, staff, payments, and books. Built for coffee, salons, wellness, bars, and more.">
+  <meta property="og:description"
+    content="One platform for orders, staff, payments, and books. Built for coffee, salons, wellness, bars, and more.">
   <meta property="og:image" content="https://knotsystem.com/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -24,7 +26,8 @@
   <!-- Twitter / X Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Knot — The operating system for local business">
-  <meta name="twitter:description" content="One platform for orders, staff, payments, and books. Built for coffee, salons, wellness, bars, and more.">
+  <meta name="twitter:description"
+    content="One platform for orders, staff, payments, and books. Built for coffee, salons, wellness, bars, and more.">
   <meta name="twitter:image" content="https://knotsystem.com/og-image.png">
 
   <link rel="stylesheet" href="./src/index.css" />
@@ -55,8 +58,8 @@
       <a href="#" class="flex items-center space-x-3 font-black text-xl tracking-tight text-zinc-900 shrink-0">
         <div class="bg-knot-purple text-white p-2.5 rounded-xl flex items-center justify-center shadow-sm">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-            <circle cx="12" cy="12" r="8" stroke="white" stroke-width="2.5"/>
-            <circle cx="12" cy="12" r="3" fill="white"/>
+            <circle cx="12" cy="12" r="8" stroke="white" stroke-width="2.5" />
+            <circle cx="12" cy="12" r="3" fill="white" />
           </svg>
         </div>
         <span>Knot</span>
@@ -72,13 +75,17 @@
 
       <div class="flex items-center justify-end">
         <div class="hidden md:flex items-center space-x-6 font-semibold text-sm">
-          <button onclick="openModal('signin-modal')" class="hover:text-zinc-800 transition text-zinc-600 bg-transparent border-none cursor-pointer font-semibold text-sm p-0">Sign in</button>
-          <button onclick="openModal('contact-modal')" class="bg-knot-purple hover:bg-indigo-700 active:scale-95 text-white px-6 py-2.5 rounded-full transition-all duration-200 shadow-sm hover:shadow cursor-pointer border-none outline-none">
+          <button onclick="openModal('signin-modal')"
+            class="hover:text-zinc-800 transition text-zinc-600 bg-transparent border-none cursor-pointer font-semibold text-sm p-0">Sign
+            in</button>
+          <button onclick="openModal('contact-modal')"
+            class="bg-knot-purple hover:bg-indigo-700 active:scale-95 text-white px-6 py-2.5 rounded-full transition-all duration-200 shadow-sm hover:shadow cursor-pointer border-none outline-none">
             Contact us
           </button>
         </div>
         <!-- Hamburger (mobile only) -->
-        <button id="hamburger-btn" onclick="toggleMobileMenu()" class="md:hidden flex flex-col gap-[5px] p-1 cursor-pointer bg-transparent border-none outline-none">
+        <button id="hamburger-btn" onclick="toggleMobileMenu()"
+          class="md:hidden flex flex-col gap-[5px] p-1 cursor-pointer bg-transparent border-none outline-none">
           <span class="block w-5 h-0.5 bg-zinc-800 rounded transition-all duration-300"></span>
           <span class="block w-5 h-0.5 bg-zinc-800 rounded transition-all duration-300"></span>
           <span class="block w-5 h-0.5 bg-zinc-800 rounded transition-all duration-300"></span>
@@ -89,15 +96,23 @@
     <!-- Mobile menu -->
     <div id="mobile-menu" class="hidden md:hidden bg-knot-bg border-t border-zinc-200 px-6 pt-2 pb-6 space-y-4">
       <nav class="flex flex-col font-medium text-base text-zinc-700">
-        <a href="#verticals" onclick="closeMobileMenu()" class="hover:text-black transition py-3.5 border-b border-zinc-200">Verticals</a>
-        <a href="#platform" onclick="closeMobileMenu()" class="hover:text-black transition py-3.5 border-b border-zinc-200">Platform</a>
-        <a href="#onboarding" onclick="closeMobileMenu()" class="hover:text-black transition py-3.5 border-b border-zinc-200">Onboarding</a>
-        <a href="#pricing" onclick="closeMobileMenu()" class="hover:text-black transition py-3.5 border-b border-zinc-200">Pricing</a>
+        <a href="#verticals" onclick="closeMobileMenu()"
+          class="hover:text-black transition py-3.5 border-b border-zinc-200">Verticals</a>
+        <a href="#platform" onclick="closeMobileMenu()"
+          class="hover:text-black transition py-3.5 border-b border-zinc-200">Platform</a>
+        <a href="#onboarding" onclick="closeMobileMenu()"
+          class="hover:text-black transition py-3.5 border-b border-zinc-200">Onboarding</a>
+        <a href="#pricing" onclick="closeMobileMenu()"
+          class="hover:text-black transition py-3.5 border-b border-zinc-200">Pricing</a>
         <a href="#faq" onclick="closeMobileMenu()" class="hover:text-black transition py-3.5">FAQ</a>
       </nav>
       <div class="flex flex-col gap-3 pt-2 border-t border-zinc-200">
-        <button onclick="closeMobileMenu(); openModal('signin-modal')" class="text-zinc-600 font-semibold text-center py-3 bg-transparent border-none cursor-pointer w-full">Sign in</button>
-        <button onclick="closeMobileMenu(); openModal('contact-modal')" class="w-full bg-knot-purple hover:bg-indigo-700 text-white font-semibold px-6 py-3.5 rounded-full cursor-pointer border-none">Contact us</button>
+        <button onclick="closeMobileMenu(); openModal('signin-modal')"
+          class="text-zinc-600 font-semibold text-center py-3 bg-transparent border-none cursor-pointer w-full">Sign
+          in</button>
+        <button onclick="closeMobileMenu(); openModal('contact-modal')"
+          class="w-full bg-knot-purple hover:bg-indigo-700 text-white font-semibold px-6 py-3.5 rounded-full cursor-pointer border-none">Contact
+          us</button>
       </div>
     </div>
   </header>
@@ -126,34 +141,50 @@
         <button onclick="openModal('video-modal')"
           class="w-full sm:w-auto flex items-center justify-center gap-2.5 bg-white hover:bg-zinc-50 active:scale-95 text-zinc-700 font-semibold border border-zinc-200 px-7 py-4 rounded-full transition-all duration-200 shadow-sm cursor-pointer border-solid">
           <span class="w-5 h-5 rounded-full bg-knot-purple flex items-center justify-center flex-shrink-0">
-            <svg width="8" height="8" viewBox="0 0 10 12" fill="white"><path d="M0 0l10 6-10 6z"/></svg>
+            <svg width="8" height="8" viewBox="0 0 10 12" fill="white">
+              <path d="M0 0l10 6-10 6z" />
+            </svg>
           </span>
           Watch demo
         </button>
       </div>
 
-      <div class="pt-3 flex flex-col gap-2.5 text-[11px] font-semibold text-zinc-500 sm:flex-row sm:items-center sm:gap-4">
-  
-  <div class="flex items-center gap-1.5">
-    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" class="text-green-500 flex-shrink-0"><path d="M20 6 9 17l-5-5"/></svg>
-    <span>No contract</span>
-  </div>
+      <div
+        class="pt-3 flex flex-col gap-2.5 text-[11px] font-semibold text-zinc-500 sm:flex-row sm:items-center sm:gap-4">
 
-  <span class="hidden sm:inline text-zinc-400 font-normal">·</span>
+        <div class="flex flex-col items-start gap-3 text-left sm:flex-row sm:items-center sm:justify-center sm:gap-4">
 
-  <div class="flex items-center gap-1.5">
-    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" class="text-green-500 flex-shrink-0"><path d="M20 6 9 17l-5-5"/></svg>
-    <span>Cancel anytime</span>
-  </div>
+          <div class="flex items-center gap-1.5">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" class="text-green-500 flex-shrink-0">
+              <path d="M20 6 9 17l-5-5" />
+            </svg>
+            <span>No contract</span>
+          </div>
 
-  <span class="hidden sm:inline text-zinc-400 font-normal">·</span>
+          <span class="hidden sm:inline text-zinc-400 font-normal">·</span>
 
-  <div class="flex items-center gap-1.5">
-    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" class="text-green-500 flex-shrink-0"><path d="M20 6 9 17l-5-5"/></svg>
-    <span>Free trial until your current contract ends</span>
-  </div>
+          <div class="flex items-center gap-1.5">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" class="text-green-500 flex-shrink-0">
+              <path d="M20 6 9 17l-5-5" />
+            </svg>
+            <span>Cancel anytime</span>
+          </div>
 
-</div>
+          <span class="hidden sm:inline text-zinc-400 font-normal">·</span>
+
+          <div class="flex items-start gap-1.5">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" class="text-green-500 flex-shrink-0 mt-0.5">
+              <path d="M20 6 9 17l-5-5" />
+            </svg>
+            <span>Free trial until your current contract ends</span>
+          </div>
+
+        </div>
+
+      </div>
     </div>
 
     <div class="hidden lg:flex lg:col-span-5 justify-center lg:justify-end items-center">
@@ -163,32 +194,43 @@
         <div class="absolute top-0 left-0 w-[480px] h-[470px] origin-top-left scale-[0.7] sm:scale-[0.85] lg:scale-100">
 
           <!-- POS Terminal Card (background) -->
-          <div class="absolute right-0 top-0 w-[405px] h-[305px] bg-[#E5E1D8] rounded-3xl overflow-hidden border border-zinc-300/30">
-            <div class="absolute inset-0" style="background: repeating-linear-gradient(-45deg, transparent 0px, transparent 12px, rgba(0,0,0,0.05) 12px, rgba(0,0,0,0.05) 13px);"></div>
+          <div
+            class="absolute right-0 top-0 w-[405px] h-[305px] bg-[#E5E1D8] rounded-3xl overflow-hidden border border-zinc-300/30">
+            <div class="absolute inset-0"
+              style="background: repeating-linear-gradient(-45deg, transparent 0px, transparent 12px, rgba(0,0,0,0.05) 12px, rgba(0,0,0,0.05) 13px);">
+            </div>
             <div class="absolute top-4 left-5">
               <span class="text-[9px] font-bold tracking-[0.15em] text-zinc-500 uppercase">POS TERMINAL SCREEN</span>
             </div>
-            <div class="absolute top-3 right-3 flex items-center gap-1.5 bg-white rounded-full px-3 py-1.5 shadow-sm border border-zinc-100">
+            <div
+              class="absolute top-3 right-3 flex items-center gap-1.5 bg-white rounded-full px-3 py-1.5 shadow-sm border border-zinc-100">
               <span class="w-2 h-2 bg-green-500 rounded-full"></span>
-              <span class="text-[11px] font-semibold text-zinc-800">Today · <span class="text-indigo-600 font-bold">$4,182</span></span>
+              <span class="text-[11px] font-semibold text-zinc-800">Today · <span
+                  class="text-indigo-600 font-bold">$4,182</span></span>
             </div>
           </div>
 
           <!-- Volume up button -->
-          <div class="absolute bg-zinc-500 rounded-l-sm z-20" style="left:51px; top:112px; width:4px; height:26px;"></div>
+          <div class="absolute bg-zinc-500 rounded-l-sm z-20" style="left:51px; top:112px; width:4px; height:26px;">
+          </div>
           <!-- Volume down button -->
-          <div class="absolute bg-zinc-500 rounded-l-sm z-20" style="left:51px; top:148px; width:4px; height:26px;"></div>
+          <div class="absolute bg-zinc-500 rounded-l-sm z-20" style="left:51px; top:148px; width:4px; height:26px;">
+          </div>
           <!-- Power / side button -->
-          <div class="absolute bg-zinc-500 rounded-r-sm z-20" style="left:233px; top:128px; width:4px; height:44px;"></div>
+          <div class="absolute bg-zinc-500 rounded-r-sm z-20" style="left:233px; top:128px; width:4px; height:44px;">
+          </div>
 
           <!-- Phone mockup (foreground) — iPhone 17 style -->
-          <div class="absolute left-[55px] top-[40px] w-[178px] h-[390px] rounded-[26px] border-[3px] border-zinc-600 bg-[#E5E1D8] overflow-hidden z-10 shadow-[0_20px_60px_rgba(0,0,0,0.15)]">
+          <div
+            class="absolute left-[55px] top-[40px] w-[178px] h-[390px] rounded-[26px] border-[3px] border-zinc-600 bg-[#E5E1D8] overflow-hidden z-10 shadow-[0_20px_60px_rgba(0,0,0,0.15)]">
             <div class="relative w-full h-full">
               <!-- Dynamic Island -->
               <div class="absolute top-[10px] left-0 right-0 flex justify-center z-20">
                 <div class="w-[52px] h-[18px] bg-zinc-900 rounded-full"></div>
               </div>
-              <div class="absolute inset-0" style="background: repeating-linear-gradient(-45deg, transparent 0px, transparent 12px, rgba(0,0,0,0.05) 12px, rgba(0,0,0,0.05) 13px);"></div>
+              <div class="absolute inset-0"
+                style="background: repeating-linear-gradient(-45deg, transparent 0px, transparent 12px, rgba(0,0,0,0.05) 12px, rgba(0,0,0,0.05) 13px);">
+              </div>
               <div class="absolute bottom-6 left-0 right-0 flex justify-center">
                 <span class="text-[9px] font-bold tracking-[0.15em] text-zinc-500 uppercase">CUSTOMER APP</span>
               </div>
@@ -200,7 +242,9 @@
     </div>
   </main>
 
-  <div class="w-full max-w-7xl mx-auto px-6"><div class="border-t border-zinc-300"></div></div>
+  <div class="w-full max-w-7xl mx-auto px-6">
+    <div class="border-t border-zinc-300"></div>
+  </div>
 
   <section id="verticals" class="w-full max-w-7xl mx-auto px-6 py-20">
     <div class="space-y-4 max-w-3xl mb-12">
@@ -281,20 +325,24 @@
         </div>
         <div class="space-y-2">
           <h3 class="font-black text-xl text-zinc-900">Online stores</h3>
-          <p class="text-zinc-500 text-sm leading-relaxed">Sell across your store, your website, and your socials — inventory, orders, and fulfilment all in one place.</p>
+          <p class="text-zinc-500 text-sm leading-relaxed">Sell across your store, your website, and your socials —
+            inventory, orders, and fulfilment all in one place.</p>
         </div>
       </div>
 
-      <button onclick="openModal('contact-modal')" class="bg-knot-purple rounded-3xl p-8 flex flex-col justify-between h-[200px] shadow-sm group hover:bg-indigo-700 transition-all cursor-pointer w-full text-left border-none">
+      <button onclick="openModal('contact-modal')"
+        class="bg-knot-purple rounded-3xl p-8 flex flex-col justify-between h-[200px] shadow-sm group hover:bg-indigo-700 transition-all cursor-pointer w-full text-left border-none">
         <div class="text-[10px] font-extrabold tracking-widest text-indigo-300 uppercase">Your trade</div>
         <div class="space-y-2">
           <h3 class="font-black text-xl text-white">Don't see yours?</h3>
           <p class="text-indigo-200 text-sm leading-relaxed">Tell us your trade and we'll show you how Knot fits.</p>
         </div>
         <div class="flex justify-end">
-          <div class="w-10 h-10 rounded-full bg-white/15 group-hover:bg-white/25 flex items-center justify-center transition-all duration-200 group-hover:translate-x-1">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M5 12h14m-7-7 7 7-7 7"/>
+          <div
+            class="w-10 h-10 rounded-full bg-white/15 group-hover:bg-white/25 flex items-center justify-center transition-all duration-200 group-hover:translate-x-1">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14m-7-7 7 7-7 7" />
             </svg>
           </div>
         </div>
@@ -318,13 +366,19 @@
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 
-      <div onclick="openPlatformModal('customer-website')" class="bg-white border border-zinc-200/80 rounded-3xl overflow-hidden shadow-sm flex flex-col h-[380px] cursor-pointer group hover:shadow-md hover:border-zinc-300 transition-all duration-200">
+      <div onclick="openPlatformModal('customer-website')"
+        class="bg-white border border-zinc-200/80 rounded-3xl overflow-hidden shadow-sm flex flex-col h-[380px] cursor-pointer group hover:shadow-md hover:border-zinc-300 transition-all duration-200">
         <div class="h-[200px] bg-zinc-100 border-b border-zinc-200/60 relative overflow-hidden">
           <div class="absolute inset-0 p-4 flex items-center justify-center">
-          <div class="absolute inset-0" style="background: repeating-linear-gradient(-45deg, transparent 0px, transparent 12px, rgba(0,0,0,0.03) 12px, rgba(0,0,0,0.03) 13px);"></div>
-          <span class="relative text-[10px] font-bold tracking-widest text-zinc-400 uppercase bg-white/70 px-3 py-1 rounded-lg border border-zinc-200/50 shadow-sm">CUSTOMER WEBSITE SHOT</span>
+            <div class="absolute inset-0"
+              style="background: repeating-linear-gradient(-45deg, transparent 0px, transparent 12px, rgba(0,0,0,0.03) 12px, rgba(0,0,0,0.03) 13px);">
+            </div>
+            <span
+              class="relative text-[10px] font-bold tracking-widest text-zinc-400 uppercase bg-white/70 px-3 py-1 rounded-lg border border-zinc-200/50 shadow-sm">CUSTOMER
+              WEBSITE SHOT</span>
           </div>
-          <img src="/images/platform/customer-website-preview.png" alt="Customer website" class="absolute inset-0 w-full h-full object-cover z-10" onerror="this.style.display='none'">
+          <img src="/images/platform/customer-website-preview.png" alt="Customer website"
+            class="absolute inset-0 w-full h-full object-cover z-10" onerror="this.style.display='none'">
         </div>
         <div class="p-6 flex-1 flex flex-col justify-between space-y-3">
           <div class="space-y-1">
@@ -332,21 +386,32 @@
             <h3 class="font-black text-xl text-zinc-900">Customer website</h3>
           </div>
           <div class="flex items-end justify-between">
-            <p class="text-zinc-500 text-sm leading-relaxed">Your full storefront on the web, no app download required.</p>
-            <div class="opacity-0 group-hover:opacity-100 transition-opacity ml-3 shrink-0 w-7 h-7 rounded-full bg-knot-purple flex items-center justify-center">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+            <p class="text-zinc-500 text-sm leading-relaxed">Your full storefront on the web, no app download required.
+            </p>
+            <div
+              class="opacity-0 group-hover:opacity-100 transition-opacity ml-3 shrink-0 w-7 h-7 rounded-full bg-knot-purple flex items-center justify-center">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14m-7-7 7 7-7 7" />
+              </svg>
             </div>
           </div>
         </div>
       </div>
 
-      <div onclick="openPlatformModal('customer-app')" class="bg-white border border-zinc-200/80 rounded-3xl overflow-hidden shadow-sm flex flex-col h-[380px] cursor-pointer group hover:shadow-md hover:border-zinc-300 transition-all duration-200">
+      <div onclick="openPlatformModal('customer-app')"
+        class="bg-white border border-zinc-200/80 rounded-3xl overflow-hidden shadow-sm flex flex-col h-[380px] cursor-pointer group hover:shadow-md hover:border-zinc-300 transition-all duration-200">
         <div class="h-[200px] bg-zinc-100 border-b border-zinc-200/60 relative overflow-hidden">
           <div class="absolute inset-0 p-4 flex items-center justify-center">
-          <div class="absolute inset-0" style="background: repeating-linear-gradient(-45deg, transparent 0px, transparent 12px, rgba(0,0,0,0.03) 12px, rgba(0,0,0,0.03) 13px);"></div>
-          <span class="relative text-[10px] font-bold tracking-widest text-zinc-400 uppercase bg-white/70 px-3 py-1 rounded-lg border border-zinc-200/50 shadow-sm">CUSTOMER APP SHOT</span>
+            <div class="absolute inset-0"
+              style="background: repeating-linear-gradient(-45deg, transparent 0px, transparent 12px, rgba(0,0,0,0.03) 12px, rgba(0,0,0,0.03) 13px);">
+            </div>
+            <span
+              class="relative text-[10px] font-bold tracking-widest text-zinc-400 uppercase bg-white/70 px-3 py-1 rounded-lg border border-zinc-200/50 shadow-sm">CUSTOMER
+              APP SHOT</span>
           </div>
-          <img src="/images/platform/customer-app-preview.png" alt="Customer app" class="absolute inset-0 w-full h-full object-cover z-10" onerror="this.style.display='none'">
+          <img src="/images/platform/customer-app-preview.png" alt="Customer app"
+            class="absolute inset-0 w-full h-full object-cover z-10" onerror="this.style.display='none'">
         </div>
         <div class="p-6 flex-1 flex flex-col justify-between space-y-3">
           <div class="space-y-1">
@@ -354,21 +419,32 @@
             <h3 class="font-black text-xl text-zinc-900">Customer app</h3>
           </div>
           <div class="flex items-end justify-between">
-            <p class="text-zinc-500 text-sm leading-relaxed">Order, pay, and earn rewards — your storefront lives on their phone.</p>
-            <div class="opacity-0 group-hover:opacity-100 transition-opacity ml-3 shrink-0 w-7 h-7 rounded-full bg-knot-purple flex items-center justify-center">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+            <p class="text-zinc-500 text-sm leading-relaxed">Order, pay, and earn rewards — your storefront lives on
+              their phone.</p>
+            <div
+              class="opacity-0 group-hover:opacity-100 transition-opacity ml-3 shrink-0 w-7 h-7 rounded-full bg-knot-purple flex items-center justify-center">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14m-7-7 7 7-7 7" />
+              </svg>
             </div>
           </div>
         </div>
       </div>
 
-      <div onclick="openPlatformModal('employee-app')" class="bg-white border border-zinc-200/80 rounded-3xl overflow-hidden shadow-sm flex flex-col h-[380px] cursor-pointer group hover:shadow-md hover:border-zinc-300 transition-all duration-200">
+      <div onclick="openPlatformModal('employee-app')"
+        class="bg-white border border-zinc-200/80 rounded-3xl overflow-hidden shadow-sm flex flex-col h-[380px] cursor-pointer group hover:shadow-md hover:border-zinc-300 transition-all duration-200">
         <div class="h-[200px] bg-zinc-100 border-b border-zinc-200/60 relative overflow-hidden">
           <div class="absolute inset-0 p-4 flex items-center justify-center">
-          <div class="absolute inset-0" style="background: repeating-linear-gradient(-45deg, transparent 0px, transparent 12px, rgba(0,0,0,0.03) 12px, rgba(0,0,0,0.03) 13px);"></div>
-          <span class="relative text-[10px] font-bold tracking-widest text-zinc-400 uppercase bg-white/70 px-3 py-1 rounded-lg border border-zinc-200/50 shadow-sm">EMPLOYEE APP SHOT</span>
+            <div class="absolute inset-0"
+              style="background: repeating-linear-gradient(-45deg, transparent 0px, transparent 12px, rgba(0,0,0,0.03) 12px, rgba(0,0,0,0.03) 13px);">
+            </div>
+            <span
+              class="relative text-[10px] font-bold tracking-widest text-zinc-400 uppercase bg-white/70 px-3 py-1 rounded-lg border border-zinc-200/50 shadow-sm">EMPLOYEE
+              APP SHOT</span>
           </div>
-          <img src="/images/platform/employee-app-preview.png" alt="Employee app" class="absolute inset-0 w-full h-full object-cover z-10" onerror="this.style.display='none'">
+          <img src="/images/platform/employee-app-preview.png" alt="Employee app"
+            class="absolute inset-0 w-full h-full object-cover z-10" onerror="this.style.display='none'">
         </div>
         <div class="p-6 flex-1 flex flex-col justify-between space-y-3">
           <div class="space-y-1">
@@ -376,21 +452,32 @@
             <h3 class="font-black text-xl text-zinc-900">Employee app</h3>
           </div>
           <div class="flex items-end justify-between">
-            <p class="text-zinc-500 text-sm leading-relaxed">Clock in, track hours, and swap shifts — no paper timesheets.</p>
-            <div class="opacity-0 group-hover:opacity-100 transition-opacity ml-3 shrink-0 w-7 h-7 rounded-full bg-knot-purple flex items-center justify-center">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+            <p class="text-zinc-500 text-sm leading-relaxed">Clock in, track hours, and swap shifts — no paper
+              timesheets.</p>
+            <div
+              class="opacity-0 group-hover:opacity-100 transition-opacity ml-3 shrink-0 w-7 h-7 rounded-full bg-knot-purple flex items-center justify-center">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14m-7-7 7 7-7 7" />
+              </svg>
             </div>
           </div>
         </div>
       </div>
 
-      <div onclick="openPlatformModal('point-of-sale')" class="bg-white border border-zinc-200/80 rounded-3xl overflow-hidden shadow-sm flex flex-col h-[380px] cursor-pointer group hover:shadow-md hover:border-zinc-300 transition-all duration-200">
+      <div onclick="openPlatformModal('point-of-sale')"
+        class="bg-white border border-zinc-200/80 rounded-3xl overflow-hidden shadow-sm flex flex-col h-[380px] cursor-pointer group hover:shadow-md hover:border-zinc-300 transition-all duration-200">
         <div class="h-[200px] bg-zinc-100 border-b border-zinc-200/60 relative overflow-hidden">
           <div class="absolute inset-0 p-4 flex items-center justify-center">
-          <div class="absolute inset-0" style="background: repeating-linear-gradient(-45deg, transparent 0px, transparent 12px, rgba(0,0,0,0.03) 12px, rgba(0,0,0,0.03) 13px);"></div>
-          <span class="relative text-[10px] font-bold tracking-widest text-zinc-400 uppercase bg-white/70 px-3 py-1 rounded-lg border border-zinc-200/50 shadow-sm">POS TERMINAL SHOT</span>
+            <div class="absolute inset-0"
+              style="background: repeating-linear-gradient(-45deg, transparent 0px, transparent 12px, rgba(0,0,0,0.03) 12px, rgba(0,0,0,0.03) 13px);">
+            </div>
+            <span
+              class="relative text-[10px] font-bold tracking-widest text-zinc-400 uppercase bg-white/70 px-3 py-1 rounded-lg border border-zinc-200/50 shadow-sm">POS
+              TERMINAL SHOT</span>
           </div>
-          <img src="/images/platform/point-of-sale-preview.png" alt="Point of sale" class="absolute inset-0 w-full h-full object-cover z-10" onerror="this.style.display='none'">
+          <img src="/images/platform/point-of-sale-preview.png" alt="Point of sale"
+            class="absolute inset-0 w-full h-full object-cover z-10" onerror="this.style.display='none'">
         </div>
         <div class="p-6 flex-1 flex flex-col justify-between space-y-3">
           <div class="space-y-1">
@@ -398,21 +485,32 @@
             <h3 class="font-black text-xl text-zinc-900">Point of sale</h3>
           </div>
           <div class="flex items-end justify-between">
-            <p class="text-zinc-500 text-sm leading-relaxed">Quick to learn, quicker on a rush. Tap, split, tip, fire to the kitchen.</p>
-            <div class="opacity-0 group-hover:opacity-100 transition-opacity ml-3 shrink-0 w-7 h-7 rounded-full bg-knot-purple flex items-center justify-center">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+            <p class="text-zinc-500 text-sm leading-relaxed">Quick to learn, quicker on a rush. Tap, split, tip, fire to
+              the kitchen.</p>
+            <div
+              class="opacity-0 group-hover:opacity-100 transition-opacity ml-3 shrink-0 w-7 h-7 rounded-full bg-knot-purple flex items-center justify-center">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14m-7-7 7 7-7 7" />
+              </svg>
             </div>
           </div>
         </div>
       </div>
 
-      <div onclick="openPlatformModal('dashboard')" class="bg-white border border-zinc-200/80 rounded-3xl overflow-hidden shadow-sm flex flex-col h-[380px] cursor-pointer group hover:shadow-md hover:border-zinc-300 transition-all duration-200">
+      <div onclick="openPlatformModal('dashboard')"
+        class="bg-white border border-zinc-200/80 rounded-3xl overflow-hidden shadow-sm flex flex-col h-[380px] cursor-pointer group hover:shadow-md hover:border-zinc-300 transition-all duration-200">
         <div class="h-[200px] bg-zinc-100 border-b border-zinc-200/60 relative overflow-hidden">
           <div class="absolute inset-0 p-4 flex items-center justify-center">
-          <div class="absolute inset-0" style="background: repeating-linear-gradient(-45deg, transparent 0px, transparent 12px, rgba(0,0,0,0.03) 12px, rgba(0,0,0,0.03) 13px);"></div>
-          <span class="relative text-[10px] font-bold tracking-widest text-zinc-400 uppercase bg-white/70 px-3 py-1 rounded-lg border border-zinc-200/50 shadow-sm">DASHBOARD SHOT</span>
+            <div class="absolute inset-0"
+              style="background: repeating-linear-gradient(-45deg, transparent 0px, transparent 12px, rgba(0,0,0,0.03) 12px, rgba(0,0,0,0.03) 13px);">
+            </div>
+            <span
+              class="relative text-[10px] font-bold tracking-widest text-zinc-400 uppercase bg-white/70 px-3 py-1 rounded-lg border border-zinc-200/50 shadow-sm">DASHBOARD
+              SHOT</span>
           </div>
-          <img src="/images/platform/dashboard-preview.png" alt="Dashboard" class="absolute inset-0 w-full h-full object-cover z-10" onerror="this.style.display='none'">
+          <img src="/images/platform/dashboard-preview.png" alt="Dashboard"
+            class="absolute inset-0 w-full h-full object-cover z-10" onerror="this.style.display='none'">
         </div>
         <div class="p-6 flex-1 flex flex-col justify-between space-y-3">
           <div class="space-y-1">
@@ -420,21 +518,32 @@
             <h3 class="font-black text-xl text-zinc-900">Dashboard</h3>
           </div>
           <div class="flex items-end justify-between">
-            <p class="text-zinc-500 text-sm leading-relaxed">Everything in real-time. Sales, inventory, staff — from anywhere.</p>
-            <div class="opacity-0 group-hover:opacity-100 transition-opacity ml-3 shrink-0 w-7 h-7 rounded-full bg-knot-purple flex items-center justify-center">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+            <p class="text-zinc-500 text-sm leading-relaxed">Everything in real-time. Sales, inventory, staff — from
+              anywhere.</p>
+            <div
+              class="opacity-0 group-hover:opacity-100 transition-opacity ml-3 shrink-0 w-7 h-7 rounded-full bg-knot-purple flex items-center justify-center">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14m-7-7 7 7-7 7" />
+              </svg>
             </div>
           </div>
         </div>
       </div>
 
-      <div onclick="openPlatformModal('admin-ui')" class="bg-white border border-zinc-200/80 rounded-3xl overflow-hidden shadow-sm flex flex-col h-[380px] cursor-pointer group hover:shadow-md hover:border-zinc-300 transition-all duration-200">
+      <div onclick="openPlatformModal('admin-ui')"
+        class="bg-white border border-zinc-200/80 rounded-3xl overflow-hidden shadow-sm flex flex-col h-[380px] cursor-pointer group hover:shadow-md hover:border-zinc-300 transition-all duration-200">
         <div class="h-[200px] bg-zinc-100 border-b border-zinc-200/60 relative overflow-hidden">
           <div class="absolute inset-0 p-4 flex items-center justify-center">
-          <div class="absolute inset-0" style="background: repeating-linear-gradient(-45deg, transparent 0px, transparent 12px, rgba(0,0,0,0.03) 12px, rgba(0,0,0,0.03) 13px);"></div>
-          <span class="relative text-[10px] font-bold tracking-widest text-zinc-400 uppercase bg-white/70 px-3 py-1 rounded-lg border border-zinc-200/50 shadow-sm">ADMIN UI SHOT</span>
+            <div class="absolute inset-0"
+              style="background: repeating-linear-gradient(-45deg, transparent 0px, transparent 12px, rgba(0,0,0,0.03) 12px, rgba(0,0,0,0.03) 13px);">
+            </div>
+            <span
+              class="relative text-[10px] font-bold tracking-widest text-zinc-400 uppercase bg-white/70 px-3 py-1 rounded-lg border border-zinc-200/50 shadow-sm">ADMIN
+              UI SHOT</span>
           </div>
-          <img src="/images/platform/admin-ui-preview.png" alt="Admin UI" class="absolute inset-0 w-full h-full object-cover z-10" onerror="this.style.display='none'">
+          <img src="/images/platform/admin-ui-preview.png" alt="Admin UI"
+            class="absolute inset-0 w-full h-full object-cover z-10" onerror="this.style.display='none'">
         </div>
         <div class="p-6 flex-1 flex flex-col justify-between space-y-3">
           <div class="space-y-1">
@@ -442,9 +551,14 @@
             <h3 class="font-black text-xl text-zinc-900">Admin UI</h3>
           </div>
           <div class="flex items-end justify-between">
-            <p class="text-zinc-500 text-sm leading-relaxed">Configure settings, permissions, and multi-location operations.</p>
-            <div class="opacity-0 group-hover:opacity-100 transition-opacity ml-3 shrink-0 w-7 h-7 rounded-full bg-knot-purple flex items-center justify-center">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+            <p class="text-zinc-500 text-sm leading-relaxed">Configure settings, permissions, and multi-location
+              operations.</p>
+            <div
+              class="opacity-0 group-hover:opacity-100 transition-opacity ml-3 shrink-0 w-7 h-7 rounded-full bg-knot-purple flex items-center justify-center">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14m-7-7 7 7-7 7" />
+              </svg>
             </div>
           </div>
         </div>
@@ -455,12 +569,14 @@
         <div class="space-y-3 min-w-0">
           <span class="text-[9px] font-black tracking-[0.2em] text-indigo-200 uppercase">All Connected</span>
           <h3 class="font-black text-white text-2xl sm:text-3xl leading-tight">
-  Run your whole counter from one system.
-</h3>
+            Run your whole counter from one system.
+          </h3>
         </div>
-        <div class="flex-shrink-0 w-12 h-12 rounded-full bg-white/15 group-hover:bg-white/25 flex items-center justify-center transition-all duration-200 group-hover:translate-x-1">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M5 12h14m-7-7 7 7-7 7"/>
+        <div
+          class="flex-shrink-0 w-12 h-12 rounded-full bg-white/15 group-hover:bg-white/25 flex items-center justify-center transition-all duration-200 group-hover:translate-x-1">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14m-7-7 7 7-7 7" />
           </svg>
         </div>
       </button>
@@ -468,28 +584,28 @@
   </section>
 
   <section id="onboarding" class="w-full max-w-7xl mx-auto px-6 py-20 border-t border-b border-zinc-300">
-   <div class="space-y-4 max-w-3xl mb-16">
-  <div class="text-[11px] font-bold tracking-[0.2em] uppercase text-knot-purple">
-    Getting started
-  </div>
-  <h2 class="text-3xl sm:text-5xl font-black tracking-tight text-zinc-900">
-    Live in days, not quarters.
-  </h2>
-  <p class="text-zinc-600 font-medium text-base max-w-2xl">
-    A guided setup that does the heavy lifting for you — most businesses are taking orders within a week.
-  </p>
+    <div class="space-y-4 max-w-3xl mb-16">
+      <div class="text-[11px] font-bold tracking-[0.2em] uppercase text-knot-purple">
+        Getting started
+      </div>
+      <h2 class="text-3xl sm:text-5xl font-black tracking-tight text-zinc-900">
+        Live in days, not quarters.
+      </h2>
+      <p class="text-zinc-600 font-medium text-base max-w-2xl">
+        A guided setup that does the heavy lifting for you — most businesses are taking orders within a week.
+      </p>
 
-  <div class="flex flex-col gap-2 pt-1 text-[11px] font-bold text-zinc-400 uppercase tracking-wider sm:hidden">
-    <div>Day 1 → walkthrough</div>
-    <div>Day 2–3 → setup & hardware ships</div>
-    <div>Day 5–7 → go live</div>
-  </div>
+      <div class="flex flex-col gap-2 pt-1 text-[11px] font-bold text-zinc-400 uppercase tracking-wider sm:hidden">
+        <div>Day 1 → walkthrough</div>
+        <div>Day 2–3 → setup & hardware ships</div>
+        <div>Day 5–7 → go live</div>
+      </div>
 
-  <div class="hidden sm:flex items-center gap-2 pt-1 text-[11px] font-bold text-zinc-400 uppercase tracking-wider">
-    <span class="w-1.5 h-1.5 rounded-full bg-green-500"></span>
-    Day 1 → walkthrough &nbsp;·&nbsp; Day 2–3 → setup & hardware ships &nbsp;·&nbsp; Day 5–7 → go live
-  </div>
-</div>
+      <div class="hidden sm:flex items-center gap-2 pt-1 text-[11px] font-bold text-zinc-400 uppercase tracking-wider">
+        <span class="w-1.5 h-1.5 rounded-full bg-green-500"></span>
+        Day 1 → walkthrough &nbsp;·&nbsp; Day 2–3 → setup & hardware ships &nbsp;·&nbsp; Day 5–7 → go live
+      </div>
+    </div>
 
     <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
       <div class="space-y-4">
@@ -498,7 +614,8 @@
           1</div>
         <div class="space-y-2">
           <h3 class="font-black text-lg text-zinc-900">Tell us about your business</h3>
-          <p class="text-zinc-600 text-sm leading-relaxed">Pick your vertical, describe your counter, and tell us what's not working right now. The more context you give, the more tailored your walkthrough will be.</p>
+          <p class="text-zinc-600 text-sm leading-relaxed">Pick your vertical, describe your counter, and tell us what's
+            not working right now. The more context you give, the more tailored your walkthrough will be.</p>
         </div>
       </div>
 
@@ -530,7 +647,8 @@
           4</div>
         <div class="space-y-2">
           <h3 class="font-black text-lg text-zinc-900">Go live — usually within a week</h3>
-          <p class="text-zinc-600 text-sm leading-relaxed">Your first real transaction on Knot, with an onboarding specialist alongside you. They stay reachable after that — not just for day one.</p>
+          <p class="text-zinc-600 text-sm leading-relaxed">Your first real transaction on Knot, with an onboarding
+            specialist alongside you. They stay reachable after that — not just for day one.</p>
         </div>
       </div>
     </div>
@@ -538,8 +656,12 @@
 
   <section id="why-knot" class="w-full bg-[#1C1A17] text-white py-24 relative overflow-hidden">
     <!-- Subtle decorative circles — only on this dark section -->
-    <div class="circle-float-1 absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-indigo-600 opacity-[0.12] pointer-events-none"></div>
-    <div class="circle-float-2 absolute bottom-0 left-0 w-[350px] h-[350px] rounded-full bg-indigo-500 opacity-[0.10] pointer-events-none"></div>
+    <div
+      class="circle-float-1 absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-indigo-600 opacity-[0.12] pointer-events-none">
+    </div>
+    <div
+      class="circle-float-2 absolute bottom-0 left-0 w-[350px] h-[350px] rounded-full bg-indigo-500 opacity-[0.10] pointer-events-none">
+    </div>
 
     <div class="max-w-7xl mx-auto px-6 space-y-16 relative">
       <div class="space-y-4 max-w-3xl">
@@ -601,21 +723,24 @@
           <h3 class="font-black text-4xl text-indigo-400">Safe</h3>
           <div class="space-y-1">
             <h4 class="font-bold text-lg text-white">Payments built in, not bolted on</h4>
-            <p class="text-zinc-400 text-sm leading-relaxed">PCI-handled, dispute-ready, and reconciled to every sale by default.</p>
+            <p class="text-zinc-400 text-sm leading-relaxed">PCI-handled, dispute-ready, and reconciled to every sale by
+              default.</p>
           </div>
         </div>
       </div>
     </div>
 
-   <div class="border-t border-zinc-700 mt-16 pt-8 ml-4 sm:ml-60 flex flex-wrap items-center gap-5">
-  <span class="text-[10px] font-bold text-zinc-500 uppercase tracking-wider shrink-0">Powered by</span>
-  <span data-tooltip="Stripe — payments infrastructure" class="inline-flex">
-    <img src="/images/logos/stripe.svg" alt="Stripe" class="h-5 opacity-60 hover:opacity-100 transition-opacity cursor-default">
-  </span>
-  <span data-tooltip="Supabase — auth & database" class="inline-flex">
-    <img src="/images/logos/supabase.svg" alt="Supabase" class="h-5 opacity-60 hover:opacity-100 transition-opacity cursor-default">
-  </span>
-</div>
+    <div class="border-t border-zinc-700 mt-16 pt-8 ml-4 sm:ml-60 flex flex-wrap items-center gap-5">
+      <span class="text-[10px] font-bold text-zinc-500 uppercase tracking-wider shrink-0">Powered by</span>
+      <span data-tooltip="Stripe — payments infrastructure" class="inline-flex">
+        <img src="/images/logos/stripe.svg" alt="Stripe"
+          class="h-5 opacity-60 hover:opacity-100 transition-opacity cursor-default">
+      </span>
+      <span data-tooltip="Supabase — auth & database" class="inline-flex">
+        <img src="/images/logos/supabase.svg" alt="Supabase"
+          class="h-5 opacity-60 hover:opacity-100 transition-opacity cursor-default">
+      </span>
+    </div>
   </section>
 
   <!-- Comparison Section -->
@@ -623,7 +748,8 @@
     <div class="space-y-4 max-w-2xl mb-14">
       <div class="text-[11px] font-bold tracking-[0.2em] uppercase text-knot-purple">Why switch</div>
       <h2 class="text-5xl font-black tracking-tight text-zinc-900">Knot vs. cobbling it together.</h2>
-      <p class="text-zinc-600 font-medium text-base">Most independent businesses run on 3–5 disconnected tools. Here's what that actually costs.</p>
+      <p class="text-zinc-600 font-medium text-base">Most independent businesses run on 3–5 disconnected tools. Here's
+        what that actually costs.</p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -637,31 +763,47 @@
         <ul class="space-y-4">
           <li class="flex items-start gap-3">
             <span class="w-5 h-5 rounded-full bg-red-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="3" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="3"
+                stroke-linecap="round">
+                <path d="M18 6 6 18M6 6l12 12" />
+              </svg>
             </span>
-            <span class="text-sm text-zinc-600 font-medium">Multiple logins, multiple bills, multiple support lines</span>
+            <span class="text-sm text-zinc-600 font-medium">Multiple logins, multiple bills, multiple support
+              lines</span>
           </li>
           <li class="flex items-start gap-3">
             <span class="w-5 h-5 rounded-full bg-red-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="3" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="3"
+                stroke-linecap="round">
+                <path d="M18 6 6 18M6 6l12 12" />
+              </svg>
             </span>
             <span class="text-sm text-zinc-600 font-medium">Sales data that never quite matches staff hours</span>
           </li>
           <li class="flex items-start gap-3">
             <span class="w-5 h-5 rounded-full bg-red-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="3" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="3"
+                stroke-linecap="round">
+                <path d="M18 6 6 18M6 6l12 12" />
+              </svg>
             </span>
             <span class="text-sm text-zinc-600 font-medium">No customer app — loyalty lives in a punch card</span>
           </li>
           <li class="flex items-start gap-3">
             <span class="w-5 h-5 rounded-full bg-red-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="3" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="3"
+                stroke-linecap="round">
+                <path d="M18 6 6 18M6 6l12 12" />
+              </svg>
             </span>
             <span class="text-sm text-zinc-600 font-medium">End-of-month reconciliation takes half a Sunday</span>
           </li>
           <li class="flex items-start gap-3">
             <span class="w-5 h-5 rounded-full bg-red-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="3" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="3"
+                stroke-linecap="round">
+                <path d="M18 6 6 18M6 6l12 12" />
+              </svg>
             </span>
             <span class="text-sm text-zinc-600 font-medium">Locked into annual contracts with each vendor</span>
           </li>
@@ -670,7 +812,9 @@
 
       <!-- Knot -->
       <div class="bg-zinc-900 rounded-3xl p-8 space-y-6 relative overflow-hidden">
-        <div class="absolute top-0 right-0 w-48 h-48 rounded-full bg-indigo-600 opacity-10 translate-x-1/4 -translate-y-1/4 pointer-events-none"></div>
+        <div
+          class="absolute top-0 right-0 w-48 h-48 rounded-full bg-indigo-600 opacity-10 translate-x-1/4 -translate-y-1/4 pointer-events-none">
+        </div>
         <div class="space-y-1 relative">
           <div class="text-[10px] font-black tracking-widest uppercase text-indigo-400">Knot</div>
           <h3 class="font-black text-xl text-white">One platform. One login. One bill.</h3>
@@ -678,39 +822,60 @@
         <ul class="space-y-4 relative">
           <li class="flex items-start gap-3">
             <span class="w-5 h-5 rounded-full bg-green-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3"
+                stroke-linecap="round">
+                <path d="M20 6 9 17l-5-5" />
+              </svg>
             </span>
-            <span class="text-sm text-zinc-300 font-medium">POS, customer app, employee app, dashboard — all connected</span>
+            <span class="text-sm text-zinc-300 font-medium">POS, customer app, employee app, dashboard — all
+              connected</span>
           </li>
           <li class="flex items-start gap-3">
             <span class="w-5 h-5 rounded-full bg-green-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3"
+                stroke-linecap="round">
+                <path d="M20 6 9 17l-5-5" />
+              </svg>
             </span>
-            <span class="text-sm text-zinc-300 font-medium">A sale updates payroll, loyalty, and reporting automatically</span>
+            <span class="text-sm text-zinc-300 font-medium">A sale updates payroll, loyalty, and reporting
+              automatically</span>
           </li>
           <li class="flex items-start gap-3">
             <span class="w-5 h-5 rounded-full bg-green-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3"
+                stroke-linecap="round">
+                <path d="M20 6 9 17l-5-5" />
+              </svg>
             </span>
             <span class="text-sm text-zinc-300 font-medium">Branded customer app with loyalty built in</span>
           </li>
           <li class="flex items-start gap-3">
             <span class="w-5 h-5 rounded-full bg-green-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3"
+                stroke-linecap="round">
+                <path d="M20 6 9 17l-5-5" />
+              </svg>
             </span>
             <span class="text-sm text-zinc-300 font-medium">Close of day takes seconds, not a spreadsheet</span>
           </li>
           <li class="flex items-start gap-3">
             <span class="w-5 h-5 rounded-full bg-green-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3"
+                stroke-linecap="round">
+                <path d="M20 6 9 17l-5-5" />
+              </svg>
             </span>
             <span class="text-sm text-zinc-300 font-medium">No long-term contract — cancel anytime</span>
           </li>
           <li class="flex items-start gap-3">
             <span class="w-5 h-5 rounded-full bg-green-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3"
+                stroke-linecap="round">
+                <path d="M20 6 9 17l-5-5" />
+              </svg>
             </span>
-            <span class="text-sm text-zinc-300 font-medium">Transparent processing rates — quoted to your volume, no hidden markup</span>
+            <span class="text-sm text-zinc-300 font-medium">Transparent processing rates — quoted to your volume, no
+              hidden markup</span>
           </li>
         </ul>
       </div>
@@ -727,9 +892,13 @@
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
       <div class="bg-white border border-zinc-200/80 rounded-3xl p-8 space-y-6 shadow-sm flex flex-col justify-between">
-        <p class="text-zinc-700 font-medium text-base leading-relaxed">"We cut our end-of-night from 40 minutes to under five. The dashboard shows me exactly what happened while I was on the floor — without me having to ask anyone."</p>
+        <p class="text-zinc-700 font-medium text-base leading-relaxed">"We cut our end-of-night from 40 minutes to under
+          five. The dashboard shows me exactly what happened while I was on the floor — without me having to ask
+          anyone."</p>
         <div class="flex items-center gap-3 pt-2 border-t border-zinc-100">
-          <div class="w-9 h-9 rounded-full bg-amber-100 flex items-center justify-center text-amber-700 font-black text-sm shrink-0">J</div>
+          <div
+            class="w-9 h-9 rounded-full bg-amber-100 flex items-center justify-center text-amber-700 font-black text-sm shrink-0">
+            J</div>
           <div>
             <div class="font-bold text-sm text-zinc-900">Jamie R.</div>
             <div class="text-xs text-zinc-500 font-medium">Owner, coffee shop · Detroit, MI</div>
@@ -738,9 +907,13 @@
       </div>
 
       <div class="bg-white border border-zinc-200/80 rounded-3xl p-8 space-y-6 shadow-sm flex flex-col justify-between">
-        <p class="text-zinc-700 font-medium text-base leading-relaxed">"My stylists used to text me when they wanted to swap shifts. Now they handle it in the app and I just get a notification. I didn't know how much mental load that was until it was gone."</p>
+        <p class="text-zinc-700 font-medium text-base leading-relaxed">"My stylists used to text me when they wanted to
+          swap shifts. Now they handle it in the app and I just get a notification. I didn't know how much mental load
+          that was until it was gone."</p>
         <div class="flex items-center gap-3 pt-2 border-t border-zinc-100">
-          <div class="w-9 h-9 rounded-full bg-pink-100 flex items-center justify-center text-pink-600 font-black text-sm shrink-0">M</div>
+          <div
+            class="w-9 h-9 rounded-full bg-pink-100 flex items-center justify-center text-pink-600 font-black text-sm shrink-0">
+            M</div>
           <div>
             <div class="font-bold text-sm text-zinc-900">Maya T.</div>
             <div class="text-xs text-zinc-500 font-medium">Owner, salon · Chicago, IL</div>
@@ -749,9 +922,13 @@
       </div>
 
       <div class="bg-white border border-zinc-200/80 rounded-3xl p-8 space-y-6 shadow-sm flex flex-col justify-between">
-        <p class="text-zinc-700 font-medium text-base leading-relaxed">"I was on three different subscriptions and none of them talked to each other. Knot replaced all of them. The fact that payroll just works from the sales data alone makes it worth it."</p>
+        <p class="text-zinc-700 font-medium text-base leading-relaxed">"I was on three different subscriptions and none
+          of them talked to each other. Knot replaced all of them. The fact that payroll just works from the sales data
+          alone makes it worth it."</p>
         <div class="flex items-center gap-3 pt-2 border-t border-zinc-100">
-          <div class="w-9 h-9 rounded-full bg-orange-100 flex items-center justify-center text-orange-600 font-black text-sm shrink-0">D</div>
+          <div
+            class="w-9 h-9 rounded-full bg-orange-100 flex items-center justify-center text-orange-600 font-black text-sm shrink-0">
+            D</div>
           <div>
             <div class="font-bold text-sm text-zinc-900">DeShawn K.</div>
             <div class="text-xs text-zinc-500 font-medium">Owner, sports bar · Atlanta, GA</div>
@@ -772,7 +949,8 @@
           Simple plans. No surprises.
         </h2>
         <p class="text-zinc-600 font-medium text-base">
-          Software billed monthly or annually. Hardware and processing quoted to your volume — no markups buried in your plan.
+          Software billed monthly or annually. Hardware and processing quoted to your volume — no markups buried in your
+          plan.
         </p>
       </div>
 
@@ -788,13 +966,28 @@
       </div>
     </div>
 
-    <div class="flex flex-col sm:flex-row items-center justify-center gap-6 bg-green-50 border border-green-100 rounded-2xl px-6 py-4 mb-10 text-sm font-semibold text-zinc-700">
-      <span class="flex items-center gap-2"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>No long-term contract</span>
-      <span class="hidden sm:block text-zinc-300">·</span>
-      <span class="flex items-center gap-2"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>Cancel anytime</span>
-      <span class="hidden sm:block text-zinc-300">·</span>
-      <span class="flex items-center gap-2"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>Free trial until your current contract ends</span>
-    </div>
+   <div class="flex flex-col items-start gap-4 bg-green-50 border border-green-100 rounded-2xl p-5 pl-6 mb-10 text-sm font-semibold text-zinc-700 sm:flex-row sm:items-center sm:justify-center sm:gap-6 sm:pl-5">
+  
+  <span class="flex items-center gap-2 text-left">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" class="shrink-0"><path d="M20 6 9 17l-5-5"/></svg>
+    No long-term contract
+  </span>
+  
+  <span class="hidden sm:block text-zinc-300">·</span>
+  
+  <span class="flex items-center gap-2 text-left">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" class="shrink-0"><path d="M20 6 9 17l-5-5"/></svg>
+    Cancel anytime
+  </span>
+  
+  <span class="hidden sm:block text-zinc-300">·</span>
+  
+  <span class="flex items-start gap-2 text-left">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" class="shrink-0 mt-0.5"><path d="M20 6 9 17l-5-5"/></svg>
+    <span>Free trial until your current contract ends</span>
+  </span>
+
+</div>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
 
@@ -1011,7 +1204,8 @@
 
       <div class="border-t border-zinc-200 py-7 space-y-4">
         <div class="flex items-center justify-between cursor-pointer faq-trigger">
-          <h3 class="font-black text-lg text-zinc-700 hover:text-zinc-900 transition">Is my payment and customer data secure?</h3>
+          <h3 class="font-black text-lg text-zinc-700 hover:text-zinc-900 transition">Is my payment and customer data
+            secure?</h3>
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"
             class="text-zinc-400 transition-transform duration-300 icon-toggle rotate-90">
             <path class="vertical-line" d="M8 2v12" />
@@ -1020,7 +1214,13 @@
         </div>
         <div class="faq-content overflow-hidden transition-all duration-300 max-h-0 opacity-0">
           <p class="text-zinc-600 text-sm leading-relaxed max-w-3xl">
-            Yes. Knot never stores raw card numbers or banking credentials. All payment processing runs through <strong class="text-zinc-800">Stripe</strong> — the same infrastructure used by Amazon, Shopify, and millions of other businesses. Stripe is PCI Level 1 certified, the highest level of payment security certification available. User authentication and your business data are handled by <strong class="text-zinc-800">Supabase</strong>, built on enterprise-grade PostgreSQL with row-level security and encrypted connections. We chose these providers specifically because they handle security as a core product, not an afterthought.
+            Yes. Knot never stores raw card numbers or banking credentials. All payment processing runs through <strong
+              class="text-zinc-800">Stripe</strong> — the same infrastructure used by Amazon, Shopify, and millions of
+            other businesses. Stripe is PCI Level 1 certified, the highest level of payment security certification
+            available. User authentication and your business data are handled by <strong
+              class="text-zinc-800">Supabase</strong>, built on enterprise-grade PostgreSQL with row-level security and
+            encrypted connections. We chose these providers specifically because they handle security as a core product,
+            not an afterthought.
           </p>
         </div>
       </div>
@@ -1062,21 +1262,37 @@
         <div class="space-y-5">
           <div class="text-[11px] font-bold tracking-[0.2em] uppercase text-knot-purple">Built by</div>
           <h2 class="text-4xl font-black tracking-tight text-zinc-900">CH Studios</h2>
-          <p class="text-zinc-600 leading-relaxed">Knot is built and maintained by CH Studios — a product studio that designs and develops software for businesses that operate in the real world, not just online.</p>
-          <p class="text-zinc-600 leading-relaxed">We built Knot because we kept watching independent business owners drown in disconnected tools. Every café, salon, and bar deserves software as good as what the big chains have — without the enterprise price tag or the three-year contract.</p>
-          <div class="flex flex-wrap items-center gap-5 border-t border-zinc-200 pt-5">
-            <a href="https://chstudiosdetroit.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-bold text-knot-purple hover:text-indigo-700 transition">
+          <p class="text-zinc-600 leading-relaxed">Knot is built and maintained by CH Studios — a product studio that
+            designs and develops software for businesses that operate in the real world, not just online.</p>
+          <p class="text-zinc-600 leading-relaxed">We built Knot because we kept watching independent business owners
+            drown in disconnected tools. Every café, salon, and bar deserves software as good as what the big chains
+            have — without the enterprise price tag or the three-year contract.</p>
+          <div class="flex flex-col items-start gap-4 text-sm font-semibold sm:flex-row sm:items-center sm:gap-6">
+
+            <a href="#" class="text-indigo-600 hover:text-indigo-700 inline-flex items-center gap-1">
               Visit CH Studios
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round" class="mt-0.5">
+                <path d="M7 17 17 7M7 7h10v10" />
+              </svg>
             </a>
-            <a href="https://georgeclinkscalesdev.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-bold text-zinc-500 hover:text-zinc-800 transition">
+
+            <a href="#" class="text-zinc-600 hover:text-zinc-900 inline-flex items-center gap-1">
               George's portfolio
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round" class="mt-0.5">
+                <path d="M7 17 17 7M7 7h10v10" />
+              </svg>
             </a>
-            <a href="https://jaidenhenley.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-bold text-zinc-500 hover:text-zinc-800 transition">
+
+            <a href="#" class="text-zinc-600 hover:text-zinc-900 inline-flex items-center gap-1">
               Jaiden's portfolio
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round" class="mt-0.5">
+                <path d="M7 17 17 7M7 7h10v10" />
+              </svg>
             </a>
+
           </div>
         </div>
         <div class="bg-white rounded-3xl p-8 border border-zinc-200/80 shadow-sm space-y-6">
@@ -1087,27 +1303,42 @@
           <ul class="space-y-4">
             <li class="flex items-start gap-3">
               <span class="w-5 h-5 rounded-full bg-indigo-50 flex items-center justify-center flex-shrink-0 mt-0.5">
-                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#4f46e5" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#4f46e5" stroke-width="3"
+                  stroke-linecap="round">
+                  <path d="M20 6 9 17l-5-5" />
+                </svg>
               </span>
               <span class="text-sm text-zinc-600 font-medium">Human support from people who've worked a counter</span>
             </li>
             <li class="flex items-start gap-3">
               <span class="w-5 h-5 rounded-full bg-indigo-50 flex items-center justify-center flex-shrink-0 mt-0.5">
-                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#4f46e5" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#4f46e5" stroke-width="3"
+                  stroke-linecap="round">
+                  <path d="M20 6 9 17l-5-5" />
+                </svg>
               </span>
-              <span class="text-sm text-zinc-600 font-medium">Continuous updates — your feedback shapes the roadmap</span>
+              <span class="text-sm text-zinc-600 font-medium">Continuous updates — your feedback shapes the
+                roadmap</span>
             </li>
             <li class="flex items-start gap-3">
               <span class="w-5 h-5 rounded-full bg-indigo-50 flex items-center justify-center flex-shrink-0 mt-0.5">
-                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#4f46e5" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#4f46e5" stroke-width="3"
+                  stroke-linecap="round">
+                  <path d="M20 6 9 17l-5-5" />
+                </svg>
               </span>
-              <span class="text-sm text-zinc-600 font-medium">Payments via Stripe. Auth via Supabase. No weak links.</span>
+              <span class="text-sm text-zinc-600 font-medium">Payments via Stripe. Auth via Supabase. No weak
+                links.</span>
             </li>
             <li class="flex items-start gap-3">
               <span class="w-5 h-5 rounded-full bg-indigo-50 flex items-center justify-center flex-shrink-0 mt-0.5">
-                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#4f46e5" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#4f46e5" stroke-width="3"
+                  stroke-linecap="round">
+                  <path d="M20 6 9 17l-5-5" />
+                </svg>
               </span>
-              <span class="text-sm text-zinc-600 font-medium">No long-term contracts. We earn your business every month.</span>
+              <span class="text-sm text-zinc-600 font-medium">No long-term contracts. We earn your business every
+                month.</span>
             </li>
           </ul>
         </div>
@@ -1121,8 +1352,8 @@
         <a href="#" class="flex items-center space-x-3 font-black text-xl tracking-tight text-zinc-900">
           <div class="bg-indigo-600 text-white p-2.5 rounded-xl flex items-center justify-center shadow-sm">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-              <circle cx="12" cy="12" r="8" stroke="white" stroke-width="2.5"/>
-              <circle cx="12" cy="12" r="3" fill="white"/>
+              <circle cx="12" cy="12" r="8" stroke="white" stroke-width="2.5" />
+              <circle cx="12" cy="12" r="3" fill="white" />
             </svg>
           </div>
           <span>Knot</span>
@@ -1165,11 +1396,16 @@
       </div>
     </div>
 
-    <div class="max-w-7xl mx-auto px-6 mt-12 pt-6 border-t border-zinc-200 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-zinc-400 font-medium">
+    <div
+      class="max-w-7xl mx-auto px-6 mt-12 pt-6 border-t border-zinc-200 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-zinc-400 font-medium">
       <p>© 2026 Knot. All rights reserved.</p>
       <div class="flex items-center gap-6">
-        <button onclick="openModal('privacy-modal')" class="hover:text-zinc-600 transition bg-transparent border-none cursor-pointer text-xs text-zinc-400 font-medium p-0">Privacy policy</button>
-        <button onclick="openModal('terms-modal')" class="hover:text-zinc-600 transition bg-transparent border-none cursor-pointer text-xs text-zinc-400 font-medium p-0">Terms of service</button>
+        <button onclick="openModal('privacy-modal')"
+          class="hover:text-zinc-600 transition bg-transparent border-none cursor-pointer text-xs text-zinc-400 font-medium p-0">Privacy
+          policy</button>
+        <button onclick="openModal('terms-modal')"
+          class="hover:text-zinc-600 transition bg-transparent border-none cursor-pointer text-xs text-zinc-400 font-medium p-0">Terms
+          of service</button>
       </div>
     </div>
   </footer>
@@ -1178,18 +1414,26 @@
   <div id="video-modal" class="hidden fixed inset-0 z-[200] flex items-center justify-center p-4">
     <div class="absolute inset-0 bg-zinc-900/80 backdrop-blur-sm" onclick="closeModal('video-modal')"></div>
     <div class="relative w-full max-w-4xl">
-      <button onclick="closeModal('video-modal')" class="absolute -top-10 right-0 text-white/60 hover:text-white transition bg-transparent border-none cursor-pointer flex items-center gap-2 text-sm font-medium">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      <button onclick="closeModal('video-modal')"
+        class="absolute -top-10 right-0 text-white/60 hover:text-white transition bg-transparent border-none cursor-pointer flex items-center gap-2 text-sm font-medium">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+          stroke-linecap="round">
+          <path d="M18 6 6 18M6 6l12 12" />
+        </svg>
         Close
       </button>
       <!-- 16:9 video container -->
       <div class="relative w-full rounded-2xl overflow-hidden bg-zinc-900 shadow-2xl" style="padding-top: 56.25%">
         <!-- Replace this div with an <iframe> embed when video is ready -->
         <div class="absolute inset-0 flex flex-col items-center justify-center gap-4 bg-zinc-900">
-          <div class="absolute inset-0" style="background: repeating-linear-gradient(-45deg, transparent 0, transparent 20px, rgba(255,255,255,0.015) 20px, rgba(255,255,255,0.015) 21px)"></div>
+          <div class="absolute inset-0"
+            style="background: repeating-linear-gradient(-45deg, transparent 0, transparent 20px, rgba(255,255,255,0.015) 20px, rgba(255,255,255,0.015) 21px)">
+          </div>
           <div class="relative flex flex-col items-center gap-4">
             <div class="w-16 h-16 rounded-full bg-white/10 border border-white/20 flex items-center justify-center">
-              <svg width="22" height="22" viewBox="0 0 10 12" fill="white"><path d="M0 0l10 6-10 6z"/></svg>
+              <svg width="22" height="22" viewBox="0 0 10 12" fill="white">
+                <path d="M0 0l10 6-10 6z" />
+              </svg>
             </div>
             <div class="text-center space-y-1">
               <p class="text-white font-bold text-lg">Demo video coming soon</p>
@@ -1204,40 +1448,59 @@
   <!-- Privacy Policy Modal -->
   <div id="privacy-modal" class="hidden fixed inset-0 z-[200] flex items-end sm:items-center justify-center p-0 sm:p-4">
     <div class="absolute inset-0 bg-zinc-900/60 backdrop-blur-sm" onclick="closeModal('privacy-modal')"></div>
-    <div class="relative bg-white rounded-t-3xl sm:rounded-3xl p-8 sm:p-10 w-full sm:max-w-2xl shadow-2xl max-h-[85vh] overflow-y-auto">
-      <button onclick="closeModal('privacy-modal')" class="absolute top-5 right-5 text-zinc-400 hover:text-zinc-700 transition bg-transparent border-none cursor-pointer p-1">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    <div
+      class="relative bg-white rounded-t-3xl sm:rounded-3xl p-8 sm:p-10 w-full sm:max-w-2xl shadow-2xl max-h-[85vh] overflow-y-auto">
+      <button onclick="closeModal('privacy-modal')"
+        class="absolute top-5 right-5 text-zinc-400 hover:text-zinc-700 transition bg-transparent border-none cursor-pointer p-1">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+          stroke-linecap="round">
+          <path d="M18 6 6 18M6 6l12 12" />
+        </svg>
       </button>
       <h2 class="text-2xl font-black text-zinc-900 mb-1">Privacy Policy</h2>
       <p class="text-xs text-zinc-400 mb-8">Last updated: June 2026</p>
       <div class="space-y-6 text-sm text-zinc-600 leading-relaxed">
         <div>
           <h3 class="font-bold text-zinc-900 mb-2">1. Information we collect</h3>
-          <p>We collect information you provide directly to us when you create an account, use our services, or contact us for support. This includes your name, email address, business name, and payment information. We also collect usage data and log information automatically when you use our platform.</p>
+          <p>We collect information you provide directly to us when you create an account, use our services, or contact
+            us for support. This includes your name, email address, business name, and payment information. We also
+            collect usage data and log information automatically when you use our platform.</p>
         </div>
         <div>
           <h3 class="font-bold text-zinc-900 mb-2">2. How we use your information</h3>
-          <p>We use the information we collect to provide, maintain, and improve our services; process transactions; send transactional and promotional communications; and respond to your comments and questions. We do not sell your personal information to third parties.</p>
+          <p>We use the information we collect to provide, maintain, and improve our services; process transactions;
+            send transactional and promotional communications; and respond to your comments and questions. We do not
+            sell your personal information to third parties.</p>
         </div>
         <div>
           <h3 class="font-bold text-zinc-900 mb-2">3. Information sharing</h3>
-          <p>We may share your information with third-party service providers who perform services on our behalf, such as payment processing, data analysis, and email delivery. These providers are bound by contractual obligations to keep your information confidential and use it only for the purposes for which it was disclosed.</p>
+          <p>We may share your information with third-party service providers who perform services on our behalf, such
+            as payment processing, data analysis, and email delivery. These providers are bound by contractual
+            obligations to keep your information confidential and use it only for the purposes for which it was
+            disclosed.</p>
         </div>
         <div>
           <h3 class="font-bold text-zinc-900 mb-2">4. Data retention</h3>
-          <p>We retain your information for as long as your account is active or as needed to provide you with our services. You may request deletion of your personal data at any time by contacting us, subject to certain legal obligations that may require us to retain certain data.</p>
+          <p>We retain your information for as long as your account is active or as needed to provide you with our
+            services. You may request deletion of your personal data at any time by contacting us, subject to certain
+            legal obligations that may require us to retain certain data.</p>
         </div>
         <div>
           <h3 class="font-bold text-zinc-900 mb-2">5. Security</h3>
-          <p>We take reasonable measures to help protect your personal information from loss, theft, misuse, and unauthorised access. All payment data is processed through PCI-compliant payment processors and we do not store full card numbers on our servers.</p>
+          <p>We take reasonable measures to help protect your personal information from loss, theft, misuse, and
+            unauthorised access. All payment data is processed through PCI-compliant payment processors and we do not
+            store full card numbers on our servers.</p>
         </div>
         <div>
           <h3 class="font-bold text-zinc-900 mb-2">6. Cookies</h3>
-          <p>We use cookies and similar tracking technologies to track activity on our service and hold certain information. You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent.</p>
+          <p>We use cookies and similar tracking technologies to track activity on our service and hold certain
+            information. You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent.
+          </p>
         </div>
         <div>
           <h3 class="font-bold text-zinc-900 mb-2">7. Contact us</h3>
-          <p>If you have any questions about this Privacy Policy, please contact us at <span class="text-knot-purple font-medium">hello@knotsystem.com</span>.</p>
+          <p>If you have any questions about this Privacy Policy, please contact us at <span
+              class="text-knot-purple font-medium">hello@knotsystem.com</span>.</p>
         </div>
       </div>
     </div>
@@ -1246,65 +1509,101 @@
   <!-- Terms of Service Modal -->
   <div id="terms-modal" class="hidden fixed inset-0 z-[200] flex items-end sm:items-center justify-center p-0 sm:p-4">
     <div class="absolute inset-0 bg-zinc-900/60 backdrop-blur-sm" onclick="closeModal('terms-modal')"></div>
-    <div class="relative bg-white rounded-t-3xl sm:rounded-3xl p-8 sm:p-10 w-full sm:max-w-2xl shadow-2xl max-h-[85vh] overflow-y-auto">
-      <button onclick="closeModal('terms-modal')" class="absolute top-5 right-5 text-zinc-400 hover:text-zinc-700 transition bg-transparent border-none cursor-pointer p-1">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    <div
+      class="relative bg-white rounded-t-3xl sm:rounded-3xl p-8 sm:p-10 w-full sm:max-w-2xl shadow-2xl max-h-[85vh] overflow-y-auto">
+      <button onclick="closeModal('terms-modal')"
+        class="absolute top-5 right-5 text-zinc-400 hover:text-zinc-700 transition bg-transparent border-none cursor-pointer p-1">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+          stroke-linecap="round">
+          <path d="M18 6 6 18M6 6l12 12" />
+        </svg>
       </button>
       <h2 class="text-2xl font-black text-zinc-900 mb-1">Terms of Service</h2>
       <p class="text-xs text-zinc-400 mb-8">Last updated: June 2026</p>
       <div class="space-y-6 text-sm text-zinc-600 leading-relaxed">
         <div>
           <h3 class="font-bold text-zinc-900 mb-2">1. Acceptance of terms</h3>
-          <p>By accessing or using Knot's services, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our services. We reserve the right to update these terms at any time with reasonable notice.</p>
+          <p>By accessing or using Knot's services, you agree to be bound by these Terms of Service. If you do not agree
+            to these terms, please do not use our services. We reserve the right to update these terms at any time with
+            reasonable notice.</p>
         </div>
         <div>
           <h3 class="font-bold text-zinc-900 mb-2">2. Use of services</h3>
-          <p>You may use our services only for lawful purposes and in accordance with these Terms. You agree not to use our services in any way that violates applicable laws or regulations, or that could harm, disable, or impair our services or other users' ability to use them.</p>
+          <p>You may use our services only for lawful purposes and in accordance with these Terms. You agree not to use
+            our services in any way that violates applicable laws or regulations, or that could harm, disable, or impair
+            our services or other users' ability to use them.</p>
         </div>
         <div>
           <h3 class="font-bold text-zinc-900 mb-2">3. Account responsibilities</h3>
-          <p>You are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account. You agree to notify us immediately of any unauthorised use of your account. You must be at least 18 years old and authorised to conduct business on behalf of your organisation to use our services.</p>
+          <p>You are responsible for maintaining the confidentiality of your account credentials and for all activities
+            that occur under your account. You agree to notify us immediately of any unauthorised use of your account.
+            You must be at least 18 years old and authorised to conduct business on behalf of your organisation to use
+            our services.</p>
         </div>
         <div>
           <h3 class="font-bold text-zinc-900 mb-2">4. Payment and billing</h3>
-          <p>Subscription fees are billed in advance on a monthly or annual basis. All fees are non-refundable except as required by law. We reserve the right to change our pricing with 30 days' notice. If you do not cancel before the next billing cycle, you will be charged for the next period.</p>
+          <p>Subscription fees are billed in advance on a monthly or annual basis. All fees are non-refundable except as
+            required by law. We reserve the right to change our pricing with 30 days' notice. If you do not cancel
+            before the next billing cycle, you will be charged for the next period.</p>
         </div>
         <div>
           <h3 class="font-bold text-zinc-900 mb-2">5. Intellectual property</h3>
-          <p>Our services and all content, features, and functionality are owned by Knot and are protected by copyright, trademark, and other intellectual property laws. You may not reproduce, distribute, or create derivative works from our platform without our express written permission.</p>
+          <p>Our services and all content, features, and functionality are owned by Knot and are protected by copyright,
+            trademark, and other intellectual property laws. You may not reproduce, distribute, or create derivative
+            works from our platform without our express written permission.</p>
         </div>
         <div>
           <h3 class="font-bold text-zinc-900 mb-2">6. Limitation of liability</h3>
-          <p>To the maximum extent permitted by law, Knot shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of, or inability to use, our services. Our total liability to you for any claims arising from these terms or our services shall not exceed the amounts paid by you in the 12 months prior to the claim.</p>
+          <p>To the maximum extent permitted by law, Knot shall not be liable for any indirect, incidental, special,
+            consequential, or punitive damages arising from your use of, or inability to use, our services. Our total
+            liability to you for any claims arising from these terms or our services shall not exceed the amounts paid
+            by you in the 12 months prior to the claim.</p>
         </div>
         <div>
           <h3 class="font-bold text-zinc-900 mb-2">7. Termination</h3>
-          <p>We may terminate or suspend your account and access to our services at any time, with or without cause, with or without notice. Upon termination, your right to use our services will immediately cease. You may cancel your account at any time from your account settings.</p>
+          <p>We may terminate or suspend your account and access to our services at any time, with or without cause,
+            with or without notice. Upon termination, your right to use our services will immediately cease. You may
+            cancel your account at any time from your account settings.</p>
         </div>
         <div>
           <h3 class="font-bold text-zinc-900 mb-2">8. Contact us</h3>
-          <p>If you have any questions about these Terms, please contact us at <span class="text-knot-purple font-medium">hello@knotsystem.com</span>.</p>
+          <p>If you have any questions about these Terms, please contact us at <span
+              class="text-knot-purple font-medium">hello@knotsystem.com</span>.</p>
         </div>
       </div>
     </div>
   </div>
 
   <!-- Platform Detail Modal -->
-  <div id="platform-modal" class="hidden fixed inset-0 z-[200] flex items-end sm:items-center justify-center p-0 sm:p-4">
+  <div id="platform-modal"
+    class="hidden fixed inset-0 z-[200] flex items-end sm:items-center justify-center p-0 sm:p-4">
     <div class="absolute inset-0 bg-zinc-900/60 backdrop-blur-sm" onclick="closeModal('platform-modal')"></div>
-    <div class="relative bg-white rounded-t-3xl sm:rounded-3xl w-full sm:max-w-3xl shadow-2xl overflow-hidden max-h-[92vh] flex flex-col">
-      <button onclick="closeModal('platform-modal')" class="absolute top-4 right-4 z-10 text-zinc-400 hover:text-zinc-700 transition bg-white/80 backdrop-blur-sm rounded-full w-9 h-9 flex items-center justify-center border border-zinc-200/60 border-none cursor-pointer">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    <div
+      class="relative bg-white rounded-t-3xl sm:rounded-3xl w-full sm:max-w-3xl shadow-2xl overflow-hidden max-h-[92vh] flex flex-col">
+      <button onclick="closeModal('platform-modal')"
+        class="absolute top-4 right-4 z-10 text-zinc-400 hover:text-zinc-700 transition bg-white/80 backdrop-blur-sm rounded-full w-9 h-9 flex items-center justify-center border border-zinc-200/60 border-none cursor-pointer">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+          stroke-linecap="round">
+          <path d="M18 6 6 18M6 6l12 12" />
+        </svg>
       </button>
 
       <!-- Carousel -->
       <div class="relative bg-zinc-100 overflow-hidden flex-shrink-0" style="height: 280px;">
         <div id="pm-carousel" class="flex h-full transition-transform duration-300 ease-in-out"></div>
-        <button id="pm-prev" onclick="pmSlide(-1)" class="absolute left-3 top-1/2 -translate-y-1/2 bg-white/90 backdrop-blur-sm rounded-full w-9 h-9 flex items-center justify-center shadow-sm border border-zinc-200/60 transition-opacity cursor-pointer border-solid hover:bg-white">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m15 18-6-6 6-6"/></svg>
+        <button id="pm-prev" onclick="pmSlide(-1)"
+          class="absolute left-3 top-1/2 -translate-y-1/2 bg-white/90 backdrop-blur-sm rounded-full w-9 h-9 flex items-center justify-center shadow-sm border border-zinc-200/60 transition-opacity cursor-pointer border-solid hover:bg-white">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round">
+            <path d="m15 18-6-6 6-6" />
+          </svg>
         </button>
-        <button id="pm-next" onclick="pmSlide(1)" class="absolute right-3 top-1/2 -translate-y-1/2 bg-white/90 backdrop-blur-sm rounded-full w-9 h-9 flex items-center justify-center shadow-sm border border-zinc-200/60 transition-opacity cursor-pointer border-solid hover:bg-white">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m9 18 6-6-6-6"/></svg>
+        <button id="pm-next" onclick="pmSlide(1)"
+          class="absolute right-3 top-1/2 -translate-y-1/2 bg-white/90 backdrop-blur-sm rounded-full w-9 h-9 flex items-center justify-center shadow-sm border border-zinc-200/60 transition-opacity cursor-pointer border-solid hover:bg-white">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round">
+            <path d="m9 18 6-6-6-6" />
+          </svg>
         </button>
         <div id="pm-dots" class="absolute bottom-3 left-0 right-0 flex justify-center gap-2"></div>
       </div>
@@ -1318,7 +1617,8 @@
         </div>
         <p id="pm-description" class="text-zinc-600 text-sm leading-relaxed mb-6"></p>
         <ul id="pm-features" class="space-y-2.5 mb-8"></ul>
-        <button onclick="closeModal('platform-modal'); openModal('contact-modal')" class="bg-knot-purple text-white font-bold text-sm px-6 py-3 rounded-full hover:bg-indigo-700 transition-colors cursor-pointer border-none">
+        <button onclick="closeModal('platform-modal'); openModal('contact-modal')"
+          class="bg-knot-purple text-white font-bold text-sm px-6 py-3 rounded-full hover:bg-indigo-700 transition-colors cursor-pointer border-none">
           Get in touch
         </button>
       </div>
@@ -1329,12 +1629,19 @@
   <div id="signin-modal" class="hidden fixed inset-0 z-[200] flex items-end sm:items-center justify-center p-0 sm:p-4">
     <div class="absolute inset-0 bg-zinc-900/60 backdrop-blur-sm" onclick="closeModal('signin-modal')"></div>
     <div class="relative bg-white rounded-t-3xl sm:rounded-3xl p-8 sm:p-10 w-full sm:max-w-sm shadow-2xl">
-      <button onclick="closeModal('signin-modal')" class="absolute top-5 right-5 text-zinc-400 hover:text-zinc-700 transition bg-transparent border-none cursor-pointer p-1">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      <button onclick="closeModal('signin-modal')"
+        class="absolute top-5 right-5 text-zinc-400 hover:text-zinc-700 transition bg-transparent border-none cursor-pointer p-1">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M18 6 6 18M6 6l12 12" />
+        </svg>
       </button>
       <div class="mb-7 space-y-1">
         <div class="flex items-center gap-2 mb-4">
-          <div class="bg-knot-purple text-white p-2 rounded-lg"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" stroke="white" stroke-width="2.5"/><circle cx="12" cy="12" r="3" fill="white"/></svg></div>
+          <div class="bg-knot-purple text-white p-2 rounded-lg"><svg width="16" height="16" viewBox="0 0 24 24"
+              fill="none">
+              <circle cx="12" cy="12" r="8" stroke="white" stroke-width="2.5" />
+              <circle cx="12" cy="12" r="3" fill="white" />
+            </svg></div>
           <span class="font-black text-lg text-zinc-900">Knot</span>
         </div>
         <h2 class="text-2xl font-black text-zinc-900">Welcome back.</h2>
@@ -1343,26 +1650,35 @@
       <form class="space-y-4" novalidate onsubmit="handleSignInSubmit(event)">
         <div>
           <label class="block text-xs font-semibold text-zinc-600 mb-1.5">Email</label>
-          <input type="email" name="email" required placeholder="george@coffeehouse.com" class="w-full px-4 py-3 rounded-xl border border-zinc-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-knot-purple transition">
+          <input type="email" name="email" required placeholder="george@coffeehouse.com"
+            class="w-full px-4 py-3 rounded-xl border border-zinc-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-knot-purple transition">
         </div>
         <div>
           <label class="block text-xs font-semibold text-zinc-600 mb-1.5">Password</label>
-          <input type="password" name="password" required placeholder="••••••••" class="w-full px-4 py-3 rounded-xl border border-zinc-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-knot-purple transition">
+          <input type="password" name="password" required placeholder="••••••••"
+            class="w-full px-4 py-3 rounded-xl border border-zinc-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-knot-purple transition">
         </div>
-        <button type="submit" class="w-full bg-knot-purple hover:bg-indigo-700 text-white font-bold py-4 rounded-full transition-all cursor-pointer border-none">
+        <button type="submit"
+          class="w-full bg-knot-purple hover:bg-indigo-700 text-white font-bold py-4 rounded-full transition-all cursor-pointer border-none">
           Sign in
         </button>
       </form>
-      <p class="text-center text-xs text-zinc-400 mt-5">Don't have an account? <button onclick="closeModal('signin-modal'); openModal('contact-modal')" class="text-knot-purple font-semibold bg-transparent border-none cursor-pointer">Get in touch</button></p>
+      <p class="text-center text-xs text-zinc-400 mt-5">Don't have an account? <button
+          onclick="closeModal('signin-modal'); openModal('contact-modal')"
+          class="text-knot-purple font-semibold bg-transparent border-none cursor-pointer">Get in touch</button></p>
     </div>
   </div>
 
   <!-- Contact Modal -->
   <div id="contact-modal" class="hidden fixed inset-0 z-[200] flex items-end sm:items-center justify-center p-0 sm:p-4">
     <div class="absolute inset-0 bg-zinc-900/60 backdrop-blur-sm" onclick="closeModal('contact-modal')"></div>
-    <div class="relative bg-white rounded-t-3xl sm:rounded-3xl p-8 sm:p-10 w-full sm:max-w-lg shadow-2xl max-h-[92vh] overflow-y-auto">
-      <button onclick="closeModal('contact-modal')" class="absolute top-5 right-5 text-zinc-400 hover:text-zinc-700 transition bg-transparent border-none cursor-pointer p-1">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    <div
+      class="relative bg-white rounded-t-3xl sm:rounded-3xl p-8 sm:p-10 w-full sm:max-w-lg shadow-2xl max-h-[92vh] overflow-y-auto">
+      <button onclick="closeModal('contact-modal')"
+        class="absolute top-5 right-5 text-zinc-400 hover:text-zinc-700 transition bg-transparent border-none cursor-pointer p-1">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M18 6 6 18M6 6l12 12" />
+        </svg>
       </button>
       <div class="mb-7 space-y-1">
         <div class="text-[10px] font-black tracking-[0.2em] uppercase text-knot-purple">Get in touch</div>
@@ -1375,24 +1691,29 @@
         <div class="grid grid-cols-2 gap-3">
           <div>
             <label class="block text-xs font-semibold text-zinc-600 mb-1.5">First name</label>
-            <input type="text" name="first_name" required placeholder="George" class="w-full px-4 py-3 rounded-xl border border-zinc-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-knot-purple transition">
+            <input type="text" name="first_name" required placeholder="George"
+              class="w-full px-4 py-3 rounded-xl border border-zinc-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-knot-purple transition">
           </div>
           <div>
             <label class="block text-xs font-semibold text-zinc-600 mb-1.5">Last name</label>
-            <input type="text" name="last_name" required placeholder="Smith" class="w-full px-4 py-3 rounded-xl border border-zinc-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-knot-purple transition">
+            <input type="text" name="last_name" required placeholder="Smith"
+              class="w-full px-4 py-3 rounded-xl border border-zinc-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-knot-purple transition">
           </div>
         </div>
         <div>
           <label class="block text-xs font-semibold text-zinc-600 mb-1.5">Business name</label>
-          <input type="text" name="business_name" required placeholder="The Coffee House" class="w-full px-4 py-3 rounded-xl border border-zinc-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-knot-purple transition">
+          <input type="text" name="business_name" required placeholder="The Coffee House"
+            class="w-full px-4 py-3 rounded-xl border border-zinc-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-knot-purple transition">
         </div>
         <div>
           <label class="block text-xs font-semibold text-zinc-600 mb-1.5">Email</label>
-          <input type="email" name="email" required placeholder="george@coffeehouse.com" class="w-full px-4 py-3 rounded-xl border border-zinc-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-knot-purple transition">
+          <input type="email" name="email" required placeholder="george@coffeehouse.com"
+            class="w-full px-4 py-3 rounded-xl border border-zinc-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-knot-purple transition">
         </div>
         <div>
           <label class="block text-xs font-semibold text-zinc-600 mb-1.5">Your trade</label>
-          <select name="trade" required class="w-full px-4 py-3 rounded-xl border border-zinc-200 text-sm text-zinc-700 focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-knot-purple transition bg-white">
+          <select name="trade" required
+            class="w-full px-4 py-3 rounded-xl border border-zinc-200 text-sm text-zinc-700 focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-knot-purple transition bg-white">
             <option value="" disabled selected>Select your business type</option>
             <option>Coffee &amp; cafés</option>
             <option>Salons &amp; studios</option>
@@ -1404,9 +1725,11 @@
         </div>
         <div>
           <label class="block text-xs font-semibold text-zinc-600 mb-1.5">What are you looking for?</label>
-          <textarea name="message" rows="3" placeholder="Tell us a bit about your setup and what you need..." class="w-full px-4 py-3 rounded-xl border border-zinc-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-knot-purple transition resize-none"></textarea>
+          <textarea name="message" rows="3" placeholder="Tell us a bit about your setup and what you need..."
+            class="w-full px-4 py-3 rounded-xl border border-zinc-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-knot-purple transition resize-none"></textarea>
         </div>
-        <button type="submit" id="contact-submit-btn" class="w-full bg-knot-purple hover:bg-indigo-700 text-white font-bold py-4 rounded-full transition-all cursor-pointer border-none mt-2">
+        <button type="submit" id="contact-submit-btn"
+          class="w-full bg-knot-purple hover:bg-indigo-700 text-white font-bold py-4 rounded-full transition-all cursor-pointer border-none mt-2">
           Send message
         </button>
       </form>
@@ -1421,9 +1744,13 @@
   <!-- Book Walkthrough Modal -->
   <div id="book-modal" class="hidden fixed inset-0 z-[200] flex items-end sm:items-center justify-center p-0 sm:p-4">
     <div class="absolute inset-0 bg-zinc-900/60 backdrop-blur-sm" onclick="closeModal('book-modal')"></div>
-    <div class="relative bg-white rounded-t-3xl sm:rounded-3xl p-8 sm:p-10 w-full sm:max-w-lg shadow-2xl max-h-[92vh] overflow-y-auto">
-      <button onclick="closeModal('book-modal')" class="absolute top-5 right-5 text-zinc-400 hover:text-zinc-700 transition bg-transparent border-none cursor-pointer p-1">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    <div
+      class="relative bg-white rounded-t-3xl sm:rounded-3xl p-8 sm:p-10 w-full sm:max-w-lg shadow-2xl max-h-[92vh] overflow-y-auto">
+      <button onclick="closeModal('book-modal')"
+        class="absolute top-5 right-5 text-zinc-400 hover:text-zinc-700 transition bg-transparent border-none cursor-pointer p-1">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M18 6 6 18M6 6l12 12" />
+        </svg>
       </button>
       <div class="mb-7 space-y-1">
         <div class="text-[10px] font-black tracking-[0.2em] uppercase text-knot-purple">Book a walkthrough</div>
@@ -1436,20 +1763,24 @@
         <div class="grid grid-cols-2 gap-3">
           <div>
             <label class="block text-xs font-semibold text-zinc-600 mb-1.5">First name</label>
-            <input type="text" name="first_name" required placeholder="George" class="w-full px-4 py-3 rounded-xl border border-zinc-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-knot-purple transition">
+            <input type="text" name="first_name" required placeholder="George"
+              class="w-full px-4 py-3 rounded-xl border border-zinc-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-knot-purple transition">
           </div>
           <div>
             <label class="block text-xs font-semibold text-zinc-600 mb-1.5">Last name</label>
-            <input type="text" name="last_name" required placeholder="Smith" class="w-full px-4 py-3 rounded-xl border border-zinc-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-knot-purple transition">
+            <input type="text" name="last_name" required placeholder="Smith"
+              class="w-full px-4 py-3 rounded-xl border border-zinc-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-knot-purple transition">
           </div>
         </div>
         <div>
           <label class="block text-xs font-semibold text-zinc-600 mb-1.5">Email</label>
-          <input type="email" name="email" required placeholder="george@coffeehouse.com" class="w-full px-4 py-3 rounded-xl border border-zinc-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-knot-purple transition">
+          <input type="email" name="email" required placeholder="george@coffeehouse.com"
+            class="w-full px-4 py-3 rounded-xl border border-zinc-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-knot-purple transition">
         </div>
         <div>
           <label class="block text-xs font-semibold text-zinc-600 mb-1.5">Your trade</label>
-          <select name="trade" required class="w-full px-4 py-3 rounded-xl border border-zinc-200 text-sm text-zinc-700 focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-knot-purple transition bg-white">
+          <select name="trade" required
+            class="w-full px-4 py-3 rounded-xl border border-zinc-200 text-sm text-zinc-700 focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-knot-purple transition bg-white">
             <option value="" disabled selected>Select your business type</option>
             <option>Coffee &amp; cafés</option>
             <option>Salons &amp; studios</option>
@@ -1461,10 +1792,12 @@
         </div>
         <div>
           <label class="block text-xs font-semibold text-zinc-600 mb-1.5">When works for you?</label>
-          <input type="text" name="availability" placeholder="e.g. Weekday mornings, any time after 2pm..." class="w-full px-4 py-3 rounded-xl border border-zinc-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-knot-purple transition">
+          <input type="text" name="availability" placeholder="e.g. Weekday mornings, any time after 2pm..."
+            class="w-full px-4 py-3 rounded-xl border border-zinc-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-knot-purple transition">
         </div>
         <p class="text-[11px] text-zinc-400 leading-relaxed">We'll follow up by email to confirm a time that works.</p>
-        <button type="submit" id="book-submit-btn" class="w-full bg-knot-purple hover:bg-indigo-700 text-white font-bold py-4 rounded-full transition-all cursor-pointer border-none">
+        <button type="submit" id="book-submit-btn"
+          class="w-full bg-knot-purple hover:bg-indigo-700 text-white font-bold py-4 rounded-full transition-all cursor-pointer border-none">
           Request walkthrough
         </button>
       </form>
@@ -1527,7 +1860,7 @@
     }
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
-        ['contact-modal','book-modal','video-modal','platform-modal','privacy-modal','terms-modal'].forEach(closeModal);
+        ['contact-modal', 'book-modal', 'video-modal', 'platform-modal', 'privacy-modal', 'terms-modal'].forEach(closeModal);
       }
     });
     function handleSignInSubmit(e) {
