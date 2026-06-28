@@ -590,15 +590,21 @@
       A guided setup that does the heavy lifting for you — most businesses are taking orders within a week.
     </p>
 
-    <div class="flex flex-col gap-2 pt-1 text-[11px] font-bold text-zinc-400 uppercase tracking-wider sm:hidden">
-      <div>Day 1 → walkthrough</div>
-      <div>Day 2–3 → setup & hardware ships</div>
-      <div>Day 5–7 → go live</div>
-    </div>
-
-    <div class="hidden sm:flex items-center gap-2 pt-1 text-[11px] font-bold text-zinc-400 uppercase tracking-wider">
-      <span class="w-1.5 h-1.5 rounded-full bg-green-500"></span>
-      Day 1 → walkthrough &nbsp;·&nbsp; Day 2–3 → setup & hardware ships &nbsp;·&nbsp; Day 5–7 → go live
+    <div class="flex flex-col sm:flex-row sm:items-center flex-wrap gap-y-2 gap-x-4 pt-1 text-[11px] font-bold text-zinc-500 uppercase tracking-wider">
+      <div class="flex items-center gap-2">
+        <span class="w-1.5 h-1.5 rounded-full bg-green-500"></span>
+        <span>Day 1 → walkthrough</span>
+      </div>
+      <span class="hidden sm:inline text-zinc-300 font-normal">·</span>
+      <div class="flex items-center gap-2">
+        <span class="w-1.5 h-1.5 rounded-full bg-green-500"></span>
+        <span>Day 2–3 → setup & hardware ships</span>
+      </div>
+      <span class="hidden sm:inline text-zinc-300 font-normal">·</span>
+      <div class="flex items-center gap-2">
+        <span class="w-1.5 h-1.5 rounded-full bg-green-500"></span>
+        <span>Day 5–7 → go live</span>
+      </div>
     </div>
   </div>
 
