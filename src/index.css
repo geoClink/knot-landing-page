@@ -21,3 +21,16 @@
         color: var(--color-knot-text);
     }
 }
+
+@keyframes float-slow {
+    0%, 100% { transform: translate(33%, -33%) translateY(0px); }
+    50%       { transform: translate(33%, -33%) translateY(-24px); }
+}
+
+@keyframes float-slow-reverse {
+    0%, 100% { transform: translate(-25%, 25%) translateY(0px); }
+    50%       { transform: translate(-25%, 25%) translateY(20px); }
+}
+
+.circle-float-1 { animation: float-slow 9s ease-in-out infinite; }
+.circle-float-2 { animation: float-slow-reverse 11s ease-in-out infinite; }

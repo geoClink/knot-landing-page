@@ -123,15 +123,25 @@
           class="w-full sm:w-auto bg-knot-purple hover:bg-indigo-600 active:scale-95 text-white font-semibold px-7 py-4 rounded-full transition-all duration-200 shadow-sm cursor-pointer border-none">
           Get in touch
         </button>
-        <a href="#onboarding" class="w-full sm:w-auto">
-          <button
-            class="w-full bg-white hover:bg-zinc-50 active:scale-95 text-zinc-700 font-semibold border border-zinc-200 px-7 py-4 rounded-full transition-all duration-200 shadow-sm cursor-pointer">
-            See how it works
-          </button>
-        </a>
+        <button onclick="openModal('video-modal')"
+          class="w-full sm:w-auto flex items-center justify-center gap-2.5 bg-white hover:bg-zinc-50 active:scale-95 text-zinc-700 font-semibold border border-zinc-200 px-7 py-4 rounded-full transition-all duration-200 shadow-sm cursor-pointer border-solid">
+          <span class="w-5 h-5 rounded-full bg-knot-purple flex items-center justify-center flex-shrink-0">
+            <svg width="8" height="8" viewBox="0 0 10 12" fill="white"><path d="M0 0l10 6-10 6z"/></svg>
+          </span>
+          Watch demo
+        </button>
       </div>
 
-      <div class="pt-4 text-[11px] font-bold text-zinc-500 uppercase tracking-[0.05em]">
+      <div class="pt-3 flex items-center gap-1.5 text-[11px] font-semibold text-zinc-500">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" class="text-green-500 flex-shrink-0"><path d="M20 6 9 17l-5-5"/></svg>
+        No contract &nbsp;·&nbsp;
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" class="text-green-500 flex-shrink-0"><path d="M20 6 9 17l-5-5"/></svg>
+        Cancel anytime &nbsp;·&nbsp;
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" class="text-green-500 flex-shrink-0"><path d="M20 6 9 17l-5-5"/></svg>
+        Free trial until your current contract ends
+      </div>
+
+      <div class="pt-2 text-[11px] font-bold text-zinc-500 uppercase tracking-[0.05em]">
         Built for <span class="text-zinc-700">coffee · salons · wellness · bars · online stores · and more</span>
       </div>
     </div>
@@ -500,8 +510,8 @@
 
   <section id="why-knot" class="w-full bg-[#1C1A17] text-white py-24 relative overflow-hidden">
     <!-- Subtle decorative circles — only on this dark section -->
-    <div class="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-indigo-600 opacity-[0.12] translate-x-1/3 -translate-y-1/3 pointer-events-none"></div>
-    <div class="absolute bottom-0 left-0 w-[350px] h-[350px] rounded-full bg-indigo-500 opacity-[0.10] -translate-x-1/4 translate-y-1/4 pointer-events-none"></div>
+    <div class="circle-float-1 absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-indigo-600 opacity-[0.12] pointer-events-none"></div>
+    <div class="circle-float-2 absolute bottom-0 left-0 w-[350px] h-[350px] rounded-full bg-indigo-500 opacity-[0.10] pointer-events-none"></div>
 
     <div class="max-w-7xl mx-auto px-6 space-y-16 relative">
       <div class="space-y-4 max-w-3xl">
@@ -563,10 +573,108 @@
           <h3 class="font-black text-4xl text-indigo-400">Safe</h3>
           <div class="space-y-1">
             <h4 class="font-bold text-lg text-white">Payments built in, not bolted on</h4>
-            <p class="text-zinc-400 text-sm leading-relaxed">PCI-handled, dispute-ready, and reconciled to every sale by
-              default.</p>
+            <p class="text-zinc-400 text-sm leading-relaxed">PCI-handled, dispute-ready, and reconciled to every sale by default.</p>
+          </div>
+          <div class="flex items-center gap-3 pt-2">
+            <span class="text-[10px] font-bold text-zinc-500 uppercase tracking-wider">Powered by</span>
+            <span class="text-white font-black text-sm tracking-tight">Stripe</span>
+            <span class="text-zinc-600">·</span>
+            <span class="text-white font-black text-sm tracking-tight">Supabase</span>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison Section -->
+  <section class="w-full max-w-7xl mx-auto px-6 py-24 border-t border-zinc-300">
+    <div class="space-y-4 max-w-2xl mb-14">
+      <div class="text-[11px] font-bold tracking-[0.2em] uppercase text-knot-purple">Why switch</div>
+      <h2 class="text-5xl font-black tracking-tight text-zinc-900">Knot vs. cobbling it together.</h2>
+      <p class="text-zinc-600 font-medium text-base">Most independent businesses run on 3–5 disconnected tools. Here's what that actually costs.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+      <!-- The old way -->
+      <div class="bg-zinc-100 rounded-3xl p-8 space-y-6">
+        <div class="space-y-1">
+          <div class="text-[10px] font-black tracking-widest uppercase text-zinc-400">The old way</div>
+          <h3 class="font-black text-xl text-zinc-900">Square + Acuity + Deputy + spreadsheets</h3>
+        </div>
+        <ul class="space-y-4">
+          <li class="flex items-start gap-3">
+            <span class="w-5 h-5 rounded-full bg-red-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="3" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+            </span>
+            <span class="text-sm text-zinc-600 font-medium">Multiple logins, multiple bills, multiple support lines</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="w-5 h-5 rounded-full bg-red-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="3" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+            </span>
+            <span class="text-sm text-zinc-600 font-medium">Sales data that never quite matches staff hours</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="w-5 h-5 rounded-full bg-red-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="3" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+            </span>
+            <span class="text-sm text-zinc-600 font-medium">No customer app — loyalty lives in a punch card</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="w-5 h-5 rounded-full bg-red-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="3" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+            </span>
+            <span class="text-sm text-zinc-600 font-medium">End-of-month reconciliation takes half a Sunday</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="w-5 h-5 rounded-full bg-red-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="3" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+            </span>
+            <span class="text-sm text-zinc-600 font-medium">Locked into annual contracts with each vendor</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Knot -->
+      <div class="bg-zinc-900 rounded-3xl p-8 space-y-6 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-48 h-48 rounded-full bg-indigo-600 opacity-10 translate-x-1/4 -translate-y-1/4 pointer-events-none"></div>
+        <div class="space-y-1 relative">
+          <div class="text-[10px] font-black tracking-widest uppercase text-indigo-400">Knot</div>
+          <h3 class="font-black text-xl text-white">One platform. One login. One bill.</h3>
+        </div>
+        <ul class="space-y-4 relative">
+          <li class="flex items-start gap-3">
+            <span class="w-5 h-5 rounded-full bg-green-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>
+            </span>
+            <span class="text-sm text-zinc-300 font-medium">POS, customer app, employee app, dashboard — all connected</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="w-5 h-5 rounded-full bg-green-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>
+            </span>
+            <span class="text-sm text-zinc-300 font-medium">A sale updates payroll, loyalty, and reporting automatically</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="w-5 h-5 rounded-full bg-green-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>
+            </span>
+            <span class="text-sm text-zinc-300 font-medium">Branded customer app with loyalty built in</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="w-5 h-5 rounded-full bg-green-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>
+            </span>
+            <span class="text-sm text-zinc-300 font-medium">Close of day takes seconds, not a spreadsheet</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="w-5 h-5 rounded-full bg-green-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>
+            </span>
+            <span class="text-sm text-zinc-300 font-medium">No long-term contract — cancel anytime</span>
+          </li>
+        </ul>
       </div>
     </div>
   </section>
@@ -595,6 +703,14 @@
           Annual <span class="text-indigo-600 font-black">-20%</span>
         </button>
       </div>
+    </div>
+
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-6 bg-green-50 border border-green-100 rounded-2xl px-6 py-4 mb-10 text-sm font-semibold text-zinc-700">
+      <span class="flex items-center gap-2"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>No long-term contract</span>
+      <span class="hidden sm:block text-zinc-300">·</span>
+      <span class="flex items-center gap-2"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>Cancel anytime</span>
+      <span class="hidden sm:block text-zinc-300">·</span>
+      <span class="flex items-center gap-2"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>Free trial until your current contract ends</span>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
@@ -840,6 +956,66 @@
     </div>
   </section>
 
+  <!-- About / Built by CH Studios -->
+  <section class="w-full bg-knot-bg border-t border-zinc-300 py-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div class="space-y-5">
+          <div class="text-[11px] font-bold tracking-[0.2em] uppercase text-knot-purple">Built by</div>
+          <h2 class="text-4xl font-black tracking-tight text-zinc-900">CH Studios</h2>
+          <p class="text-zinc-600 leading-relaxed">Knot is built and maintained by CH Studios — a product studio that designs and develops software for businesses that operate in the real world, not just online.</p>
+          <p class="text-zinc-600 leading-relaxed">We built Knot because we kept watching independent business owners drown in disconnected tools. Every café, salon, and bar deserves software as good as what the big chains have — without the enterprise price tag or the three-year contract.</p>
+          <div class="flex flex-wrap items-center gap-5">
+            <a href="https://chstudiosdetroit.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-bold text-knot-purple hover:text-indigo-700 transition">
+              Visit CH Studios
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg>
+            </a>
+            <a href="https://georgeclinkscalesdev.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-bold text-zinc-500 hover:text-zinc-800 transition">
+              George's portfolio
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg>
+            </a>
+            <a href="https://jaidenhenley.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-bold text-zinc-500 hover:text-zinc-800 transition">
+              Jaiden's portfolio
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="bg-white rounded-3xl p-8 border border-zinc-200/80 shadow-sm space-y-6">
+          <div class="space-y-1">
+            <div class="text-[10px] font-black tracking-widest uppercase text-zinc-400">Our commitment</div>
+            <h3 class="font-black text-xl text-zinc-900">We're in it with you.</h3>
+          </div>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+              <span class="w-5 h-5 rounded-full bg-indigo-50 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#4f46e5" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>
+              </span>
+              <span class="text-sm text-zinc-600 font-medium">Human support from people who've worked a counter</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="w-5 h-5 rounded-full bg-indigo-50 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#4f46e5" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>
+              </span>
+              <span class="text-sm text-zinc-600 font-medium">Continuous updates — your feedback shapes the roadmap</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="w-5 h-5 rounded-full bg-indigo-50 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#4f46e5" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>
+              </span>
+              <span class="text-sm text-zinc-600 font-medium">Payments via Stripe. Auth via Supabase. No weak links.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="w-5 h-5 rounded-full bg-indigo-50 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#4f46e5" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>
+              </span>
+              <span class="text-sm text-zinc-600 font-medium">No long-term contracts. We earn your business every month.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <footer class="w-full bg-zinc-50 border-t border-zinc-300 py-16">
     <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-12">
       <div class="md:col-span-4 space-y-4">
@@ -898,6 +1074,33 @@
       </div>
     </div>
   </footer>
+
+  <!-- Demo Video Modal -->
+  <div id="video-modal" class="hidden fixed inset-0 z-[200] flex items-center justify-center p-4">
+    <div class="absolute inset-0 bg-zinc-900/80 backdrop-blur-sm" onclick="closeModal('video-modal')"></div>
+    <div class="relative w-full max-w-4xl">
+      <button onclick="closeModal('video-modal')" class="absolute -top-10 right-0 text-white/60 hover:text-white transition bg-transparent border-none cursor-pointer flex items-center gap-2 text-sm font-medium">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        Close
+      </button>
+      <!-- 16:9 video container -->
+      <div class="relative w-full rounded-2xl overflow-hidden bg-zinc-900 shadow-2xl" style="padding-top: 56.25%">
+        <!-- Replace this div with an <iframe> embed when video is ready -->
+        <div class="absolute inset-0 flex flex-col items-center justify-center gap-4 bg-zinc-900">
+          <div class="absolute inset-0" style="background: repeating-linear-gradient(-45deg, transparent 0, transparent 20px, rgba(255,255,255,0.015) 20px, rgba(255,255,255,0.015) 21px)"></div>
+          <div class="relative flex flex-col items-center gap-4">
+            <div class="w-16 h-16 rounded-full bg-white/10 border border-white/20 flex items-center justify-center">
+              <svg width="22" height="22" viewBox="0 0 10 12" fill="white"><path d="M0 0l10 6-10 6z"/></svg>
+            </div>
+            <div class="text-center space-y-1">
+              <p class="text-white font-bold text-lg">Demo video coming soon</p>
+              <p class="text-zinc-500 text-sm">Drop your video embed URL here when ready</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Privacy Policy Modal -->
   <div id="privacy-modal" class="hidden fixed inset-0 z-[200] flex items-end sm:items-center justify-center p-0 sm:p-4">
@@ -1225,8 +1428,7 @@
     }
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
-        closeModal('contact-modal');
-        closeModal('book-modal');
+        ['contact-modal','book-modal','video-modal','platform-modal','privacy-modal','terms-modal'].forEach(closeModal);
       }
     });
     function handleSignInSubmit(e) {
