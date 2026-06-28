@@ -7,6 +7,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Knot — The operating system for local business</title>
   <meta name="description" content="Knot runs orders, staff, payments, and books for independent businesses — one platform for the whole counter. Built for coffee, salons, wellness, bars, and more.">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://knotsystem.com/">
+
+  <!-- Open Graph (controls how link previews look on iMessage, Slack, LinkedIn, etc.) -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://knotsystem.com/">
+  <meta property="og:title" content="Knot — The operating system for local business">
+  <meta property="og:description" content="One platform for orders, staff, payments, and books. Built for coffee, salons, wellness, bars, and more.">
+  <meta property="og:image" content="https://knotsystem.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="Knot">
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Knot — The operating system for local business">
+  <meta name="twitter:description" content="One platform for orders, staff, payments, and books. Built for coffee, salons, wellness, bars, and more.">
+  <meta name="twitter:image" content="https://knotsystem.com/og-image.png">
+
   <link rel="stylesheet" href="./src/index.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -112,7 +132,7 @@
       </div>
 
       <div class="pt-4 text-[11px] font-bold text-zinc-400 uppercase tracking-[0.05em]">
-        Built for <span class="text-zinc-700">coffee · salons · wellness · bars · online stores</span>
+        Built for <span class="text-zinc-700">coffee · salons · wellness · bars · online stores · and more</span>
       </div>
     </div>
 
@@ -284,81 +304,106 @@
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div class="bg-white border border-zinc-200/80 rounded-3xl overflow-hidden shadow-sm flex flex-col h-[380px]">
-        <div class="h-[200px] bg-zinc-100 border-b border-zinc-200/60 p-4 flex items-center justify-center">
-          <span class="text-[10px] font-bold tracking-widest text-zinc-400 uppercase bg-white/70 px-3 py-1 rounded-lg border border-zinc-200/50 shadow-sm">CUSTOMER WEBSITE SHOT</span>
+
+      <div onclick="openPlatformModal('customer-website')" class="bg-white border border-zinc-200/80 rounded-3xl overflow-hidden shadow-sm flex flex-col h-[380px] cursor-pointer group hover:shadow-md hover:border-zinc-300 transition-all duration-200">
+        <div class="h-[200px] bg-zinc-100 border-b border-zinc-200/60 p-4 flex items-center justify-center relative overflow-hidden">
+          <div class="absolute inset-0" style="background: repeating-linear-gradient(-45deg, transparent 0px, transparent 12px, rgba(0,0,0,0.03) 12px, rgba(0,0,0,0.03) 13px);"></div>
+          <span class="relative text-[10px] font-bold tracking-widest text-zinc-400 uppercase bg-white/70 px-3 py-1 rounded-lg border border-zinc-200/50 shadow-sm">CUSTOMER WEBSITE SHOT</span>
         </div>
         <div class="p-6 flex-1 flex flex-col justify-between space-y-3">
           <div class="space-y-1">
             <span class="text-[9px] font-extrabold tracking-[0.15em] text-knot-purple uppercase">Web</span>
             <h3 class="font-black text-xl text-zinc-900">Customer website</h3>
           </div>
-          <p class="text-zinc-500 text-sm leading-relaxed">Your full storefront on the web, no app download required.</p>
+          <div class="flex items-end justify-between">
+            <p class="text-zinc-500 text-sm leading-relaxed">Your full storefront on the web, no app download required.</p>
+            <span class="text-knot-purple opacity-0 group-hover:opacity-100 transition-opacity ml-3 shrink-0 text-sm font-bold">→</span>
+          </div>
         </div>
       </div>
 
-      <div class="bg-white border border-zinc-200/80 rounded-3xl overflow-hidden shadow-sm flex flex-col h-[380px]">
-        <div class="h-[200px] bg-zinc-100 border-b border-zinc-200/60 p-4 flex items-center justify-center">
-          <span class="text-[10px] font-bold tracking-widest text-zinc-400 uppercase bg-white/70 px-3 py-1 rounded-lg border border-zinc-200/50 shadow-sm">CUSTOMER APP SHOT</span>
+      <div onclick="openPlatformModal('customer-app')" class="bg-white border border-zinc-200/80 rounded-3xl overflow-hidden shadow-sm flex flex-col h-[380px] cursor-pointer group hover:shadow-md hover:border-zinc-300 transition-all duration-200">
+        <div class="h-[200px] bg-zinc-100 border-b border-zinc-200/60 p-4 flex items-center justify-center relative overflow-hidden">
+          <div class="absolute inset-0" style="background: repeating-linear-gradient(-45deg, transparent 0px, transparent 12px, rgba(0,0,0,0.03) 12px, rgba(0,0,0,0.03) 13px);"></div>
+          <span class="relative text-[10px] font-bold tracking-widest text-zinc-400 uppercase bg-white/70 px-3 py-1 rounded-lg border border-zinc-200/50 shadow-sm">CUSTOMER APP SHOT</span>
         </div>
         <div class="p-6 flex-1 flex flex-col justify-between space-y-3">
           <div class="space-y-1">
             <span class="text-[9px] font-extrabold tracking-[0.15em] text-knot-purple uppercase">iOS</span>
             <h3 class="font-black text-xl text-zinc-900">Customer app</h3>
           </div>
-          <p class="text-zinc-500 text-sm leading-relaxed">Order, pay, and earn rewards — your storefront lives on their phone and your website.</p>
+          <div class="flex items-end justify-between">
+            <p class="text-zinc-500 text-sm leading-relaxed">Order, pay, and earn rewards — your storefront lives on their phone.</p>
+            <span class="text-knot-purple opacity-0 group-hover:opacity-100 transition-opacity ml-3 shrink-0 text-sm font-bold">→</span>
+          </div>
         </div>
       </div>
 
-      <div class="bg-white border border-zinc-200/80 rounded-3xl overflow-hidden shadow-sm flex flex-col h-[380px]">
-        <div class="h-[200px] bg-zinc-100 border-b border-zinc-200/60 p-4 flex items-center justify-center">
-          <span class="text-[10px] font-bold tracking-widest text-zinc-400 uppercase bg-white/70 px-3 py-1 rounded-lg border border-zinc-200/50 shadow-sm">EMPLOYEE APP SHOT</span>
+      <div onclick="openPlatformModal('employee-app')" class="bg-white border border-zinc-200/80 rounded-3xl overflow-hidden shadow-sm flex flex-col h-[380px] cursor-pointer group hover:shadow-md hover:border-zinc-300 transition-all duration-200">
+        <div class="h-[200px] bg-zinc-100 border-b border-zinc-200/60 p-4 flex items-center justify-center relative overflow-hidden">
+          <div class="absolute inset-0" style="background: repeating-linear-gradient(-45deg, transparent 0px, transparent 12px, rgba(0,0,0,0.03) 12px, rgba(0,0,0,0.03) 13px);"></div>
+          <span class="relative text-[10px] font-bold tracking-widest text-zinc-400 uppercase bg-white/70 px-3 py-1 rounded-lg border border-zinc-200/50 shadow-sm">EMPLOYEE APP SHOT</span>
         </div>
         <div class="p-6 flex-1 flex flex-col justify-between space-y-3">
           <div class="space-y-1">
             <span class="text-[9px] font-extrabold tracking-[0.15em] text-knot-purple uppercase">iOS</span>
             <h3 class="font-black text-xl text-zinc-900">Employee app</h3>
           </div>
-          <p class="text-zinc-500 text-sm leading-relaxed">Clock in, track hours, and swap shifts — no paper timesheets, no guesswork on payroll.</p>
+          <div class="flex items-end justify-between">
+            <p class="text-zinc-500 text-sm leading-relaxed">Clock in, track hours, and swap shifts — no paper timesheets.</p>
+            <span class="text-knot-purple opacity-0 group-hover:opacity-100 transition-opacity ml-3 shrink-0 text-sm font-bold">→</span>
+          </div>
         </div>
       </div>
 
-      <div class="bg-white border border-zinc-200/80 rounded-3xl overflow-hidden shadow-sm flex flex-col h-[380px]">
-        <div class="h-[200px] bg-zinc-100 border-b border-zinc-200/60 p-4 flex items-center justify-center">
-          <span class="text-[10px] font-bold tracking-widests text-zinc-400 uppercase bg-white/70 px-3 py-1 rounded-lg border border-zinc-200/50 shadow-sm">POS TERMINAL SHOT</span>
+      <div onclick="openPlatformModal('point-of-sale')" class="bg-white border border-zinc-200/80 rounded-3xl overflow-hidden shadow-sm flex flex-col h-[380px] cursor-pointer group hover:shadow-md hover:border-zinc-300 transition-all duration-200">
+        <div class="h-[200px] bg-zinc-100 border-b border-zinc-200/60 p-4 flex items-center justify-center relative overflow-hidden">
+          <div class="absolute inset-0" style="background: repeating-linear-gradient(-45deg, transparent 0px, transparent 12px, rgba(0,0,0,0.03) 12px, rgba(0,0,0,0.03) 13px);"></div>
+          <span class="relative text-[10px] font-bold tracking-widest text-zinc-400 uppercase bg-white/70 px-3 py-1 rounded-lg border border-zinc-200/50 shadow-sm">POS TERMINAL SHOT</span>
         </div>
         <div class="p-6 flex-1 flex flex-col justify-between space-y-3">
           <div class="space-y-1">
             <span class="text-[9px] font-extrabold tracking-[0.15em] text-knot-purple uppercase">iOS · Hardware</span>
             <h3 class="font-black text-xl text-zinc-900">Point of sale</h3>
           </div>
-          <p class="text-zinc-500 text-sm leading-relaxed">Quick to learn, quicker on a rush. Tap, split, tip, and send to the kitchen or bar.</p>
+          <div class="flex items-end justify-between">
+            <p class="text-zinc-500 text-sm leading-relaxed">Quick to learn, quicker on a rush. Tap, split, tip, fire to the kitchen.</p>
+            <span class="text-knot-purple opacity-0 group-hover:opacity-100 transition-opacity ml-3 shrink-0 text-sm font-bold">→</span>
+          </div>
         </div>
       </div>
 
-      <div class="bg-white border border-zinc-200/80 rounded-3xl overflow-hidden shadow-sm flex flex-col h-[380px]">
-        <div class="h-[200px] bg-zinc-100 border-b border-zinc-200/60 p-4 flex items-center justify-center">
-          <span class="text-[10px] font-bold tracking-widest text-zinc-400 uppercase bg-white/70 px-3 py-1 rounded-lg border border-zinc-200/50 shadow-sm">DASHBOARD SHOT</span>
+      <div onclick="openPlatformModal('dashboard')" class="bg-white border border-zinc-200/80 rounded-3xl overflow-hidden shadow-sm flex flex-col h-[380px] cursor-pointer group hover:shadow-md hover:border-zinc-300 transition-all duration-200">
+        <div class="h-[200px] bg-zinc-100 border-b border-zinc-200/60 p-4 flex items-center justify-center relative overflow-hidden">
+          <div class="absolute inset-0" style="background: repeating-linear-gradient(-45deg, transparent 0px, transparent 12px, rgba(0,0,0,0.03) 12px, rgba(0,0,0,0.03) 13px);"></div>
+          <span class="relative text-[10px] font-bold tracking-widest text-zinc-400 uppercase bg-white/70 px-3 py-1 rounded-lg border border-zinc-200/50 shadow-sm">DASHBOARD SHOT</span>
         </div>
         <div class="p-6 flex-1 flex flex-col justify-between space-y-3">
           <div class="space-y-1">
             <span class="text-[9px] font-extrabold tracking-[0.15em] text-knot-purple uppercase">Web</span>
             <h3 class="font-black text-xl text-zinc-900">Dashboard</h3>
           </div>
-          <p class="text-zinc-500 text-sm leading-relaxed">Everything in real-time. Manage inventory, view sales trends, and adjust menus instantly.</p>
+          <div class="flex items-end justify-between">
+            <p class="text-zinc-500 text-sm leading-relaxed">Everything in real-time. Sales, inventory, staff — from anywhere.</p>
+            <span class="text-knot-purple opacity-0 group-hover:opacity-100 transition-opacity ml-3 shrink-0 text-sm font-bold">→</span>
+          </div>
         </div>
       </div>
 
-      <div class="bg-white border border-zinc-200/80 rounded-3xl overflow-hidden shadow-sm flex flex-col h-[380px]">
-        <div class="h-[200px] bg-zinc-100 border-b border-zinc-200/60 p-4 flex items-center justify-center">
-          <span class="text-[10px] font-bold tracking-widest text-zinc-400 uppercase bg-white/70 px-3 py-1 rounded-lg border border-zinc-200/50 shadow-sm">ADMIN UI SHOT</span>
+      <div onclick="openPlatformModal('admin-ui')" class="bg-white border border-zinc-200/80 rounded-3xl overflow-hidden shadow-sm flex flex-col h-[380px] cursor-pointer group hover:shadow-md hover:border-zinc-300 transition-all duration-200">
+        <div class="h-[200px] bg-zinc-100 border-b border-zinc-200/60 p-4 flex items-center justify-center relative overflow-hidden">
+          <div class="absolute inset-0" style="background: repeating-linear-gradient(-45deg, transparent 0px, transparent 12px, rgba(0,0,0,0.03) 12px, rgba(0,0,0,0.03) 13px);"></div>
+          <span class="relative text-[10px] font-bold tracking-widest text-zinc-400 uppercase bg-white/70 px-3 py-1 rounded-lg border border-zinc-200/50 shadow-sm">ADMIN UI SHOT</span>
         </div>
         <div class="p-6 flex-1 flex flex-col justify-between space-y-3">
           <div class="space-y-1">
             <span class="text-[9px] font-extrabold tracking-[0.15em] text-knot-purple uppercase">Web</span>
             <h3 class="font-black text-xl text-zinc-900">Admin UI</h3>
           </div>
-          <p class="text-zinc-500 text-sm leading-relaxed">Configure settings, manage multi-location operations, and oversee staff configurations.</p>
+          <div class="flex items-end justify-between">
+            <p class="text-zinc-500 text-sm leading-relaxed">Configure settings, permissions, and multi-location operations.</p>
+            <span class="text-knot-purple opacity-0 group-hover:opacity-100 transition-opacity ml-3 shrink-0 text-sm font-bold">→</span>
+          </div>
         </div>
       </div>
 
@@ -440,8 +485,12 @@
     </div>
   </section>
 
-  <section id="why-knot" class="w-full bg-[#1C1A17] text-white py-24">
-    <div class="max-w-7xl mx-auto px-6 space-y-16">
+  <section id="why-knot" class="w-full bg-[#1C1A17] text-white py-24 relative overflow-hidden">
+    <!-- Subtle decorative circles — only on this dark section -->
+    <div class="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-indigo-600 opacity-[0.04] translate-x-1/3 -translate-y-1/3 pointer-events-none"></div>
+    <div class="absolute bottom-0 left-0 w-[350px] h-[350px] rounded-full bg-indigo-500 opacity-[0.05] -translate-x-1/4 translate-y-1/4 pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-6 space-y-16 relative">
       <div class="space-y-4 max-w-3xl">
         <div class="text-[11px] font-bold tracking-[0.2em] uppercase text-indigo-400">
           Why Knot
@@ -451,7 +500,7 @@
         </h2>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-16 border-t border-zinc-800/60 pt-16">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-16 border-t border-zinc-700 pt-16">
         <div class="space-y-3">
           <h3 class="font-black text-4xl text-indigo-400">One</h3>
           <div class="space-y-1">
@@ -837,6 +886,42 @@
     </div>
   </footer>
 
+  <!-- Platform Detail Modal -->
+  <div id="platform-modal" class="hidden fixed inset-0 z-[200] flex items-end sm:items-center justify-center p-0 sm:p-4">
+    <div class="absolute inset-0 bg-zinc-900/60 backdrop-blur-sm" onclick="closeModal('platform-modal')"></div>
+    <div class="relative bg-white rounded-t-3xl sm:rounded-3xl w-full sm:max-w-3xl shadow-2xl overflow-hidden max-h-[92vh] flex flex-col">
+      <button onclick="closeModal('platform-modal')" class="absolute top-4 right-4 z-10 text-zinc-400 hover:text-zinc-700 transition bg-white/80 backdrop-blur-sm rounded-full w-9 h-9 flex items-center justify-center border border-zinc-200/60 border-none cursor-pointer">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+
+      <!-- Carousel -->
+      <div class="relative bg-zinc-100 overflow-hidden flex-shrink-0" style="height: 280px;">
+        <div id="pm-carousel" class="flex h-full transition-transform duration-300 ease-in-out"></div>
+        <button id="pm-prev" onclick="pmSlide(-1)" class="absolute left-3 top-1/2 -translate-y-1/2 bg-white/90 backdrop-blur-sm rounded-full w-9 h-9 flex items-center justify-center shadow-sm border border-zinc-200/60 transition-opacity cursor-pointer border-solid hover:bg-white">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m15 18-6-6 6-6"/></svg>
+        </button>
+        <button id="pm-next" onclick="pmSlide(1)" class="absolute right-3 top-1/2 -translate-y-1/2 bg-white/90 backdrop-blur-sm rounded-full w-9 h-9 flex items-center justify-center shadow-sm border border-zinc-200/60 transition-opacity cursor-pointer border-solid hover:bg-white">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m9 18 6-6-6-6"/></svg>
+        </button>
+        <div id="pm-dots" class="absolute bottom-3 left-0 right-0 flex justify-center gap-2"></div>
+      </div>
+
+      <!-- Content -->
+      <div class="p-7 sm:p-9 overflow-y-auto">
+        <div class="mb-5">
+          <span id="pm-badge" class="text-[9px] font-extrabold tracking-[0.15em] text-knot-purple uppercase"></span>
+          <h2 id="pm-title" class="text-3xl font-black text-zinc-900 tracking-tight mt-1"></h2>
+          <p id="pm-tagline" class="text-zinc-500 font-medium mt-1"></p>
+        </div>
+        <p id="pm-description" class="text-zinc-600 text-sm leading-relaxed mb-6"></p>
+        <ul id="pm-features" class="space-y-2.5 mb-8"></ul>
+        <button onclick="closeModal('platform-modal'); openModal('contact-modal')" class="bg-knot-purple text-white font-bold text-sm px-6 py-3 rounded-full hover:bg-indigo-700 transition-colors cursor-pointer border-none">
+          Get in touch
+        </button>
+      </div>
+    </div>
+  </div>
+
   <!-- Sign In Modal -->
   <div id="signin-modal" class="hidden fixed inset-0 z-[200] flex items-end sm:items-center justify-center p-0 sm:p-4">
     <div class="absolute inset-0 bg-zinc-900/60 backdrop-blur-sm" onclick="closeModal('signin-modal')"></div>
@@ -1127,6 +1212,136 @@
     }
     function closeMobileMenu() {
       document.getElementById('mobile-menu').classList.add('hidden');
+    }
+
+    // Platform card modal
+    const platformData = {
+      'customer-website': {
+        badge: 'Web',
+        title: 'Customer website',
+        tagline: 'Your full storefront, no app download required.',
+        description: 'Customers browse your menu, place orders, make bookings, and earn loyalty points — all on a branded website that lives on your domain. Automatically synced with your POS so pricing and availability are always accurate.',
+        features: ['Custom domain & branding', 'Online ordering & booking', 'Loyalty points displayed in real time', 'Menu syncs automatically from your POS', 'Works for any device, no app install'],
+        imageCount: 3,
+        imageLabel: 'Customer Website'
+      },
+      'customer-app': {
+        badge: 'iOS',
+        title: 'Customer app',
+        tagline: 'Your storefront lives on their phone.',
+        description: 'Customers order ahead, pay, track loyalty points, and get notified when their order is ready — in a branded app that feels like yours, not a third-party platform. No marketplace fees, no shared discovery feed.',
+        features: ['Branded to your business', 'Order-ahead & pay in-app', 'Loyalty points & reward tiers', 'Push notifications for order status', 'Syncs with your POS in real time'],
+        imageCount: 3,
+        imageLabel: 'Customer App'
+      },
+      'employee-app': {
+        badge: 'iOS',
+        title: 'Employee app',
+        tagline: 'Everything your team needs on one screen.',
+        description: 'Staff clock in, view their schedule, swap shifts, and see tips — all without needing to touch the main POS terminal. No paper timesheets, no group chats about who can cover Friday.',
+        features: ['Clock in/out from their phone', 'Schedule view & shift swap requests', 'Tip tracking & payout history', 'Task lists & manager announcements', 'Payroll-ready hour exports'],
+        imageCount: 3,
+        imageLabel: 'Employee App'
+      },
+      'point-of-sale': {
+        badge: 'iOS · Hardware',
+        title: 'Point of sale',
+        tagline: 'Fast to learn. Faster on a rush.',
+        description: 'Tap to order, split the bill, add a tip, and fire to the kitchen or bar — all in a few taps. Built for the reality of a busy counter, not a demo environment. Hardware ships pre-configured and ready to go.',
+        features: ['One-tap order entry', 'Split bills & custom tips', 'Kitchen & bar ticket printing', 'Offline mode for dropped signal', 'Hardware arrives pre-configured'],
+        imageCount: 3,
+        imageLabel: 'Point of Sale'
+      },
+      'dashboard': {
+        badge: 'Web',
+        title: 'Dashboard',
+        tagline: 'Everything in real time, from anywhere.',
+        description: 'See today\'s sales, your busiest hours, top items, and staff performance — all live. Adjust your menu, update prices, and manage inventory without being on-site. Multi-location owners get a single rolled-up view.',
+        features: ['Live sales & revenue view', 'Staff performance & hours', 'Inventory levels & low-stock alerts', 'Menu & pricing updates in real time', 'Multi-location rolled up in one view'],
+        imageCount: 3,
+        imageLabel: 'Dashboard'
+      },
+      'admin-ui': {
+        badge: 'Web',
+        title: 'Admin UI',
+        tagline: 'The control room for your whole operation.',
+        description: 'Configure permissions, manage multiple locations, oversee staff roles, and handle integrations — all from one web interface designed for operators, not IT departments.',
+        features: ['Role-based staff permissions', 'Multi-location management', 'Integration & API controls', 'Audit logs & access history', 'Billing & subscription settings'],
+        imageCount: 3,
+        imageLabel: 'Admin UI'
+      }
+    };
+
+    let pmCurrentSlide = 0;
+    let pmTotalSlides = 0;
+    let pmTouchStartX = 0;
+
+    function openPlatformModal(key) {
+      const data = platformData[key];
+      if (!data) return;
+      pmCurrentSlide = 0;
+      pmTotalSlides = data.imageCount;
+
+      document.getElementById('pm-badge').textContent = data.badge;
+      document.getElementById('pm-title').textContent = data.title;
+      document.getElementById('pm-tagline').textContent = data.tagline;
+      document.getElementById('pm-description').textContent = data.description;
+
+      document.getElementById('pm-features').innerHTML = data.features.map(f =>
+        `<li class="flex items-center gap-3 text-sm font-medium text-zinc-700">
+          <span class="w-1.5 h-1.5 rounded-full bg-knot-purple flex-shrink-0"></span>${f}
+        </li>`
+      ).join('');
+
+      document.getElementById('pm-carousel').innerHTML = Array.from({ length: data.imageCount }, (_, i) =>
+        `<div class="flex-shrink-0 w-full h-full flex flex-col items-center justify-center gap-3 relative bg-zinc-100" style="min-width:100%">
+          <div class="absolute inset-0" style="background:repeating-linear-gradient(-45deg,transparent 0,transparent 12px,rgba(0,0,0,0.035) 12px,rgba(0,0,0,0.035) 13px)"></div>
+          <div class="relative flex flex-col items-center gap-2 text-center px-8">
+            <div class="w-10 h-10 rounded-xl bg-zinc-200 flex items-center justify-center mb-1">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#a1a1aa" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="m3 9 18"/><circle cx="8" cy="15" r="2"/><path d="m21 21-4.35-4.35"/></svg>
+            </div>
+            <span class="text-[10px] font-bold tracking-[0.15em] text-zinc-400 uppercase">${data.imageLabel} — screenshot ${i + 1}</span>
+            <span class="text-[10px] text-zinc-300 font-medium">Image coming soon</span>
+          </div>
+        </div>`
+      ).join('');
+
+      document.getElementById('pm-dots').innerHTML = Array.from({ length: data.imageCount }, (_, i) =>
+        `<button onclick="pmGoTo(${i})" id="pm-dot-${i}" class="rounded-full h-2 transition-all duration-200 cursor-pointer border-none bg-zinc-300" style="width:8px"></button>`
+      ).join('');
+
+      const carousel = document.getElementById('pm-carousel');
+      carousel.ontouchstart = (e) => { pmTouchStartX = e.touches[0].clientX; };
+      carousel.ontouchend = (e) => {
+        const diff = pmTouchStartX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 40) pmSlide(diff > 0 ? 1 : -1);
+      };
+
+      pmUpdateCarousel();
+      openModal('platform-modal');
+    }
+
+    function pmSlide(dir) {
+      pmCurrentSlide = Math.max(0, Math.min(pmTotalSlides - 1, pmCurrentSlide + dir));
+      pmUpdateCarousel();
+    }
+
+    function pmGoTo(index) {
+      pmCurrentSlide = index;
+      pmUpdateCarousel();
+    }
+
+    function pmUpdateCarousel() {
+      document.getElementById('pm-carousel').style.transform = `translateX(-${pmCurrentSlide * 100}%)`;
+      for (let i = 0; i < pmTotalSlides; i++) {
+        const dot = document.getElementById(`pm-dot-${i}`);
+        if (dot) {
+          dot.style.width = i === pmCurrentSlide ? '20px' : '8px';
+          dot.style.background = i === pmCurrentSlide ? '#18181b' : '#d4d4d8';
+        }
+      }
+      document.getElementById('pm-prev').style.opacity = pmCurrentSlide === 0 ? '0.3' : '1';
+      document.getElementById('pm-next').style.opacity = pmCurrentSlide === pmTotalSlides - 1 ? '0.3' : '1';
     }
 
     // 2. FAQ Accordion Engine
