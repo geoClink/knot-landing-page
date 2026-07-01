@@ -186,8 +186,8 @@
     </div>
 
     <div class="hidden lg:flex lg:col-span-5 justify-center lg:justify-end items-center">
-      <div class="relative w-[336px] h-[329px] sm:w-[408px] sm:h-[399px] lg:w-[480px] lg:h-[470px] overflow-hidden">
-        <div class="absolute top-0 left-0 w-[480px] h-[470px] origin-top-left scale-[0.7] sm:scale-[0.85] lg:scale-100">
+      <div class="relative w-[336px] h-[392px] sm:w-[408px] sm:h-[476px] lg:w-[480px] lg:h-[560px] overflow-hidden">
+        <div class="absolute top-0 left-0 w-[480px] h-[560px] origin-top-left scale-[0.7] sm:scale-[0.85] lg:scale-100">
 
           <div class="absolute right-0 top-0 w-[405px] h-[305px]">
             <div class="w-full h-full rounded-[16px] overflow-hidden border-[6px] border-zinc-900 shadow-[0_20px_60px_rgba(0,0,0,0.25)] bg-zinc-900">
@@ -199,26 +199,23 @@
           </div>
           <div class="absolute bg-zinc-900 rounded-l-sm z-20" style="left:51px; top:148px; width:4px; height:26px;">
           </div>
-          <div class="absolute bg-zinc-900 rounded-r-sm z-20" style="left:233px; top:128px; width:4px; height:44px;">
+          <div class="absolute bg-zinc-900 rounded-r-sm z-20" style="left:295px; top:128px; width:4px; height:44px;">
           </div>
 
           <div
-            class="absolute left-[55px] top-[40px] w-[178px] h-[390px] rounded-[26px] border-[6px] border-zinc-900 bg-zinc-900 overflow-hidden z-10 shadow-[0_20px_60px_rgba(0,0,0,0.3)] flex flex-col">
-            <!-- status bar -->
-            <div class="flex-shrink-0 h-[26px] flex items-center justify-between px-3 relative" style="background:#000;">
-              <span style="color:white;font-size:9px;font-weight:600;letter-spacing:-0.02em;">9:41</span>
-              <div class="absolute top-0 left-0 right-0 flex justify-center">
-                <div style="width:54px;height:18px;background:#111;border-radius:0 0 12px 12px;"></div>
-              </div>
-              <div style="display:flex;align-items:center;gap:4px;">
-                <svg width="12" height="9" viewBox="0 0 12 9" fill="white"><path d="M6 2.8C7.6 2.8 9 3.4 10.1 4.4L11 3.5C9.7 2.3 7.9 1.5 6 1.5s-3.7.8-5 2L1.9 4.4C3 3.4 4.4 2.8 6 2.8z"/><path d="M6 5.2c.9 0 1.7.4 2.3.9l.9-.9C8.3 4.5 7.2 4 6 4s-2.3.5-3.2 1.2l.9.9C4.3 5.6 5.1 5.2 6 5.2z"/><circle cx="6" cy="8" r="1"/></svg>
-                <svg width="16" height="8" viewBox="0 0 16 8" fill="none"><rect x="0.5" y="0.5" width="13" height="7" rx="1.5" stroke="white" stroke-opacity="0.6"/><rect x="1.5" y="1.5" width="10" height="5" rx="0.5" fill="white"/><path d="M14.5 2.5v3a1 1 0 000-3z" fill="white" fill-opacity="0.4"/></svg>
-              </div>
-            </div>
-            <!-- live site -->
-            <div class="flex-1 overflow-hidden">
+            class="absolute left-[55px] top-[40px] w-[240px] h-[520px] rounded-[38px] border-[6px] border-zinc-900 bg-zinc-900 overflow-hidden z-10 shadow-[0_20px_60px_rgba(0,0,0,0.3)]">
+            <div class="relative w-full h-full">
               <iframe src="https://the-bakery-co.vercel.app/index.html" tabindex="-1"
-                style="width:390px;height:830px;transform:scale(0.4256);transform-origin:top left;border:none;display:block;"></iframe>
+                style="width:390px;height:869px;transform:scale(0.5846);transform-origin:top left;border:none;display:block;margin-top:28px;"></iframe>
+              <!-- transparent status bar overlay -->
+              <div style="position:absolute;top:0;left:0;right:0;height:28px;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);background:rgba(0,0,0,0.18);display:flex;align-items:center;justify-content:space-between;padding:0 12px;z-index:30;pointer-events:none;">
+                <span style="color:white;font-size:9px;font-weight:600;letter-spacing:-0.02em;text-shadow:0 1px 3px rgba(0,0,0,0.5);">9:41</span>
+                <div style="position:absolute;top:5px;left:50%;transform:translateX(-50%);width:58px;height:16px;background:#09090b;border-radius:50px;pointer-events:none;"></div>
+                <div style="display:flex;align-items:center;gap:4px;">
+                  <svg width="12" height="9" viewBox="0 0 12 9" fill="white" style="filter:drop-shadow(0 1px 2px rgba(0,0,0,0.5))"><path d="M6 2.8C7.6 2.8 9 3.4 10.1 4.4L11 3.5C9.7 2.3 7.9 1.5 6 1.5s-3.7.8-5 2L1.9 4.4C3 3.4 4.4 2.8 6 2.8z"/><path d="M6 5.2c.9 0 1.7.4 2.3.9l.9-.9C8.3 4.5 7.2 4 6 4s-2.3.5-3.2 1.2l.9.9C4.3 5.6 5.1 5.2 6 5.2z"/><circle cx="6" cy="8" r="1"/></svg>
+                  <svg width="16" height="8" viewBox="0 0 16 8" fill="none" style="filter:drop-shadow(0 1px 2px rgba(0,0,0,0.5))"><rect x="0.5" y="0.5" width="13" height="7" rx="1.5" stroke="white" stroke-opacity="0.6"/><rect x="1.5" y="1.5" width="10" height="5" rx="0.5" fill="white"/><path d="M14.5 2.5v3a1 1 0 000-3z" fill="white" fill-opacity="0.4"/></svg>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -244,23 +241,22 @@
 
         <!-- iPhone mockup -->
         <div class="flex-shrink-0 relative" style="width:240px;">
-          <div style="width:240px;height:520px;border-radius:38px;border:6px solid #09090b;overflow:hidden;box-shadow:0 32px 80px rgba(0,0,0,0.7);background:#000;display:flex;flex-direction:column;">
-            <!-- status bar -->
-            <div style="flex-shrink:0;height:28px;background:#000;display:flex;align-items:center;justify-content:space-between;padding:0 14px;position:relative;">
-              <span style="color:white;font-size:10px;font-weight:600;letter-spacing:-0.02em;">9:41</span>
-              <div style="position:absolute;top:0;left:50%;transform:translateX(-50%);width:60px;height:20px;background:#09090b;border-radius:0 0 16px 16px;"></div>
+          <div style="width:240px;height:520px;border-radius:38px;border:6px solid #09090b;overflow:hidden;box-shadow:0 32px 80px rgba(0,0,0,0.7);background:#000;position:relative;">
+            <!-- iframe offset down so content clears status bar -->
+            <iframe id="storefront-frame" src="https://the-bakery-co.vercel.app/index.html" tabindex="-1"
+              style="width:390px;height:869px;transform:scale(0.5846);transform-origin:top left;border:none;display:block;margin-top:28px;"></iframe>
+            <!-- transparent status bar overlay -->
+            <div style="position:absolute;top:0;left:0;right:0;height:28px;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);background:rgba(0,0,0,0.18);display:flex;align-items:center;justify-content:space-between;padding:0 14px;z-index:30;pointer-events:none;">
+              <span style="color:white;font-size:10px;font-weight:600;letter-spacing:-0.02em;text-shadow:0 1px 3px rgba(0,0,0,0.5);">9:41</span>
+              <div style="position:absolute;top:6px;left:50%;transform:translateX(-50%);width:76px;height:22px;background:#09090b;border-radius:50px;pointer-events:none;"></div>
               <div style="display:flex;align-items:center;gap:4px;">
-                <svg width="13" height="10" viewBox="0 0 12 9" fill="white"><path d="M6 2.8C7.6 2.8 9 3.4 10.1 4.4L11 3.5C9.7 2.3 7.9 1.5 6 1.5s-3.7.8-5 2L1.9 4.4C3 3.4 4.4 2.8 6 2.8z"/><path d="M6 5.2c.9 0 1.7.4 2.3.9l.9-.9C8.3 4.5 7.2 4 6 4s-2.3.5-3.2 1.2l.9.9C4.3 5.6 5.1 5.2 6 5.2z"/><circle cx="6" cy="8" r="1"/></svg>
-                <svg width="18" height="9" viewBox="0 0 16 8" fill="none"><rect x="0.5" y="0.5" width="13" height="7" rx="1.5" stroke="white" stroke-opacity="0.6"/><rect x="1.5" y="1.5" width="10" height="5" rx="0.5" fill="white"/><path d="M14.5 2.5v3a1 1 0 000-3z" fill="white" fill-opacity="0.4"/></svg>
+                <svg width="13" height="10" viewBox="0 0 12 9" fill="white" style="filter:drop-shadow(0 1px 2px rgba(0,0,0,0.5))"><path d="M6 2.8C7.6 2.8 9 3.4 10.1 4.4L11 3.5C9.7 2.3 7.9 1.5 6 1.5s-3.7.8-5 2L1.9 4.4C3 3.4 4.4 2.8 6 2.8z"/><path d="M6 5.2c.9 0 1.7.4 2.3.9l.9-.9C8.3 4.5 7.2 4 6 4s-2.3.5-3.2 1.2l.9.9C4.3 5.6 5.1 5.2 6 5.2z"/><circle cx="6" cy="8" r="1"/></svg>
+                <svg width="18" height="9" viewBox="0 0 16 8" fill="none" style="filter:drop-shadow(0 1px 2px rgba(0,0,0,0.5))"><rect x="0.5" y="0.5" width="13" height="7" rx="1.5" stroke="white" stroke-opacity="0.6"/><rect x="1.5" y="1.5" width="10" height="5" rx="0.5" fill="white"/><path d="M14.5 2.5v3a1 1 0 000-3z" fill="white" fill-opacity="0.4"/></svg>
               </div>
             </div>
-            <!-- iframe -->
-            <div style="flex:1;overflow:hidden;position:relative;">
-              <iframe id="storefront-frame" src="https://the-bakery-co.vercel.app/index.html" tabindex="-1"
-                style="width:390px;height:820px;transform:scale(0.5846);transform-origin:top left;border:none;display:block;"></iframe>
-              <div id="storefront-loading" style="position:absolute;inset:0;background:#000;display:flex;align-items:center;justify-content:center;z-index:10;transition:opacity 0.3s;">
-                <div style="width:22px;height:22px;border:2px solid #3f3f46;border-top-color:#fff;border-radius:50%;animation:spin 0.8s linear infinite;"></div>
-              </div>
+            <!-- loading overlay -->
+            <div id="storefront-loading" style="position:absolute;inset:0;background:#000;display:flex;align-items:center;justify-content:center;z-index:20;transition:opacity 0.3s;">
+              <div style="width:22px;height:22px;border:2px solid #3f3f46;border-top-color:#fff;border-radius:50%;animation:spin 0.8s linear infinite;"></div>
             </div>
           </div>
           <!-- side buttons -->
