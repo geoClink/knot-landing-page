@@ -45,6 +45,11 @@
       }
     }
   </script>
+  <style>
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .sf-btn.active { border-color: #4f46e5 !important; background: #1e1b4b !important; }
+    .sf-btn.active span:first-child { color: white; }
+  </style>
 </head>
 
 <body class="min-h-screen flex flex-col bg-knot-bg overflow-x-hidden text-knot-text font-sans">
@@ -184,41 +189,36 @@
       <div class="relative w-[336px] h-[329px] sm:w-[408px] sm:h-[399px] lg:w-[480px] lg:h-[470px] overflow-hidden">
         <div class="absolute top-0 left-0 w-[480px] h-[470px] origin-top-left scale-[0.7] sm:scale-[0.85] lg:scale-100">
 
-          <div
-            class="absolute right-0 top-0 w-[405px] h-[305px] bg-[#E5E1D8] rounded-3xl overflow-hidden border border-zinc-300/30">
-            <div class="absolute inset-0"
-              style="background: repeating-linear-gradient(-45deg, transparent 0px, transparent 12px, rgba(0,0,0,0.05) 12px, rgba(0,0,0,0.05) 13px);">
-            </div>
-            <div class="absolute top-4 left-5">
-              <span class="text-[9px] font-bold tracking-[0.15em] text-zinc-500 uppercase">POS TERMINAL SCREEN</span>
-            </div>
-            <div
-              class="absolute top-3 right-3 flex items-center gap-1.5 bg-white rounded-full px-3 py-1.5 shadow-sm border border-zinc-100">
-              <span class="w-2 h-2 bg-green-500 rounded-full"></span>
-              <span class="text-[11px] font-semibold text-zinc-800">Today · <span
-                  class="text-indigo-600 font-bold">$4,182</span></span>
+          <div class="absolute right-0 top-0 w-[405px] h-[305px]">
+            <div class="w-full h-full rounded-[16px] overflow-hidden border-[6px] border-zinc-900 shadow-[0_20px_60px_rgba(0,0,0,0.25)] bg-zinc-900">
+              <img src="/images/platform/point-of-sale-2.png" alt="POS terminal screen" class="w-full h-full object-cover object-top">
             </div>
           </div>
 
-          <div class="absolute bg-zinc-500 rounded-l-sm z-20" style="left:51px; top:112px; width:4px; height:26px;">
+          <div class="absolute bg-zinc-900 rounded-l-sm z-20" style="left:51px; top:112px; width:4px; height:26px;">
           </div>
-          <div class="absolute bg-zinc-500 rounded-l-sm z-20" style="left:51px; top:148px; width:4px; height:26px;">
+          <div class="absolute bg-zinc-900 rounded-l-sm z-20" style="left:51px; top:148px; width:4px; height:26px;">
           </div>
-          <div class="absolute bg-zinc-500 rounded-r-sm z-20" style="left:233px; top:128px; width:4px; height:44px;">
+          <div class="absolute bg-zinc-900 rounded-r-sm z-20" style="left:233px; top:128px; width:4px; height:44px;">
           </div>
 
           <div
-            class="absolute left-[55px] top-[40px] w-[178px] h-[390px] rounded-[26px] border-[3px] border-zinc-600 bg-[#E5E1D8] overflow-hidden z-10 shadow-[0_20px_60px_rgba(0,0,0,0.15)]">
-            <div class="relative w-full h-full">
-              <div class="absolute top-[10px] left-0 right-0 flex justify-center z-20">
-                <div class="w-[52px] h-[18px] bg-zinc-900 rounded-full"></div>
+            class="absolute left-[55px] top-[40px] w-[178px] h-[390px] rounded-[26px] border-[6px] border-zinc-900 bg-zinc-900 overflow-hidden z-10 shadow-[0_20px_60px_rgba(0,0,0,0.3)] flex flex-col">
+            <!-- status bar -->
+            <div class="flex-shrink-0 h-[26px] flex items-center justify-between px-3 relative" style="background:#000;">
+              <span style="color:white;font-size:9px;font-weight:600;letter-spacing:-0.02em;">9:41</span>
+              <div class="absolute top-0 left-0 right-0 flex justify-center">
+                <div style="width:54px;height:18px;background:#111;border-radius:0 0 12px 12px;"></div>
               </div>
-              <div class="absolute inset-0"
-                style="background: repeating-linear-gradient(-45deg, transparent 0px, transparent 12px, rgba(0,0,0,0.05) 12px, rgba(0,0,0,0.05) 13px);">
+              <div style="display:flex;align-items:center;gap:4px;">
+                <svg width="12" height="9" viewBox="0 0 12 9" fill="white"><path d="M6 2.8C7.6 2.8 9 3.4 10.1 4.4L11 3.5C9.7 2.3 7.9 1.5 6 1.5s-3.7.8-5 2L1.9 4.4C3 3.4 4.4 2.8 6 2.8z"/><path d="M6 5.2c.9 0 1.7.4 2.3.9l.9-.9C8.3 4.5 7.2 4 6 4s-2.3.5-3.2 1.2l.9.9C4.3 5.6 5.1 5.2 6 5.2z"/><circle cx="6" cy="8" r="1"/></svg>
+                <svg width="16" height="8" viewBox="0 0 16 8" fill="none"><rect x="0.5" y="0.5" width="13" height="7" rx="1.5" stroke="white" stroke-opacity="0.6"/><rect x="1.5" y="1.5" width="10" height="5" rx="0.5" fill="white"/><path d="M14.5 2.5v3a1 1 0 000-3z" fill="white" fill-opacity="0.4"/></svg>
               </div>
-              <div class="absolute bottom-6 left-0 right-0 flex justify-center">
-                <span class="text-[9px] font-bold tracking-[0.15em] text-zinc-500 uppercase">CUSTOMER APP</span>
-              </div>
+            </div>
+            <!-- live site -->
+            <div class="flex-1 overflow-hidden">
+              <iframe src="https://the-bakery-co.vercel.app/index.html" tabindex="-1"
+                style="width:390px;height:830px;transform:scale(0.4256);transform-origin:top left;border:none;display:block;"></iframe>
             </div>
           </div>
 
@@ -230,6 +230,73 @@
   <div class="w-full max-w-7xl mx-auto px-6">
     <div class="border-t border-zinc-300"></div>
   </div>
+
+  <!-- Live storefront demos -->
+  <section id="storefronts" class="w-full bg-zinc-900 pt-20 pb-28">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-14">
+        <div class="text-[11px] font-bold tracking-[0.2em] uppercase text-knot-purple mb-4">Live demos</div>
+        <h2 class="text-4xl font-black text-white tracking-tight">Real storefronts, built on Knot</h2>
+        <p class="text-zinc-400 mt-3 max-w-sm mx-auto text-sm leading-relaxed">Browse four live customer websites. Every one runs on Knot — fully branded, no app install required.</p>
+      </div>
+
+      <div class="flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-20">
+
+        <!-- iPhone mockup -->
+        <div class="flex-shrink-0 relative" style="width:240px;">
+          <div style="width:240px;height:520px;border-radius:38px;border:6px solid #09090b;overflow:hidden;box-shadow:0 32px 80px rgba(0,0,0,0.7);background:#000;display:flex;flex-direction:column;">
+            <!-- status bar -->
+            <div style="flex-shrink:0;height:28px;background:#000;display:flex;align-items:center;justify-content:space-between;padding:0 14px;position:relative;">
+              <span style="color:white;font-size:10px;font-weight:600;letter-spacing:-0.02em;">9:41</span>
+              <div style="position:absolute;top:0;left:50%;transform:translateX(-50%);width:60px;height:20px;background:#09090b;border-radius:0 0 16px 16px;"></div>
+              <div style="display:flex;align-items:center;gap:4px;">
+                <svg width="13" height="10" viewBox="0 0 12 9" fill="white"><path d="M6 2.8C7.6 2.8 9 3.4 10.1 4.4L11 3.5C9.7 2.3 7.9 1.5 6 1.5s-3.7.8-5 2L1.9 4.4C3 3.4 4.4 2.8 6 2.8z"/><path d="M6 5.2c.9 0 1.7.4 2.3.9l.9-.9C8.3 4.5 7.2 4 6 4s-2.3.5-3.2 1.2l.9.9C4.3 5.6 5.1 5.2 6 5.2z"/><circle cx="6" cy="8" r="1"/></svg>
+                <svg width="18" height="9" viewBox="0 0 16 8" fill="none"><rect x="0.5" y="0.5" width="13" height="7" rx="1.5" stroke="white" stroke-opacity="0.6"/><rect x="1.5" y="1.5" width="10" height="5" rx="0.5" fill="white"/><path d="M14.5 2.5v3a1 1 0 000-3z" fill="white" fill-opacity="0.4"/></svg>
+              </div>
+            </div>
+            <!-- iframe -->
+            <div style="flex:1;overflow:hidden;position:relative;">
+              <iframe id="storefront-frame" src="https://the-bakery-co.vercel.app/index.html" tabindex="-1"
+                style="width:390px;height:820px;transform:scale(0.5846);transform-origin:top left;border:none;display:block;"></iframe>
+              <div id="storefront-loading" style="position:absolute;inset:0;background:#000;display:flex;align-items:center;justify-content:center;z-index:10;transition:opacity 0.3s;">
+                <div style="width:22px;height:22px;border:2px solid #3f3f46;border-top-color:#fff;border-radius:50%;animation:spin 0.8s linear infinite;"></div>
+              </div>
+            </div>
+          </div>
+          <!-- side buttons -->
+          <div style="position:absolute;left:-3px;top:110px;width:3px;height:28px;background:#09090b;border-radius:2px 0 0 2px;"></div>
+          <div style="position:absolute;left:-3px;top:150px;width:3px;height:28px;background:#09090b;border-radius:2px 0 0 2px;"></div>
+          <div style="position:absolute;right:-3px;top:130px;width:3px;height:44px;background:#09090b;border-radius:0 2px 2px 0;"></div>
+        </div>
+
+        <!-- Business selector -->
+        <div class="flex flex-col gap-3 w-full max-w-xs">
+          <p class="text-zinc-500 text-xs font-semibold tracking-[0.1em] uppercase mb-1">Choose a business</p>
+          <button onclick="switchStorefront('bakery')" id="sf-btn-bakery"
+            class="sf-btn w-full text-left px-5 py-4 rounded-2xl border border-zinc-700 bg-zinc-800 text-white font-semibold text-sm transition-all cursor-pointer hover:border-zinc-500" style="outline:none;">
+            <span class="block text-base font-bold">The Bakery Co.</span>
+            <span class="block text-zinc-400 text-xs font-medium mt-0.5">Bakery &amp; café</span>
+          </button>
+          <button onclick="switchStorefront('wellness')" id="sf-btn-wellness"
+            class="sf-btn w-full text-left px-5 py-4 rounded-2xl border border-zinc-700 bg-zinc-800 text-white font-semibold text-sm transition-all cursor-pointer hover:border-zinc-500" style="outline:none;">
+            <span class="block text-base font-bold">The Wellness Co.</span>
+            <span class="block text-zinc-400 text-xs font-medium mt-0.5">Wellness &amp; fitness</span>
+          </button>
+          <button onclick="switchStorefront('salon')" id="sf-btn-salon"
+            class="sf-btn w-full text-left px-5 py-4 rounded-2xl border border-zinc-700 bg-zinc-800 text-white font-semibold text-sm transition-all cursor-pointer hover:border-zinc-500" style="outline:none;">
+            <span class="block text-base font-bold">The Salon Co.</span>
+            <span class="block text-zinc-400 text-xs font-medium mt-0.5">Salon &amp; beauty</span>
+          </button>
+          <button onclick="switchStorefront('sportsbar')" id="sf-btn-sportsbar"
+            class="sf-btn w-full text-left px-5 py-4 rounded-2xl border border-zinc-700 bg-zinc-800 text-white font-semibold text-sm transition-all cursor-pointer hover:border-zinc-500" style="outline:none;">
+            <span class="block text-base font-bold">The Sports Bar Co.</span>
+            <span class="block text-zinc-400 text-xs font-medium mt-0.5">Bar &amp; restaurant</span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
 
   <section id="verticals" class="w-full max-w-7xl mx-auto px-6 py-20">
     <div class="space-y-4 max-w-3xl mb-12">
@@ -1475,7 +1542,7 @@
         </svg>
       </button>
 
-      <div class="relative bg-zinc-100 overflow-hidden flex-shrink-0" style="height: 280px;">
+      <div id="pm-image-area" class="relative bg-zinc-100 overflow-hidden flex-shrink-0" style="height: 280px;">
         <div id="pm-carousel" class="flex h-full transition-transform duration-300 ease-in-out"></div>
         <button id="pm-prev" onclick="pmSlide(-1)"
           class="absolute left-3 top-1/2 -translate-y-1/2 bg-white/90 backdrop-blur-sm rounded-full w-9 h-9 flex items-center justify-center shadow-sm border border-zinc-200/60 transition-opacity cursor-pointer border-solid hover:bg-white">
@@ -1888,6 +1955,35 @@
       document.getElementById('mobile-menu').classList.add('hidden');
     }
 
+    // Storefront demo switcher
+    const storefrontUrls = {
+      bakery: 'https://the-bakery-co.vercel.app/index.html',
+      salon: 'https://the-salon-co.vercel.app/',
+      sportsbar: 'https://the-sports-bar.vercel.app/',
+      wellness: 'https://the-wellness-co.vercel.app/'
+    };
+    let currentStorefront = 'bakery';
+
+    document.getElementById('sf-btn-bakery').classList.add('active');
+
+    document.getElementById('storefront-frame').addEventListener('load', () => {
+      const loading = document.getElementById('storefront-loading');
+      if (loading) loading.style.opacity = '0';
+      setTimeout(() => { if (loading) loading.style.display = 'none'; }, 300);
+    });
+
+    function switchStorefront(key) {
+      if (key === currentStorefront) return;
+      currentStorefront = key;
+      const frame = document.getElementById('storefront-frame');
+      const loading = document.getElementById('storefront-loading');
+      loading.style.display = 'flex';
+      loading.style.opacity = '1';
+      frame.src = storefrontUrls[key];
+      document.querySelectorAll('.sf-btn').forEach(b => b.classList.remove('active'));
+      document.getElementById('sf-btn-' + key).classList.add('active');
+    }
+
     // Platform card modal
     const platformData = {
       'customer-website': {
@@ -1897,7 +1993,9 @@
         description: 'Customers browse your menu, place orders, make bookings, and earn loyalty points — all on a branded website that lives on your domain. Automatically synced with your POS so pricing and availability are always accurate.',
         features: ['Custom domain & branding', 'Online ordering & booking', 'Loyalty points displayed in real time', 'Menu syncs automatically from your POS', 'Works for any device, no app install'],
         images: ['/images/platform/customer-website-1.png', '/images/platform/customer-website-2.png', '/images/platform/customer-website-3.png'],
-        imageLabel: 'Customer Website'
+        imageLabel: 'Customer Website',
+        deviceType: 'browser',
+        demoUrl: 'yourbusiness.knot.app'
       },
       'customer-app': {
         badge: 'iOS',
@@ -1906,7 +2004,8 @@
         description: 'Customers order ahead, pay, track loyalty points, and get notified when their order is ready — in a branded app that feels like yours, not a third-party platform. No marketplace fees, no shared discovery feed.',
         features: ['Branded to your business', 'Order-ahead & pay in-app', 'Loyalty points & reward tiers', 'Push notifications for order status', 'Syncs with your POS in real time'],
         images: ['/images/platform/customer-app-1.png', '/images/platform/customer-app-2.png', '/images/platform/customer-app-3.png'],
-        imageLabel: 'Customer App'
+        imageLabel: 'Customer App',
+        deviceType: 'ios'
       },
       'employee-app': {
         badge: 'iOS',
@@ -1915,7 +2014,8 @@
         description: 'Staff clock in, view their schedule, swap shifts, and see tips — all without needing to touch the main POS terminal. No paper timesheets, no group chats about who can cover Friday.',
         features: ['Clock in/out from their phone', 'Schedule view & shift swap requests', 'Tip tracking & payout history', 'Task lists & manager announcements', 'Payroll-ready hour exports'],
         images: ['/images/platform/employee-app-1.png', '/images/platform/employee-app-2.png', '/images/platform/employee-app-3.png'],
-        imageLabel: 'Employee App'
+        imageLabel: 'Employee App',
+        deviceType: 'ios'
       },
       'point-of-sale': {
         badge: 'iOS · Hardware',
@@ -1924,7 +2024,8 @@
         description: 'Tap to order, split the bill, add a tip, and fire to the kitchen or bar — all in a few taps. Built for the reality of a busy counter, not a demo environment. Hardware ships pre-configured and ready to go.',
         features: ['One-tap order entry', 'Split bills & custom tips', 'Kitchen & bar ticket printing', 'Offline mode for dropped signal', 'Hardware arrives pre-configured'],
         images: ['/images/platform/point-of-sale-1.png', '/images/platform/point-of-sale-2.png', '/images/platform/point-of-sale-3.png'],
-        imageLabel: 'Point of Sale'
+        imageLabel: 'Point of Sale',
+        deviceType: 'ipad'
       },
       'dashboard': {
         badge: 'Web',
@@ -1933,7 +2034,9 @@
         description: 'See today\'s sales, your busiest hours, top items, and staff performance — all live. Adjust your menu, update prices, and manage inventory without being on-site. Multi-location owners get a single rolled-up view.',
         features: ['Live sales & revenue view', 'Staff performance & hours', 'Inventory levels & low-stock alerts', 'Menu & pricing updates in real time', 'Multi-location rolled up in one view'],
         images: ['/images/platform/dashboard-1.png', '/images/platform/dashboard-2.png', '/images/platform/dashboard-3.png'],
-        imageLabel: 'Dashboard'
+        imageLabel: 'Dashboard',
+        deviceType: 'browser',
+        demoUrl: 'dashboard.knot.app'
       },
       'admin-ui': {
         badge: 'Web',
@@ -1942,7 +2045,9 @@
         description: 'Configure permissions, manage multiple locations, oversee staff roles, and handle integrations — all from one web interface designed for operators, not IT departments.',
         features: ['Role-based staff permissions', 'Multi-location management', 'Integration & API controls', 'Audit logs & access history', 'Billing & subscription settings'],
         images: ['/images/platform/admin-ui-1.png', '/images/platform/admin-ui-2.png', '/images/platform/admin-ui-3.png'],
-        imageLabel: 'Admin UI'
+        imageLabel: 'Admin UI',
+        deviceType: 'browser',
+        demoUrl: 'admin.knot.app'
       }
     };
 
@@ -2034,20 +2139,61 @@
         </li>`
       ).join('');
 
+      const isIOS = data.deviceType === 'ios';
+      const isIPad = data.deviceType === 'ipad';
+      const isBrowser = data.deviceType === 'browser';
+      document.getElementById('pm-image-area').style.height = isIOS ? '380px' : isIPad ? '340px' : isBrowser ? '320px' : '280px';
+      document.getElementById('pm-image-area').style.background = (isIOS || isIPad) ? '#18181b' : isBrowser ? '#e4e4e7' : '';
+
       document.getElementById('pm-carousel').innerHTML = data.images.map((src, i) =>
-        `<div class="flex-shrink-0 w-full h-full relative bg-zinc-100" style="min-width:100%">
-          <img src="${src}" alt="${data.imageLabel} screenshot ${i + 1}" class="absolute inset-0 w-full h-full object-cover z-10" onerror="this.style.display='none'">
-          <div class="absolute inset-0 flex flex-col items-center justify-center gap-3">
-            <div class="absolute inset-0" style="background:repeating-linear-gradient(-45deg,transparent 0,transparent 12px,rgba(0,0,0,0.035) 12px,rgba(0,0,0,0.035) 13px)"></div>
-            <div class="relative flex flex-col items-center gap-2 text-center px-8">
-              <div class="w-10 h-10 rounded-xl bg-zinc-200 flex items-center justify-center mb-1">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#a1a1aa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><circle cx="8" cy="6" r="1.5" fill="#a1a1aa"/><polyline points="21 21 15 15 9 19 3 15"/></svg>
+        isIOS
+          ? `<div class="flex-shrink-0 w-full h-full flex items-center justify-center" style="min-width:100%">
+              <div style="width:155px;height:336px;border-radius:28px;border:5px solid #09090b;overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,0.6);position:relative;background:#000;flex-shrink:0;">
+                <img src="${src}" alt="${data.imageLabel} screenshot ${i + 1}" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;">
+                <div style="position:absolute;top:0;left:50%;transform:translateX(-50%);width:54px;height:18px;background:#09090b;border-radius:0 0 14px 14px;z-index:10;"></div>
               </div>
-              <span class="text-[10px] font-bold tracking-[0.15em] text-zinc-400 uppercase">${data.imageLabel} — screenshot ${i + 1}</span>
-              <span class="text-[10px] text-zinc-300 font-medium">${src.split('/').pop()}</span>
-            </div>
-          </div>
-        </div>`
+            </div>`
+          : isIPad
+          ? `<div class="flex-shrink-0 w-full h-full flex items-center justify-center" style="min-width:100%">
+              <div style="width:400px;height:280px;border-radius:16px;border:6px solid #09090b;overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,0.6);position:relative;background:#000;flex-shrink:0;">
+                <img src="${src}" alt="${data.imageLabel} screenshot ${i + 1}" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;">
+                <div style="position:absolute;top:50%;left:0;transform:translateY(-50%);width:8px;height:8px;background:#1a1a1a;border-radius:50%;margin-left:4px;z-index:10;"></div>
+              </div>
+            </div>`
+          : isBrowser
+          ? `<div class="flex-shrink-0 w-full h-full flex items-center justify-center px-8" style="min-width:100%">
+              <div style="width:100%;max-width:560px;border-radius:16px;background:#1e1e1e;box-shadow:0 24px 60px rgba(0,0,0,0.35);overflow:hidden;">
+                <div style="height:36px;background:#1e1e1e;display:flex;align-items:center;padding:0 14px;position:relative;flex-shrink:0;">
+                  <div style="display:flex;align-items:center;gap:8px;">
+                    <div style="width:12px;height:12px;border-radius:50%;background:#ff5f57;"></div>
+                    <div style="width:12px;height:12px;border-radius:50%;background:#febc2e;"></div>
+                    <div style="width:12px;height:12px;border-radius:50%;background:#28c840;"></div>
+                  </div>
+                  <div style="position:absolute;left:50%;transform:translateX(-50%);width:40%;height:22px;background:#3a3a3a;border-radius:6px;display:flex;align-items:center;justify-content:center;">
+                    <span style="color:#aaa;font-size:11px;font-family:system-ui,sans-serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding:0 8px;">${data.demoUrl}</span>
+                  </div>
+                </div>
+                <div style="position:relative;width:100%;background:#f4f4f5;">
+                  <img src="${src}" alt="${data.imageLabel} screenshot ${i + 1}" style="width:100%;display:block;object-fit:cover;object-position:top;max-height:240px;" onerror="this.style.display='none'">
+                  <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;min-height:200px;background:repeating-linear-gradient(-45deg,transparent 0,transparent 12px,rgba(0,0,0,0.03) 12px,rgba(0,0,0,0.03) 13px);">
+                    <span style="font-size:10px;font-weight:700;letter-spacing:0.12em;color:#a1a1aa;text-transform:uppercase;">${data.imageLabel} — screenshot ${i + 1}</span>
+                  </div>
+                </div>
+              </div>
+            </div>`
+          : `<div class="flex-shrink-0 w-full h-full relative bg-zinc-100" style="min-width:100%">
+              <img src="${src}" alt="${data.imageLabel} screenshot ${i + 1}" class="absolute inset-0 w-full h-full object-cover z-10" onerror="this.style.display='none'">
+              <div class="absolute inset-0 flex flex-col items-center justify-center gap-3">
+                <div class="absolute inset-0" style="background:repeating-linear-gradient(-45deg,transparent 0,transparent 12px,rgba(0,0,0,0.035) 12px,rgba(0,0,0,0.035) 13px)"></div>
+                <div class="relative flex flex-col items-center gap-2 text-center px-8">
+                  <div class="w-10 h-10 rounded-xl bg-zinc-200 flex items-center justify-center mb-1">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#a1a1aa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><circle cx="8" cy="6" r="1.5" fill="#a1a1aa"/><polyline points="21 21 15 15 9 19 3 15"/></svg>
+                  </div>
+                  <span class="text-[10px] font-bold tracking-[0.15em] text-zinc-400 uppercase">${data.imageLabel} — screenshot ${i + 1}</span>
+                  <span class="text-[10px] text-zinc-300 font-medium">${src.split('/').pop()}</span>
+                </div>
+              </div>
+            </div>`
       ).join('');
 
       document.getElementById('pm-dots').innerHTML = data.images.map((_, i) =>
