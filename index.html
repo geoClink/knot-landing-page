@@ -131,128 +131,69 @@
   </header>
 
   <main class="flex-1 w-full max-w-7xl mx-auto px-6 pt-12 pb-20 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+  
+  <div class="lg:col-span-7 space-y-8">
+    <div class="text-[11px] font-bold tracking-[0.2em] uppercase text-knot-purple">
+      The operating system for local business
+    </div>
+    <h1 class="text-6xl md:text-7xl font-black tracking-tight text-zinc-900 leading-[1.05]">
+      One platform <br>for the whole <br>counter.
+    </h1>
+    <p class="max-w-xl text-[17px] text-zinc-600 font-medium leading-relaxed">
+      Knot runs the orders, the staff, the payments, and the books — whether you pour coffee, book chairs, lead sessions, or call last orders.
+    </p>
+    
+    <div class="flex flex-col sm:flex-row items-center gap-4 pt-2">
+      <button onclick="openModal('contact-modal')" class="w-full sm:w-auto bg-knot-purple hover:bg-indigo-600 text-white font-semibold px-8 py-4 rounded-full transition-all active:scale-95 cursor-pointer">
+        Get in touch
+      </button>
+      <button onclick="openModal('video-modal')" class="w-full sm:w-auto flex items-center justify-center gap-3 bg-white hover:bg-zinc-50 border border-zinc-200 text-zinc-700 font-semibold px-8 py-4 rounded-full transition-all active:scale-95 cursor-pointer">
+        <span class="w-5 h-5 rounded-full bg-knot-purple flex items-center justify-center">
+          <svg width="8" height="8" viewBox="0 0 10 12" fill="white"><path d="M0 0l10 6-10 6z"/></svg>
+        </span>
+        Watch demo
+      </button>
+    </div>
+  </div>
 
-    <div class="lg:col-span-7 space-y-8">
-      <div class="text-[11px] font-bold tracking-[0.2em] uppercase text-knot-purple">
-        The operating system for local business
+  <div class="hidden lg:flex lg:col-span-5 justify-center lg:justify-end items-center">
+    <div class="relative" style="width:500px;height:520px;">
+
+      <!-- iPad POS behind iPhone -->
+      <div class="absolute right-0 top-[60px] rounded-[14px] overflow-hidden border-[6px] border-zinc-900 bg-zinc-900 shadow-[0_20px_60px_rgba(0,0,0,0.25)]" style="width:320px;height:240px;">
+        <img src="/images/platform/point-of-sale-2.png" alt="POS terminal screen" class="w-full h-full object-cover object-top">
       </div>
 
-      <h1 class="text-6xl md:text-7xl font-black tracking-tight text-zinc-900 leading-[1.05]">
-        One platform <br>for the whole <br>counter.
-      </h1>
-
-      <p class="max-w-xl text-[17px] text-zinc-600 font-medium leading-relaxed">
-        Knot runs the orders, the staff, the payments, and the books — whether you pour coffee, book chairs, lead
-        sessions, or call last orders.
-      </p>
-
-      <div class="flex flex-col sm:flex-row items-center gap-4 pt-2">
-        <button onclick="openModal('contact-modal')"
-          class="w-full sm:w-auto bg-knot-purple hover:bg-indigo-600 active:scale-95 text-white font-semibold px-7 py-4 rounded-full transition-all duration-200 shadow-sm cursor-pointer border-none">
-          Get in touch
-        </button>
-        <button onclick="openModal('video-modal')"
-          class="w-full sm:w-auto flex items-center justify-center gap-2.5 bg-white hover:bg-zinc-50 active:scale-95 text-zinc-700 font-semibold border border-zinc-200 px-7 py-4 rounded-full transition-all duration-200 shadow-sm cursor-pointer border-solid">
-          <span class="w-5 h-5 rounded-full bg-knot-purple flex items-center justify-center flex-shrink-0">
-            <svg width="8" height="8" viewBox="0 0 10 12" fill="white">
-              <path d="M0 0l10 6-10 6z" />
-            </svg>
-          </span>
-          Watch demo
-        </button>
-      </div>
-
-      <div
-        class="pt-3 flex flex-col gap-2.5 text-[11px] font-semibold text-zinc-500 sm:flex-row sm:items-center sm:gap-4">
-        <div class="flex flex-col items-start gap-3 text-left sm:flex-row sm:items-center sm:justify-center sm:gap-4">
-          <div class="flex items-center gap-1.5">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-              stroke-linecap="round" class="text-green-500 flex-shrink-0">
-              <path d="M20 6 9 17l-5-5" />
-            </svg>
-            <span>No contract</span>
-          </div>
-
-          <span class="hidden sm:inline text-zinc-400 font-normal">·</span>
-
-          <div class="flex items-center gap-1.5">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-              stroke-linecap="round" class="text-green-500 flex-shrink-0">
-              <path d="M20 6 9 17l-5-5" />
-            </svg>
-            <span>Cancel anytime</span>
-          </div>
-
-          <span class="hidden sm:inline text-zinc-400 font-normal">·</span>
-
-          <div class="flex items-start gap-1.5">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-              stroke-linecap="round" class="text-green-500 flex-shrink-0 mt-0.5">
-              <path d="M20 6 9 17l-5-5" />
-            </svg>
-            <span>Free trial until your current contract ends</span>
+    <!-- iPhone wrapper (relative so side buttons can escape overflow:hidden) -->
+    <div class="absolute left-0 top-0 z-10" style="width:240px;height:520px;">
+      <div style="width:240px;height:520px;border-radius:38px;border:6px solid #09090b;overflow:hidden;box-shadow:0 32px 80px rgba(0,0,0,0.7);background:#000;display:flex;flex-direction:column;">
+        <!-- status bar in flow — website viewport starts below it -->
+        <div style="flex-shrink:0;height:28px;display:flex;align-items:center;justify-content:space-between;padding:0 14px;background:#09090b;position:relative;">
+          <span style="color:white;font-size:10px;font-weight:600;letter-spacing:-0.02em;">9:41</span>
+          <div style="position:absolute;top:3px;left:50%;transform:translateX(-50%);width:76px;height:22px;background:#09090b;border-radius:50px;border:1px solid rgba(255,255,255,0.08);"></div>
+          <div style="display:flex;align-items:center;gap:4px;">
+            <svg width="13" height="10" viewBox="0 0 12 9" fill="white"><path d="M6 2.8C7.6 2.8 9 3.4 10.1 4.4L11 3.5C9.7 2.3 7.9 1.5 6 1.5s-3.7.8-5 2L1.9 4.4C3 3.4 4.4 2.8 6 2.8z"/><path d="M6 5.2c.9 0 1.7.4 2.3.9l.9-.9C8.3 4.5 7.2 4 6 4s-2.3.5-3.2 1.2l.9.9C4.3 5.6 5.1 5.2 6 5.2z"/><circle cx="6" cy="8" r="1"/></svg>
+            <svg width="18" height="9" viewBox="0 0 16 8" fill="none"><rect x="0.5" y="0.5" width="13" height="7" rx="1.5" stroke="white" stroke-opacity="0.6"/><rect x="1.5" y="1.5" width="10" height="5" rx="0.5" fill="white"/><path d="M14.5 2.5v3a1 1 0 000-3z" fill="white" fill-opacity="0.4"/></svg>
           </div>
         </div>
-      </div>
-    </div>
-
-    <div class="hidden lg:flex lg:col-span-5 justify-center lg:justify-end items-center">
-      <div class="relative w-[336px] h-[392px] sm:w-[408px] sm:h-[476px] lg:w-[480px] lg:h-[560px] overflow-hidden">
-        <div class="absolute top-0 left-0 w-[480px] h-[560px] origin-top-left scale-[0.7] sm:scale-[0.85] lg:scale-100">
-
-          <div class="absolute right-0 top-0 w-[405px] h-[305px]">
-            <div
-              class="w-full h-full rounded-[16px] overflow-hidden border-[6px] border-zinc-900 shadow-[0_20px_60px_rgba(0,0,0,0.25)] bg-zinc-900">
-              <img src="/images/platform/point-of-sale-2.png" alt="POS terminal screen"
-                class="w-full h-full object-cover object-top">
-            </div>
-          </div>
-
-          <div class="absolute bg-zinc-900 rounded-l-sm z-20" style="left:51px; top:112px; width:4px; height:26px;">
-          </div>
-          <div class="absolute bg-zinc-900 rounded-l-sm z-20" style="left:51px; top:148px; width:4px; height:26px;">
-          </div>
-          <div class="absolute bg-zinc-900 rounded-r-sm z-20" style="left:295px; top:128px; width:4px; height:44px;">
-          </div>
-
-          <div
-            class="absolute left-[55px] top-[40px] w-[240px] h-[520px] rounded-[38px] border-[6px] border-zinc-900 bg-zinc-900 overflow-hidden z-10 shadow-[0_20px_60px_rgba(0,0,0,0.3)]">
-            <div class="relative w-full h-full">
-              <iframe src="https://the-bakery-co.vercel.app/index.html" tabindex="-1"
-                style="width:390px;height:869px;transform:scale(0.5846);transform-origin:top left;border:none;display:block;">
-              </iframe>
-              <!-- transparent status bar overlay -->
-              <div
-                style="position:absolute;top:0;left:0;right:0;height:28px;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);background:rgba(0,0,0,0.18);display:flex;align-items:center;justify-content:space-between;padding:0 12px;z-index:30;pointer-events:none;">
-                <span
-                  style="color:white;font-size:9px;font-weight:600;letter-spacing:-0.02em;text-shadow:0 1px 3px rgba(0,0,0,0.5);">9:41</span>
-                <div
-                  style="position:absolute;top:5px;left:50%;transform:translateX(-50%);width:58px;height:16px;background:#09090b;border-radius:50px;pointer-events:none;">
-                </div>
-                <div style="display:flex;align-items:center;gap:4px;">
-                  <svg width="12" height="9" viewBox="0 0 12 9" fill="white"
-                    style="filter:drop-shadow(0 1px 2px rgba(0,0,0,0.5))">
-                    <path
-                      d="M6 2.8C7.6 2.8 9 3.4 10.1 4.4L11 3.5C9.7 2.3 7.9 1.5 6 1.5s-3.7.8-5 2L1.9 4.4C3 3.4 4.4 2.8 6 2.8z" />
-                    <path
-                      d="M6 5.2c.9 0 1.7.4 2.3.9l.9-.9C8.3 4.5 7.2 4 6 4s-2.3.5-3.2 1.2l.9.9C4.3 5.6 5.1 5.2 6 5.2z" />
-                    <circle cx="6" cy="8" r="1" />
-                  </svg>
-                  <svg width="16" height="8" viewBox="0 0 16 8" fill="none"
-                    style="filter:drop-shadow(0 1px 2px rgba(0,0,0,0.5))">
-                    <rect x="0.5" y="0.5" width="13" height="7" rx="1.5" stroke="white" stroke-opacity="0.6" />
-                    <rect x="1.5" y="1.5" width="10" height="5" rx="0.5" fill="white" />
-                    <path d="M14.5 2.5v3a1 1 0 000-3z" fill="white" fill-opacity="0.4" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </div>
-
+        <!-- website viewport -->
+        <div style="flex:1;overflow:hidden;">
+          <iframe
+            src="https://the-bakery-co.vercel.app/index.html"
+            tabindex="-1"
+            style="width:390px;height:869px;border:none;display:block;transform:scale(0.5846);transform-origin:top left;">
+          </iframe>
         </div>
       </div>
+      <!-- side buttons -->
+      <div style="position:absolute;left:-3px;top:110px;width:3px;height:28px;background:#09090b;border-radius:2px 0 0 2px;"></div>
+      <div style="position:absolute;left:-3px;top:150px;width:3px;height:28px;background:#09090b;border-radius:2px 0 0 2px;"></div>
+      <div style="position:absolute;right:-3px;top:130px;width:3px;height:44px;background:#09090b;border-radius:0 2px 2px 0;"></div>
     </div>
-  </main>
+    </div>
+  </div>
+</main>
+
 
   <div class="w-full max-w-7xl mx-auto px-6">
     <div class="border-t border-zinc-300"></div>
@@ -273,46 +214,22 @@
         <!-- iPhone mockup -->
         <div class="flex-shrink-0 relative" style="width:240px;">
           <div
-            style="width:240px;height:520px;border-radius:38px;border:6px solid #09090b;overflow:hidden;box-shadow:0 32px 80px rgba(0,0,0,0.7);background:#000;position:relative;">
-            <!-- iframe offset down so content clears status bar -->
-            <iframe id="storefront-frame" src="https://the-bakery-co.vercel.app/index.html" tabindex="-1" style="
-    width:390px;
-    height:869px;
-    transform:scale(0.5846);
-    transform-origin:top left;
-    border:none;
-    display:block;
-    position: absolute;  /* Add this */
-    top: 40px;           /* Adjust this number until the menu is visible */
-    left: 0;             /* Add this to keep it flush left */
-    margin-top: 0;       /* Remove the margin */
-  ">
-            </iframe>
-            <!-- transparent status bar overlay -->
-            <div
-              style="position:absolute;top:0;left:0;right:0;height:28px;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);background:rgba(0,0,0,0.18);display:flex;align-items:center;justify-content:space-between;padding:0 14px;z-index:30;pointer-events:none;">
-              <span
-                style="color:white;font-size:10px;font-weight:600;letter-spacing:-0.02em;text-shadow:0 1px 3px rgba(0,0,0,0.5);">9:41</span>
-              <div
-                style="position:absolute;top:6px;left:50%;transform:translateX(-50%);width:76px;height:22px;background:#09090b;border-radius:50px;pointer-events:none;">
-              </div>
+            style="width:240px;height:520px;border-radius:38px;border:6px solid #09090b;overflow:hidden;box-shadow:0 32px 80px rgba(0,0,0,0.7);background:#000;display:flex;flex-direction:column;">
+            <!-- status bar in flow — website viewport starts below it -->
+            <div style="flex-shrink:0;height:28px;display:flex;align-items:center;justify-content:space-between;padding:0 14px;background:#09090b;position:relative;">
+              <span style="color:white;font-size:10px;font-weight:600;letter-spacing:-0.02em;">9:41</span>
+              <div style="position:absolute;top:3px;left:50%;transform:translateX(-50%);width:76px;height:22px;background:#09090b;border-radius:50px;border:1px solid rgba(255,255,255,0.08);"></div>
               <div style="display:flex;align-items:center;gap:4px;">
-                <svg width="13" height="10" viewBox="0 0 12 9" fill="white"
-                  style="filter:drop-shadow(0 1px 2px rgba(0,0,0,0.5))">
-                  <path
-                    d="M6 2.8C7.6 2.8 9 3.4 10.1 4.4L11 3.5C9.7 2.3 7.9 1.5 6 1.5s-3.7.8-5 2L1.9 4.4C3 3.4 4.4 2.8 6 2.8z" />
-                  <path
-                    d="M6 5.2c.9 0 1.7.4 2.3.9l.9-.9C8.3 4.5 7.2 4 6 4s-2.3.5-3.2 1.2l.9.9C4.3 5.6 5.1 5.2 6 5.2z" />
-                  <circle cx="6" cy="8" r="1" />
-                </svg>
-                <svg width="18" height="9" viewBox="0 0 16 8" fill="none"
-                  style="filter:drop-shadow(0 1px 2px rgba(0,0,0,0.5))">
-                  <rect x="0.5" y="0.5" width="13" height="7" rx="1.5" stroke="white" stroke-opacity="0.6" />
-                  <rect x="1.5" y="1.5" width="10" height="5" rx="0.5" fill="white" />
-                  <path d="M14.5 2.5v3a1 1 0 000-3z" fill="white" fill-opacity="0.4" />
-                </svg>
+                <svg width="13" height="10" viewBox="0 0 12 9" fill="white"><path d="M6 2.8C7.6 2.8 9 3.4 10.1 4.4L11 3.5C9.7 2.3 7.9 1.5 6 1.5s-3.7.8-5 2L1.9 4.4C3 3.4 4.4 2.8 6 2.8z"/><path d="M6 5.2c.9 0 1.7.4 2.3.9l.9-.9C8.3 4.5 7.2 4 6 4s-2.3.5-3.2 1.2l.9.9C4.3 5.6 5.1 5.2 6 5.2z"/><circle cx="6" cy="8" r="1"/></svg>
+                <svg width="18" height="9" viewBox="0 0 16 8" fill="none"><rect x="0.5" y="0.5" width="13" height="7" rx="1.5" stroke="white" stroke-opacity="0.6"/><rect x="1.5" y="1.5" width="10" height="5" rx="0.5" fill="white"/><path d="M14.5 2.5v3a1 1 0 000-3z" fill="white" fill-opacity="0.4"/></svg>
               </div>
             </div>
+            <!-- website viewport -->
+            <div style="flex:1;overflow:hidden;position:relative;">
+              <iframe id="storefront-frame"
+                src="https://the-bakery-co.vercel.app/index.html"
+                tabindex="-1"
+                style="width:390px;height:869px;transform:scale(0.5846);transform-origin:top left;border:none;display:block;"></iframe>
             <!-- loading overlay -->
             <div id="storefront-loading"
               style="position:absolute;inset:0;background:#000;display:flex;align-items:center;justify-content:center;z-index:20;transition:opacity 0.3s;">
@@ -320,8 +237,9 @@
                 style="width:22px;height:22px;border:2px solid #3f3f46;border-top-color:#fff;border-radius:50%;animation:spin 0.8s linear infinite;">
               </div>
             </div>
-          </div>
-          <!-- side buttons -->
+            </div><!-- /viewport -->
+          </div><!-- /phone bezel -->
+          <!-- side buttons (outside bezel so they aren't clipped by overflow:hidden) -->
           <div
             style="position:absolute;left:-3px;top:110px;width:3px;height:28px;background:#09090b;border-radius:2px 0 0 2px;">
           </div>
@@ -331,7 +249,7 @@
           <div
             style="position:absolute;right:-3px;top:130px;width:3px;height:44px;background:#09090b;border-radius:0 2px 2px 0;">
           </div>
-        </div>
+        </div><!-- /outer wrapper -->
 
         <!-- Business selector -->
         <div class="flex flex-col gap-3 w-full max-w-xs">
